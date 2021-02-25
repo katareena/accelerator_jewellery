@@ -1,0 +1,153 @@
+@mixin list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin blockToCenter {
+  display: block;
+  margin: 0 auto;
+}
+
+@mixin title {
+  margin: 0;
+  font-family: "Cormorant Garamond", "Tahoma", sans-serif;
+  font-weight: 700;
+  line-height: calc(44.2 / 34);
+  letter-spacing: 0.03em;
+  text-align: center;
+}
+
+@mixin input {
+  font-family: "Poppins", "Tahoma", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: calc(21 / 14);
+  border: none;
+  border-bottom: solid 1px $text;
+  padding-bottom: 15px;
+  padding-top: 15px;
+  transition: all 0.2s ease;
+
+  &:hover,
+  &:focus,
+  &:active {
+    border-bottom: solid 1px $decor-2;
+  }
+
+  &::placeholder {
+    color: $decor-2;
+  }
+}
+
+@mixin button {
+  display: block;
+  text-align: center;
+  color: $white;
+  background-color: $decor-1;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  &:hover,
+  &:focus {
+    background-color: $decor-2;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+// @mixin button-close {
+//   cursor: pointer;
+//   position: absolute;
+//   top: 30px;
+//   right: 30px;
+//   width: 30px;
+//   height: 30px;
+//   border: none;
+//   background-color: transparent;
+
+//   &::before {
+//     position: absolute;
+//     top: 0;
+//     right: 10px;
+//     content: "";
+//     height: 22px;
+//     width: 2px;
+//     background: $gradient;
+//     transform: rotate(45deg);
+
+//     @media (max-width: $mobile-width) {
+//       top: -10px;
+//       right: 0;
+//     }
+//   }
+
+//   &::after {
+//     position: absolute;
+//     top: 0;
+//     right: 10px;
+//     content: "";
+//     height: 22px;
+//     width: 2px;
+//     background: $gradient;
+//     transform: rotate(-45deg);
+
+//     @media (max-width: $mobile-width) {
+//       top: -10px;
+//       right: 0;
+//     }
+//   }
+
+//   &:hover::after,
+//   &:focus::after,
+//   &:hover::before,
+//   &:focus::before {
+//     background: $accent-decor-3;
+//     opacity: 0.5;
+//   }
+
+//   &:active::after,
+//   &:active::before {
+//     background: $gradient;
+//     opacity: 0.5;
+//   }
+// }
+
+// @mixin modal {
+//   width: 100vw;
+//   height: 100vh;
+//   position: fixed;
+//   top: 0;
+//   left: 0;
+//   z-index: 5000;
+
+//   @media (max-width: $mobile-width) {
+//     height: auto;
+//   }
+// }
+
+// @mixin modal-form {
+//   width: 480px;
+//   background-color: $white;
+//   border-radius: 8px;
+//   position: fixed;
+//   top: 15vh;
+//   left: calc(50vw - 240px);
+//   display: flex;
+//   flex-wrap: wrap;
+//   flex-direction: column;
+//   box-shadow: 0 3px 12px rgba($black, 0.1);
+
+//   @media (max-width: $mobile-width) {
+//     width: 100%;
+//     min-width: 320px;
+//     max-width: 767px;
+//     min-height: 768px;
+//     border-radius: 0;
+//     top: 0;
+//     left: 0;
+//   }
+// }
