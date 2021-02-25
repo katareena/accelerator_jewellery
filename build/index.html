@@ -28,12 +28,117 @@
 
 <body>
   <header class="header">
+    <h1 class="visually-hidden">Jewellery store and workshop</h1>
+    <div class="header__wrap">
+
+      <div class="header__inner">
+        <div class="user-search">
+          <form class="user-search__form" action="#" method="get">
+            <div class="user-search__box">
+              <svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true">
+                <use xlink:href="img/sprite_auto.svg#icon-loupe"></use>
+              </svg>
+              <label class="visually-hidden" for="search-field">Field of searching</label>
+              <input id="search-field" type="search" name="search" autocomplete="off" placeholder="Type here to search">
+            </div>
+          </form>
+        </div>
+
+        <a class="header__logo header__decor-line"><img src="img/logo-white-theme.svg" width="104" height="40" alt="Logotype Jewellery store"></a>
+
+        <ul class="user-nav">
+          <li class="user-nav__item">
+            <a class="user-nav__link" href="#">Login</a>
+          </li>
+          <li class="user-nav__item">
+            <a class="user-nav__link" href="#">Cart <span>0</span></a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="header__inner">
+        <nav class="site-nav">
+          <ul class="site-nav__list">
+            <li class="site-nav__item">
+              <a class="site-nav__link site-nav__link--transporter" href="#">What’s new</a>
+            </li>
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="#">Chokers</a>
+            </li>
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="#">Necklaces</a>
+            </li>
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="#">Rings</a>
+            </li>
+            <li class="site-nav__item">
+              <a class="site-nav__link site-nav__link--technic" href="#">Earrings</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+    </div>
   </header>
 
   <main class="main">
+
   </main>
 
   <footer class="footer">
+    <div class="footer__wrap">
+      <section class="subscription">
+        <h2>The good stuff in your inbox</h2>
+        <p>News and updates from CH. No spam, we promise.</p>
+        <form class="subscription__form" action="#" method="post">
+          <div class="subscription__box">
+            <label class="visually-hidden" for="subscription-field">Дeave your contacts for subscription</label>
+            <input id="subscription-field" type="input" name="subscription" autocomplete="off" placeholder="Your E-mail">
+            <button class="subscription__btn">Sign Up
+              <svg width="29" height="9" viewBox="0 0 29 9" aria-hidden="true">
+                <use xlink:href="img/sprite_auto.svg#icon-arrow"></use>
+              </svg>
+            </button>
+          </div>
+        </form>
+      </section>
+
+      <section class="information"></section>
+      <ul class="social">
+        <li class="social__item">
+          <a class="social__link" href="https://www.facebook.com/">
+            <svg width="8" height="15" viewBox="0 0 8 15" aria-hidden="true">
+              <use xlink:href="img/sprite_auto.svg#icon-fb"></use>
+            </svg>
+            Facebook
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link" href="https://www.instagram.com/">
+            <svg width="15" height="15" viewBox="0 0 15 15" aria-hidden="true">
+              <use xlink:href="img/sprite_auto.svg#icon-inst"></use>
+            </svg>
+            Instagram
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link" href="https://www.pinterest.ru/">
+            <svg width="15" height="15" viewBox="0 0 15 15" aria-hidden="true">
+              <use xlink:href="img/sprite_auto.svg#icon-pint"></use>
+            </svg>
+            Pinterest
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link" href="https://twitter.com/">
+            <svg width="15" height="13" viewBox="0 0 15 13" aria-hidden="true">
+              <use xlink:href="img/sprite_auto.svg#icon-twitter"></use>
+            </svg>
+            Twitter
+          </a>
+        </li>
+      </ul>
+    </div>
   </footer>
 
   <script src="js/vendor.js" defer=""></script>
