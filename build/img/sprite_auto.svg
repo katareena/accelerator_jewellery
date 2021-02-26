@@ -1,5 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol id="icon-arrow" viewBox="0 0 30 11">
 <path d="M0 5.5H29M29 5.5L23.5135 1M29 5.5L23.5135 10" stroke="white"/>
+</symbol><symbol id="icon-basket" viewBox="0 0 20 18">
+<path d="M14 5C14 6.06087 13.5786 7.07828 12.8284 7.82843C12.0783 8.57857 11.0609 9 10 9C8.93913 9 7.92172 8.57857 7.17157 7.82843C6.42143 7.07828 6 6.06087 6 5M1 1H19V17H1V1Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</symbol><symbol id="icon-burger" viewBox="0 0 25 18">
+<path d="M0 1H25M0 9H25M0 17H25" stroke="white" stroke-width="2"/>
 </symbol><symbol id="icon-fb" viewBox="0 0 8 15">
 <path d="M5.33333 8.625H7.2381L8 5.625H5.33333V4.125C5.33333 3.3525 5.33333 2.625 6.85714 2.625H8V0.105C7.75162 0.0727501 6.81371 0 5.82324 0C3.75467 0 2.28571 1.24275 2.28571 3.525V5.625H0V8.625H2.28571V15H5.33333V8.625Z" fill="white"/>
 </symbol><symbol id="icon-inst" viewBox="0 0 15 15">
