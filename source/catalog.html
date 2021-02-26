@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Jewellery store</title>
+  <meta name="description" content="Jewellery store and workshop">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preload" href="fonts/poppins-v15-latin-regular.woff2" type="font/woff2" as="font">
+  <link rel="preload" href="fonts/poppins-v15-latin-500.woff2" type="font/woff2" as="font">
+  <link rel="preload" href="fonts/poppins-v15-latin-700.woff2" type="font/woff2" as="font">
+  <link rel="preload" href="fonts/cormorant-garamond-v9-latin-regular.woff2" type="font/woff2" as="font">
+  <link rel="preload" href="fonts/cormorant-garamond-v9-latin-italic.woff2" type="font/woff2" as="font">
+  <link rel="preload" href="fonts/cormorant-garamond-v9-latin-500italic.woff2" type="font/woff2" as="font">
+  <link rel="preload" href="fonts/cormorant-garamond-v9-latin-600.woff2" type="font/woff2" as="font">
+  <link rel="preload" href="fonts/cormorant-garamond-v9-latin-700.woff2" type="font/woff2" as="font">
+  <link rel="preload" crossorigin="anonymous" href="fonts/poppins-v15-latin-regular.woff" type="font/woff" as="font">
+  <link rel="preload" crossorigin="anonymous" href="fonts/poppins-v15-latin-500.woff" type="font/woff" as="font">
+  <link rel="preload" crossorigin="anonymous" href="fonts/poppins-v15-latin-700.woff" type="font/woff" as="font">
+  <link rel="preload" crossorigin="anonymous" href="fonts/cormorant-garamond-v9-latin-regular.woff" type="font/woff"
+    as="font">
+  <link rel="preload" crossorigin="anonymous" href="fonts/cormorant-garamond-v9-latin-italic.woff" type="font/woff"
+    as="font">
+  <link rel="preload" crossorigin="anonymous" href="fonts/cormorant-garamond-v9-latin-500italic.woff" type="font/woff"
+    as="font">
+  <link rel="preload" crossorigin="anonymous" href="fonts/cormorant-garamond-v9-latin-600.woff" type="font/woff"
+    as="font">
+  <link rel="preload" crossorigin="anonymous" href="fonts/cormorant-garamond-v9-latin-700.woff" type="font/woff"
+    as="font">
+  <link href="css/style.min.css" rel="stylesheet">
+  <link rel="shortcut icon" href="img/favicon.ico" />
+</head>
+
+<body>
+  <header class="header">
+    <h1 class="visually-hidden">Jewellery store and workshop</h1>
+    <div class="header__wrap">
+
+      <div class="header__inner">
+        <div class="user-search">
+          <form class="user-search__form" action="#" method="get">
+            <div class="user-search__box">
+              <svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true">
+                <use xlink:href="img/sprite_auto.svg#icon-loupe"></use>
+              </svg>
+              <label class="visually-hidden" for="search-field">Field of searching</label>
+              <input id="search-field" type="search" name="search" autocomplete="off" placeholder="Type here to search">
+            </div>
+          </form>
+        </div>
+
+        <a class="header__logo header__decor-line" href="index.html"><img src="img/logo-white-theme.svg" width="104"
+            height="40" alt="Logotype Jewellery store"></a>
+
+        <ul class="user-nav">
+          <li class="user-nav__item">
+            <a class="user-nav__link" href="#">Login</a>
+          </li>
+          <li class="user-nav__item">
+            <a class="user-nav__link" href="#">Cart <span>0</span></a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="header__inner">
+        <nav class="site-nav">
+          <ul class="site-nav__list">
+            <li class="site-nav__item">
+              <a class="site-nav__link site-nav__link--transporter" href="#">What’s new</a>
+            </li>
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="#">Chokers</a>
+            </li>
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="#">Necklaces</a>
+            </li>
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="#">Rings</a>
+            </li>
+            <li class="site-nav__item">
+              <a class="site-nav__link site-nav__link--technic" href="#">Earrings</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+    </div>
+  </header>
+
+  <main class="main">
+    <section class="catalog">
+      <div class="catalog__title">
+        <h2>ALL JEWELLERY</h2>
+        <p>Discover picks of fashion's finest trends in our jewellery catalog</p>
+      </div>
+
+      <div class="catalog__wrap">
+        <form class="catalog__filter filter" method="get" action="https://echo.htmlacademy.ru">
+          <h3 class="visually-hidden">Catalog's filter</h3>
+          <fieldset class="filter__item">
+            <h4>Product</h4>
+            <ul class="filter__type">
+              <li class="filter__checkbox">
+                <input type="checkbox" name="necklaces" id="filter-necklaces" checked>
+                <label for="filter-necklaces">Necklaces</label>
+              </li>
+              <li class="filter__checkbox">
+                <input type="checkbox" name="chokers" id="filter-chokers" checked>
+                <label for="filter-chokers">Chokers</label>
+              </li>
+              <li class="filter__checkbox">
+                <input type="checkbox" name="rings" id="filter-rings">
+                <label for="filter-rings">Rings</label>
+              </li>
+              <li class="filter__checkbox">
+                <input type="checkbox" name="earrings" id="filter-earrings" checked>
+                <label for="filter-earrings">earrings</label>
+              </li>
+            </ul>
+            <div class="filter__arrow">
+              <div class="filter__arrow-open"></div>
+              <div class="filter__arrow-close"></div>
+            </div>
+          </fieldset>
+
+          <fieldset class="filter__item">
+            <h4>Material</h4>
+            <ul class="filter__material">
+              <li class="filter__checkbox">
+                <input type="checkbox" name="gold" id="filter-gold">
+                <label for="filter-gold">Gold</label>
+              </li>
+              <li class="filter__checkbox">
+                <input type="checkbox" name="silver" id="filter-silver" checked>
+                <label for="filter-silver">Silver</label>
+              </li>
+            </ul>
+            <div class="filter__arrow">
+              <div class="filter__arrow-open"></div>
+              <div class="filter__arrow-close"></div>
+            </div>
+          </fieldset>
+
+          <fieldset class="filter__item">
+            <h4>Collection</h4>
+            <ul class="filter__collection">
+              <li class="filter__checkbox">
+                <input type="checkbox" name="flamingo" id="filter-flamingo" checked>
+                <label for="filter-flamingo">Pink flamingo</label>
+              </li>
+              <li class="filter__checkbox">
+                <input type="checkbox" name="dreams" id="filter-dreams">
+                <label for="filter-dreams">Dreams</label>
+              </li>
+            </ul>
+            <div class="filter__arrow">
+              <div class="filter__arrow-open"></div>
+              <div class="filter__arrow-close"></div>
+            </div>
+          </fieldset>
+
+          <fieldset class="filter__item">
+            <h4>Price</h4>
+
+            <div class="filter__range">
+              <div class="filter__controls">
+                <div class="filter__scale">
+                  <div class="filter__bar"></div>
+                </div>
+                <div class="filter__toggle filter__toggle--min">
+                  <span class="filter__result"></span>
+                </div>
+                <div class="filter__toggle filter__toggle--max">
+                  <span class="filter__result"></span>
+                </div>
+              </div>
+            </div>
+
+            <div class="filter__arrow">
+              <div class="filter__arrow-open"></div>
+              <div class="filter__arrow-close"></div>
+            </div>
+          </fieldset>
+          <button class="filter__submit" type="submit">Apply</button>
+          <button class="filter__clear" type="button">Clear All</button>
+        </form>
+
+        <section class="catalog__catalog">
+          <h3 class="visually-hidden">Catalog</h3>
+
+          <article class="catalog__card">
+            <a class="catalog__link" href="#">
+              <picture>
+                <source type="image/webp" media="(max-width: 767px)"
+                  srcset="img/catalog-1-mobile@1x.webp 1x, img/catalog-1-mobile@2x.webp 2x" />
+                <source type="image/webp" media="(max-width: 1023px)"
+                  srcset="img/catalog-1-tablet@1x.webp 1x, img/catalog-1-tablet@2x.webp 2x" />
+                <source type="image/webp" srcset="img/catalog-1-desktop@1x.webp 1x, img/catalog-1-desktop@2x.webp 2x" />
+
+                <!-- 1х: 130px; 2x: 260px -->
+                <source media="(max-width: 767px)"
+                  srcset="img/catalog-1-mobile@1x.jpg 1x, img/catalog-1-mobile@2x.jpg 2x" />
+                <!-- 1х: 324px; 2x: 648px -->
+                <source media="(max-width: 1023px)"
+                  srcset="img/catalog-1-tablet@1x.jpg 1x, img/catalog-1-tablet@2x.jpg 2x" />
+                <!-- 1х: 270px; 2x: 540px -->
+                <img src="img/catalog-1-desktop@1x.jpg" srcset="img/catalog-1-desktop@2x.jpg 2x" alt="Jewellery"
+                  width="270" height="272" />
+              </picture>
+              <h3>Double pearl earrings</h3>
+              <p>&#36; 115</p>
+            </a>
+          </article>
+
+          <article class="catalog__card">
+            <a class="catalog__link" href="#">
+              <picture>
+                <source type="image/webp" media="(max-width: 767px)"
+                  srcset="img/catalog-2-mobile@1x.webp 1x, img/catalog-2-mobile@2x.webp 2x" />
+                <source type="image/webp" media="(max-width: 1023px)"
+                  srcset="img/catalog-2-tablet@1x.webp 1x, img/catalog-2-tablet@2x.webp 2x" />
+                <source type="image/webp" srcset="img/catalog-2-desktop@1x.webp 1x, img/catalog-2-desktop@2x.webp 2x" />
+
+                <!-- 1х: 130px; 2x: 260px -->
+                <source media="(max-width: 767px)"
+                  srcset="img/catalog-2-mobile@1x.jpg 1x, img/catalog-2-mobile@2x.jpg 2x" />
+                <!-- 1х: 324px; 2x: 648px -->
+                <source media="(max-width: 1023px)"
+                  srcset="img/catalog-2-tablet@1x.jpg 1x, img/catalog-2-tablet@2x.jpg 2x" />
+                <!-- 1х: 270px; 2x: 540px -->
+                <img src="img/catalog-2-desktop@1x.jpg" srcset="img/catalog-2-desktop@2x.jpg 2x" alt="Jewellery"
+                  width="270" height="272" />
+              </picture>
+              <h3>Choker with gold bead</h3>
+              <p>&#36; 55</p>
+            </a>
+          </article>
+
+          <article class="catalog__card">
+            <a class="catalog__link" href="#">
+              <picture>
+                <source type="image/webp" media="(max-width: 767px)"
+                  srcset="img/catalog-3-mobile@1x.webp 1x, img/catalog-3-mobile@2x.webp 2x" />
+                <source type="image/webp" media="(max-width: 1023px)"
+                  srcset="img/catalog-3-tablet@1x.webp 1x, img/catalog-3-tablet@2x.webp 2x" />
+                <source type="image/webp" srcset="img/catalog-3-desktop@1x.webp 1x, img/catalog-3-desktop@2x.webp 2x" />
+
+                <!-- 1х: 130px; 2x: 260px -->
+                <source media="(max-width: 767px)"
+                  srcset="img/catalog-3-mobile@1x.jpg 1x, img/catalog-3-mobile@2x.jpg 2x" />
+                <!-- 1х: 324px; 2x: 648px -->
+                <source media="(max-width: 1023px)"
+                  srcset="img/catalog-3-tablet@1x.jpg 1x, img/catalog-3-tablet@2x.jpg 2x" />
+                <!-- 1х: 270px; 2x: 540px -->
+                <img src="img/catalog-3-desktop@1x.jpg" srcset="img/catalog-3-desktop@2x.jpg 2x" alt="Jewellery"
+                  width="270" height="272" />
+              </picture>
+              <h3>Gold layered necklace</h3>
+              <p>&#36; 155</p>
+            </a>
+          </article>
+
+          <article class="catalog__card">
+            <a class="catalog__link" href="#">
+              <picture>
+                <source type="image/webp" media="(max-width: 767px)"
+                  srcset="img/catalog-4-mobile@1x.webp 1x, img/catalog-4-mobile@2x.webp 2x" />
+                <source type="image/webp" media="(max-width: 1023px)"
+                  srcset="img/catalog-4-tablet@1x.webp 1x, img/catalog-4-tablet@2x.webp 2x" />
+                <source type="image/webp" srcset="img/catalog-4-desktop@1x.webp 1x, img/catalog-4-desktop@2x.webp 2x" />
+
+                <!-- 1х: 130px; 2x: 260px -->
+                <source media="(max-width: 767px)"
+                  srcset="img/catalog-4-mobile@1x.jpg 1x, img/catalog-4-mobile@2x.jpg 2x" />
+                <!-- 1х: 324px; 2x: 648px -->
+                <source media="(max-width: 1023px)"
+                  srcset="img/catalog-4-tablet@1x.jpg 1x, img/catalog-4-tablet@2x.jpg 2x" />
+                <!-- 1х: 270px; 2x: 540px -->
+                <img src="img/catalog-4-desktop@1x.jpg" srcset="img/catalog-4-desktop@2x.jpg 2x" alt="Jewellery"
+                  width="270" height="272" />
+              </picture>
+              <h3>Blue gemstone pendant</h3>
+              <p>&#36; 105</p>
+            </a>
+          </article>
+
+          <article class="catalog__card">
+            <a class="catalog__link" href="#">
+              <picture>
+                <source type="image/webp" media="(max-width: 767px)"
+                  srcset="img/catalog-5-mobile@1x.webp 1x, img/catalog-5-mobile@2x.webp 2x" />
+                <source type="image/webp" media="(max-width: 1023px)"
+                  srcset="img/catalog-5-tablet@1x.webp 1x, img/catalog-5-tablet@2x.webp 2x" />
+                <source type="image/webp" srcset="img/catalog-5-desktop@1x.webp 1x, img/catalog-5-desktop@2x.webp 2x" />
+
+                <!-- 1х: 130px; 2x: 260px -->
+                <source media="(max-width: 767px)"
+                  srcset="img/catalog-5-mobile@1x.jpg 1x, img/catalog-5-mobile@2x.jpg 2x" />
+                <!-- 1х: 324px; 2x: 648px -->
+                <source media="(max-width: 1023px)"
+                  srcset="img/catalog-5-tablet@1x.jpg 1x, img/catalog-5-tablet@2x.jpg 2x" />
+                <!-- 1х: 270px; 2x: 540px -->
+                <img src="img/catalog-5-desktop@1x.jpg" srcset="img/catalog-5-desktop@2x.jpg 2x" alt="Jewellery"
+                  width="270" height="272" />
+              </picture>
+              <h3>Boho earrings</h3>
+              <p>&#36; 75</p>
+            </a>
+          </article>
+
+          <article class="catalog__card">
+            <a class="catalog__link" href="#">
+              <picture>
+                <source type="image/webp" media="(max-width: 767px)"
+                  srcset="img/catalog-6-mobile@1x.webp 1x, img/catalog-6-mobile@2x.webp 2x" />
+                <source type="image/webp" media="(max-width: 1023px)"
+                  srcset="img/catalog-6-tablet@1x.webp 1x, img/catalog-6-tablet@2x.webp 2x" />
+                <source type="image/webp" srcset="img/catalog-6-desktop@1x.webp 1x, img/catalog-6-desktop@2x.webp 2x" />
+
+                <!-- 1х: 130px; 2x: 260px -->
+                <source media="(max-width: 767px)"
+                  srcset="img/catalog-6-mobile@1x.jpg 1x, img/catalog-6-mobile@2x.jpg 2x" />
+                <!-- 1х: 324px; 2x: 648px -->
+                <source media="(max-width: 1023px)"
+                  srcset="img/catalog-6-tablet@1x.jpg 1x, img/catalog-6-tablet@2x.jpg 2x" />
+                <!-- 1х: 270px; 2x: 540px -->
+                <img src="img/catalog-6-desktop@1x.jpg" srcset="img/catalog-6-desktop@2x.jpg 2x" alt="Jewellery"
+                  width="270" height="272" />
+              </picture>
+              <h3>Gold bird necklace</h3>
+              <p>&#36; 135</p>
+            </a>
+          </article>
+
+          <article class="catalog__card">
+            <a class="catalog__link" href="#">
+              <picture>
+                <source type="image/webp" media="(max-width: 767px)"
+                  srcset="img/catalog-7-mobile@1x.webp 1x, img/catalog-7-mobile@2x.webp 2x" />
+                <source type="image/webp" media="(max-width: 1023px)"
+                  srcset="img/catalog-7-tablet@1x.webp 1x, img/catalog-7-tablet@2x.webp 2x" />
+                <source type="image/webp" srcset="img/catalog-7-desktop@1x.webp 1x, img/catalog-7-desktop@2x.webp 2x" />
+
+                <!-- 1х: 130px; 2x: 260px -->
+                <source media="(max-width: 767px)"
+                  srcset="img/catalog-7-mobile@1x.jpg 1x, img/catalog-7-mobile@2x.jpg 2x" />
+                <!-- 1х: 324px; 2x: 648px -->
+                <source media="(max-width: 1023px)"
+                  srcset="img/catalog-7-tablet@1x.jpg 1x, img/catalog-7-tablet@2x.jpg 2x" />
+                <!-- 1х: 270px; 2x: 540px -->
+                <img src="img/catalog-7-desktop@1x.jpg" srcset="img/catalog-7-desktop@2x.jpg 2x" alt="Jewellery"
+                  width="270" height="272" />
+              </picture>
+              <h3>Black leather choker</h3>
+              <p>&#36; 85</p>
+            </a>
+          </article>
+
+          <article class="catalog__card">
+            <a class="catalog__link" href="#">
+              <picture>
+                <source type="image/webp" media="(max-width: 767px)"
+                  srcset="img/catalog-8-mobile@1x.webp 1x, img/catalog-8-mobile@2x.webp 2x" />
+                <source type="image/webp" media="(max-width: 1023px)"
+                  srcset="img/catalog-8-tablet@1x.webp 1x, img/catalog-8-tablet@2x.webp 2x" />
+                <source type="image/webp" srcset="img/catalog-8-desktop@1x.webp 1x, img/catalog-8-desktop@2x.webp 2x" />
+
+                <!-- 1х: 130px; 2x: 260px -->
+                <source media="(max-width: 767px)"
+                  srcset="img/catalog-8-mobile@1x.jpg 1x, img/catalog-8-mobile@2x.jpg 2x" />
+                <!-- 1х: 324px; 2x: 648px -->
+                <source media="(max-width: 1023px)"
+                  srcset="img/catalog-8-tablet@1x.jpg 1x, img/catalog-8-tablet@2x.jpg 2x" />
+                <!-- 1х: 270px; 2x: 540px -->
+                <img src="img/catalog-8-desktop@1x.jpg" srcset="img/catalog-8-desktop@2x.jpg 2x" alt="Jewellery"
+                  width="270" height="272" />
+              </picture>
+              <h3>Necklace with amethyst</h3>
+              <p>&#36; 145</p>
+            </a>
+          </article>
+
+          <article class="catalog__card">
+            <a class="catalog__link" href="#">
+              <picture>
+                <source type="image/webp" media="(max-width: 767px)"
+                  srcset="img/catalog-9-mobile@1x.webp 1x, img/catalog-9-mobile@2x.webp 2x" />
+                <source type="image/webp" media="(max-width: 1023px)"
+                  srcset="img/catalog-9-tablet@1x.webp 1x, img/catalog-9-tablet@2x.webp 2x" />
+                <source type="image/webp" srcset="img/catalog-9-desktop@1x.webp 1x, img/catalog-9-desktop@2x.webp 2x" />
+
+                <!-- 1х: 130px; 2x: 260px -->
+                <source media="(max-width: 767px)"
+                  srcset="img/catalog-9-mobile@1x.jpg 1x, img/catalog-9-mobile@2x.jpg 2x" />
+                <!-- 1х: 324px; 2x: 648px -->
+                <source media="(max-width: 1023px)"
+                  srcset="img/catalog-9-tablet@1x.jpg 1x, img/catalog-9-tablet@2x.jpg 2x" />
+                <!-- 1х: 270px; 2x: 540px -->
+                <img src="img/catalog-9-desktop@1x.jpg" srcset="img/catalog-9-desktop@2x.jpg 2x" alt="Jewellery"
+                  width="270" height="272" />
+              </picture>
+              <h3>Elephant earrings</h3>
+              <p>&#36; 95</p>
+            </a>
+          </article>
+
+          <article class="catalog__card">
+            <a class="catalog__link" href="#">
+              <picture>
+                <source type="image/webp" media="(max-width: 767px)"
+                  srcset="img/catalog-10-mobile@1x.webp 1x, img/catalog-10-mobile@2x.webp 2x" />
+                <source type="image/webp" media="(max-width: 1023px)"
+                  srcset="img/catalog-10-tablet@1x.webp 1x, img/catalog-10-tablet@2x.webp 2x" />
+                <source type="image/webp"
+                  srcset="img/catalog-10-desktop@1x.webp 1x, img/catalog-10-desktop@2x.webp 2x" />
+
+                <!-- 1х: 130px; 2x: 260px -->
+                <source media="(max-width: 767px)"
+                  srcset="img/catalog-10-mobile@1x.jpg 1x, img/catalog-10-mobile@2x.jpg 2x" />
+                <!-- 1х: 324px; 2x: 648px -->
+                <source media="(max-width: 1023px)"
+                  srcset="img/catalog-10-tablet@1x.jpg 1x, img/catalog-10-tablet@2x.jpg 2x" />
+                <!-- 1х: 270px; 2x: 540px -->
+                <img src="img/catalog-10-desktop@1x.jpg" srcset="img/catalog-10-desktop@2x.jpg 2x" alt="Jewellery"
+                  width="270" height="272" />
+              </picture>
+              <h3>Threader necklace</h3>
+              <p>&#36; 115</p>
+            </a>
+          </article>
+
+          <article class="catalog__card">
+            <a class="catalog__link" href="#">
+              <picture>
+                <source type="image/webp" media="(max-width: 767px)"
+                  srcset="img/catalog-11-mobile@1x.webp 1x, img/catalog-11-mobile@2x.webp 2x" />
+                <source type="image/webp" media="(max-width: 1023px)"
+                  srcset="img/catalog-11-tablet@1x.webp 1x, img/catalog-11-tablet@2x.webp 2x" />
+                <source type="image/webp"
+                  srcset="img/catalog-11-desktop@1x.webp 1x, img/catalog-11-desktop@2x.webp 2x" />
+
+                <!-- 1х: 130px; 2x: 260px -->
+                <source media="(max-width: 767px)"
+                  srcset="img/catalog-11-mobile@1x.jpg 1x, img/catalog-11-mobile@2x.jpg 2x" />
+                <!-- 1х: 324px; 2x: 648px -->
+                <source media="(max-width: 1023px)"
+                  srcset="img/catalog-11-tablet@1x.jpg 1x, img/catalog-11-tablet@2x.jpg 2x" />
+                <!-- 1х: 270px; 2x: 540px -->
+                <img src="img/catalog-11-desktop@1x.jpg" srcset="img/catalog-11-desktop@2x.jpg 2x" alt="Jewellery"
+                  width="270" height="272" />
+              </picture>
+              <h3>Origami crane necklace</h3>
+              <p>&#36; 105</p>
+            </a>
+          </article>
+
+          <article class="catalog__card">
+            <a class="catalog__link" href="#">
+              <picture>
+                <source type="image/webp" media="(max-width: 767px)"
+                  srcset="img/catalog-12-mobile@1x.webp 1x, img/catalog-12-mobile@2x.webp 2x" />
+                <source type="image/webp" media="(max-width: 1023px)"
+                  srcset="img/catalog-12-tablet@1x.webp 1x, img/catalog-12-tablet@2x.webp 2x" />
+                <source type="image/webp"
+                  srcset="img/catalog-12-desktop@1x.webp 1x, img/catalog-12-desktop@2x.webp 2x" />
+
+                <!-- 1х: 130px; 2x: 260px -->
+                <source media="(max-width: 767px)"
+                  srcset="img/catalog-12-mobile@1x.jpg 1x, img/catalog-12-mobile@2x.jpg 2x" />
+                <!-- 1х: 324px; 2x: 648px -->
+                <source media="(max-width: 1023px)"
+                  srcset="img/catalog-12-tablet@1x.jpg 1x, img/catalog-12-tablet@2x.jpg 2x" />
+                <!-- 1х: 270px; 2x: 540px -->
+                <img src="img/catalog-12-desktop@1x.jpg" srcset="img/catalog-12-desktop@2x.jpg 2x" alt="Jewellery"
+                  width="270" height="272" />
+              </picture>
+              <h3>Marble earrings</h3>
+              <p>&#36; 95</p>
+            </a>
+          </article>
+
+          <div class="pagination">
+            <a href="#">Previous</a>
+            <ul class="pagination__list">
+              <li class="pagination__item"><a class="pagination__link pagination__link--active" href="#">1</a></li>
+              <li class="pagination__item"><a class="pagination__link" href="#">2</a></li>
+              <li class="pagination__item"><a class="pagination__link" href="#">3</a></li>
+              <li class="pagination__item"><a class="pagination__link" href="#">4</a></li>
+              <li class="pagination__item"><a class="pagination__link" href="#">5</a></li>
+            </ul>
+            <a href="#">Next</a>
+          </div>
+        </section>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__wrap">
+      <section class="subscription">
+        <h2>The good stuff in your inbox</h2>
+        <p>News and updates from CH. No spam, we promise.</p>
+        <form class="subscription__form" action="#" method="post">
+          <div class="subscription__box">
+            <label class="visually-hidden" for="subscription-field">Дeave your contacts for subscription</label>
+            <input id="subscription-field" type="email" name="subscription" autocomplete="off"
+              placeholder="Your E-mail">
+            <button class="subscription__btn">Sign Up
+              <svg width="29" height="9" viewBox="0 0 29 9" aria-hidden="true">
+                <use xlink:href="img/sprite_auto.svg#icon-arrow"></use>
+              </svg>
+            </button>
+          </div>
+        </form>
+      </section>
+
+      <ul class="information">
+        <li class="information__item">
+          <a class="information__link" href="#">Ordering & Payment</a>
+        </li>
+        <li class="information__item">
+          <a class="information__link" href="#">Terms & Conditions</a>
+        </li>
+        <li class="information__item">
+          <a class="information__link" href="#">Returns & Exchanges</a>
+        </li>
+        <li class="information__item">
+          <a class="information__link" href="#">Delivery</a>
+        </li>
+        <li class="information__item">
+          <a class="information__link" href="#">About CH</a>
+        </li>
+        <li class="information__item">
+          <a class="information__link" href="#">Stores & Hours</a>
+        </li>
+        <li class="information__item">
+          <a class="information__link" href="#">Jobs</a>
+        </li>
+        <li class="information__item">
+          <a class="information__link" href="#">Contact Us</a>
+        </li>
+      </ul>
+
+      <ul class="social">
+        <li class="social__item">
+          <a class="social__link" href="https://www.facebook.com/">
+            <svg width="8" height="15" viewBox="0 0 8 15" aria-hidden="true">
+              <use xlink:href="img/sprite_auto.svg#icon-fb"></use>
+            </svg>
+            Facebook
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link" href="https://www.instagram.com/">
+            <svg width="15" height="15" viewBox="0 0 15 15" aria-hidden="true">
+              <use xlink:href="img/sprite_auto.svg#icon-inst"></use>
+            </svg>
+            Instagram
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link" href="https://www.pinterest.ru/">
+            <svg width="15" height="15" viewBox="0 0 15 15" aria-hidden="true">
+              <use xlink:href="img/sprite_auto.svg#icon-pint"></use>
+            </svg>
+            Pinterest
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link" href="https://twitter.com/">
+            <svg width="15" height="13" viewBox="0 0 15 13" aria-hidden="true">
+              <use xlink:href="img/sprite_auto.svg#icon-twitter"></use>
+            </svg>
+            Twitter
+          </a>
+        </li>
+      </ul>
+    </div>
+  </footer>
+
+  <div class="authorization">
+    <div class="authorization__wrap">
+      <h2>Log In</h2>
+      <form class="authorization__form" action="https://echo.htmlacademy.ru" method="post">
+        <div class="authorization__item">
+          <label for="user-mail">Your E-mail</label>
+          <input id="user-mail" type="email" name="email" autocomplete="off" placeholder="Your E-mail">
+          <p id="message-mail"></p>
+        </div>
+
+        <div class="authorization__item">
+          <label for="user-password">Password</label>
+          <input id="user-password" type="password" name="password" autocomplete="off" maxlength="8" minlength="6"
+            placeholder="Password">
+          <p id="message-password"></p>
+          <a class="authorization__reminder" href="#">Forgot your password?</a>
+        </div>
+
+        <button class="authorization__entry" type="submit">Log In</button>
+        <div class="authorization__box">
+          <p>Don’t have an account?</p>
+          <a class="authorization__registration" href="#">Sign up</a>
+        </div>
+        <button class="authorization__close" type="button" aria-label="Close form"></button>
+      </form>
+    </div>
+  </div>
+
+  <section class="success">
+    <h2 class="visually-hidden">Information message</h2>
+    <div class="success__inner">
+      <p class="success__message">Add to cart</p>
+      <button class="success__button" type="submit" aria-label="Понятно">Понятно</button>
+      <button class="success__close" type="button" aria-label="Закрыть форму"></button>
+    </div>
+  </section>
+
+  <script src="js/vendor.js" defer></script>
+  <script src="js/main.js" defer></script>
+</body>
+
+</html>
