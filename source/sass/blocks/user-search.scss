@@ -1,0 +1,37 @@
+.user-search {
+  @media (max-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.user-search__box {
+  position: relative;
+}
+
+.user-search__box svg {
+  position: absolute;
+  top: 9px;
+}
+
+.user-search__box input {
+  font-size: 14px;
+  line-height: calc(21 / 14);
+  color: $text;
+
+  border: none;
+  width: 200px;
+  height: 30px;
+  padding-left: 20px;
+  background-color: transparent;
+  transition: all 0.4s ease;
+}
+
+.user-search__box input::placeholder {
+  color: $decor-2;
+}
+
+.user-search__box input:hover,
+.user-search__box input:focus,
+.user-search__box input:active {
+  box-shadow: 0 1px 0 0 $black;
+}

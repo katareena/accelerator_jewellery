@@ -29,35 +29,53 @@
 <body>
   <header class="header">
     <h1 class="visually-hidden">Jewellery store and workshop</h1>
-    <div class="header__wrap">
 
-      <div class="header__inner">
-        <div class="user-search">
-          <form class="user-search__form" action="#" method="get">
-            <div class="user-search__box">
-              <svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true">
-                <use xlink:href="img/sprite_auto.svg#icon-loupe"></use>
-              </svg>
-              <label class="visually-hidden" for="search-field">Field of searching</label>
-              <input id="search-field" type="search" name="search" autocomplete="off" placeholder="Type here to search">
-            </div>
-          </form>
-        </div>
+    <div class="header__inner">
 
-        <a class="header__logo header__decor-line"><img src="img/logo-white-theme.svg" width="104" height="40" alt="Logotype Jewellery store"></a>
-
-        <ul class="user-nav">
-          <li class="user-nav__item">
-            <a class="user-nav__link" href="authorization.html">Login</a>
-          </li>
-          <li class="user-nav__item">
-            <a class="user-nav__link" href="#">Cart <span>0</span></a>
-          </li>
-        </ul>
+      <div class="user-search">
+        <form class="user-search__form" action="https://echo.htmlacademy.ru" method="get">
+          <div class="user-search__box">
+            <svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true">
+              <use xlink:href="img/sprite_auto.svg#icon-loupe"></use>
+            </svg>
+            <label class="visually-hidden" for="search-field">Field of searching</label>
+            <input id="search-field" type="search" name="search" autocomplete="off" placeholder="Type here to search">
+          </div>
+        </form>
       </div>
 
-      <div class="header__inner">
-        <nav class="site-nav">
+      <button class="header__menu-btn"></button>
+
+      <a class="header__logo header__logo-pointer"><img src="img/logo-white-theme.svg" width="66" height="66" alt="Logotype Jewellery store"></a>
+
+      <ul class="user-nav">
+        <li class="user-nav__item user-nav__item--login">
+          <a class="user-nav__link" href="authorization.html">Login</a>
+        </li>
+        <li class="user-nav__item">
+          <a class="user-nav__link user-nav__link--basket" href="#">
+            <p>Cart <span>0</span></p>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="menu menu--open">
+
+      <div class="menu-search">
+        <form class="menu-search__form" action="https://echo.htmlacademy.ru" method="get">
+          <div class="menu-search__box">
+            <svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true">
+              <use xlink:href="img/sprite_auto.svg#icon-loupe"></use>
+            </svg>
+            <label class="visually-hidden" for="search">Field of searching</label>
+            <input id="search" type="search" name="search" autocomplete="off" placeholder="Type here to search">
+          </div>
+        </form>
+      </div>
+
+      <nav class="site-nav">
+        <div class="site-nav__inner">
           <ul class="site-nav__list">
             <li class="site-nav__item">
               <a class="site-nav__link site-nav__link--transporter" href="#">What’s new</a>
@@ -75,8 +93,22 @@
               <a class="site-nav__link site-nav__link--technic" href="#">Earrings</a>
             </li>
           </ul>
-        </nav>
-      </div>
+        </div>
+      </nav>
+
+      <ul class="header__info-list">
+        <li class="header__info-item">
+          <a href="#">About CH</a>
+        </li>
+        <li class="header__info-item">
+          <a href="#">Stores & Hours</a>
+        </li>
+        <li class="header__info-item">
+          <a href="#">Contact Us</a>
+        </li>
+      </ul>
+
+      <a class="header__login" href="authorization.html">Login</a>
 
     </div>
   </header>
@@ -134,7 +166,7 @@
         <p>News and updates from CH. No spam, we promise.</p>
         <form class="subscription__form" action="#" method="post">
           <div class="subscription__box">
-            <label class="visually-hidden" for="subscription-field">Дeave your contacts for subscription</label>
+            <label class="visually-hidden" for="subscription-field">Leave your contacts for subscription</label>
             <input id="subscription-field" type="email" name="subscription" autocomplete="off" placeholder="Your E-mail">
             <button class="subscription__btn">Sign Up
               <svg width="29" height="9" viewBox="0 0 29 9" aria-hidden="true">

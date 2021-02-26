@@ -1,0 +1,59 @@
+.user-nav {
+  @include list-reset;
+  display: flex;
+}
+
+.user-nav__item:not(:last-child) {
+  margin-right: 35px;
+}
+
+.user-nav__item {
+  display: flex;
+  align-items: center;
+}
+
+.user-nav__item--login {
+  @media (max-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.user-nav__link {
+  font-size: 14px;
+  line-height: calc(21 / 14);
+}
+
+.user-nav__link--basket {
+  @media (max-width: $tablet-width) {
+    background-color: yellowgreen;
+
+    display: block;
+    width: 40px;
+    height: 40px;
+    border: none;
+    background-color: red;
+    background-image: url("../img/icon-basket.svg");
+    background-size: 18px;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: 0;
+    z-index: 30;
+  }
+}
+
+.user-nav__link--basket p {
+  @media (max-width: $tablet-width) {
+    display: none;
+  }
+}
+
+// .user-nav__link:hover,
+// .user-nav__link:focus {
+//   color: $decor-1;
+// }
+
+// .user-nav__link:active {
+//   color: rgba($decor-1, 0.6);
+// }

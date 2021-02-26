@@ -40,4 +40,14 @@ img {
 a {
   text-decoration: none;
   color: $text;
+  transition: all 0.2s ease;
+
+  &:hover,
+  &:focus {
+    color: $decor-1;
+  }
+
+  &:active {
+    color: rgba($decor-1, 0.6);
+  }
 }

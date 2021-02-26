@@ -1,0 +1,73 @@
+.header {
+  width: 100%;
+}
+
+.header__inner {
+  width: 100%;
+  min-width: 1024px;
+  max-width: 1230px;
+  padding-left: 30px;
+  padding-right: 30px;
+  min-height: 115px;
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media (max-width: $tablet-width) {
+    min-width: 768px;
+    max-width: 1023px;
+    min-height: 126px;
+  }
+}
+
+.header__menu-btn {
+  display: none;
+
+  @media (max-width: $tablet-width) {
+    display: block;
+    width: 40px;
+    height: 40px;
+    border: none;
+    background-color: red;
+    background-image: url("../img/icon-burger.svg");
+    background-repeat: no-repeat;
+    background-size: 18px;
+    background-position: center;
+    cursor: pointer;
+    z-index: 30;
+  }
+}
+
+.header__logo {
+  margin-left: -70px;
+}
+
+.header__logo-pointer {
+  cursor: pointer;
+}
+
+// .header__basket-btn {
+//   display: none;
+
+//   @media (max-width: $tablet-width) {
+//     display: block;
+//   }
+// }
+
+.header__info-list {
+  display: none;
+
+  @media (max-width: $tablet-width) {
+    display: block;
+  }
+}
+
+.header__login {
+  display: none;
+
+  @media (max-width: $tablet-width) {
+    display: block;
+  }
+}
