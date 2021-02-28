@@ -1,10 +1,25 @@
 .user-nav {
   @include list-reset;
   display: flex;
+
+  @media (max-width: $tablet-width) {
+    position: absolute;
+    left: 45px;
+    bottom: 89px;
+  }
+
+  @media (max-width: $mobile-width) {
+    left: 15px;
+    bottom: 100px;
+  }
 }
 
 .user-nav__item:not(:last-child) {
   margin-right: 35px;
+
+  @media (max-width: $tablet-width) {
+    margin-right: 0;
+  }
 }
 
 .user-nav__item {
@@ -12,48 +27,21 @@
   align-items: center;
 }
 
-.user-nav__item--login {
-  @media (max-width: $tablet-width) {
-    display: none;
-  }
-}
-
 .user-nav__link {
   font-size: 14px;
   line-height: calc(21 / 14);
-}
+  margin-top: -10px;
+  letter-spacing: 0.2px;
 
-.user-nav__link--basket {
   @media (max-width: $tablet-width) {
-    background-color: yellowgreen;
-
-    display: block;
-    width: 40px;
-    height: 40px;
-    border: none;
-    background-color: red;
-    background-image: url("../img/icon-basket.svg");
-    background-size: 18px;
-    background-repeat: no-repeat;
-    background-position: center;
-    cursor: pointer;
-    margin-left: auto;
-    margin-right: 0;
-    z-index: 30;
+    color: $white;
+    font-size: 18px;
+    line-height: calc(23 / 18);
   }
 }
 
-.user-nav__link--basket p {
+.user-nav__item--basket {
   @media (max-width: $tablet-width) {
     display: none;
   }
 }
-
-// .user-nav__link:hover,
-// .user-nav__link:focus {
-//   color: $decor-1;
-// }
-
-// .user-nav__link:active {
-//   color: rgba($decor-1, 0.6);
-// }

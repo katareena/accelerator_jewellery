@@ -1,37 +1,81 @@
 .user-search {
+  margin-top: -10px;
+
   @media (max-width: $tablet-width) {
-    display: none;
+    width: 100%;
+    margin-top: 0;
   }
 }
 
 .user-search__box {
   position: relative;
+
+  @media (max-width: $tablet-width) {
+    width: 100%;
+  }
 }
 
 .user-search__box svg {
   position: absolute;
-  top: 9px;
+  top: 5px;
+  fill: $black;
+  transition: all 0.2s ease;
+
+  @media (max-width: $tablet-width) {
+    top: 11px;
+    left: 12px;
+    fill: $white;
+  }
 }
 
 .user-search__box input {
+  font-family: "Poppins", "Tahoma", sans-serif;
   font-size: 14px;
   line-height: calc(21 / 14);
+  letter-spacing: 0.1px;
   color: $text;
 
   border: none;
   width: 200px;
   height: 30px;
-  padding-left: 20px;
+  padding-left: 28px;
   background-color: transparent;
   transition: all 0.4s ease;
+
+  @media (max-width: $tablet-width) {
+    width: inherit;
+    height: 40px;
+    padding-left: 36px;
+    padding-right: 20px;
+    background-color: rgba($white, 0.15);
+    border-radius: 21px;
+  }
 }
 
 .user-search__box input::placeholder {
-  color: $decor-2;
+  color: $text;
+
+  @media (max-width: $tablet-width) {
+    color: rgba($white, 0.02);
+  }
 }
 
 .user-search__box input:hover,
 .user-search__box input:focus,
 .user-search__box input:active {
   box-shadow: 0 1px 0 0 $black;
+
+  @media (max-width: $tablet-width) {
+    box-shadow: none;
+    background-color: rgba($white, 0.4);
+  }
+}
+
+.user-search__box:hover > svg,
+.user-search__box:focus > svg,
+.user-search__box:active > svg {
+  @media (max-width: $tablet-width) {
+    fill: $decor-2;
+    transition: all 0.2s ease;
+  }
 }

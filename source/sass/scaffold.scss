@@ -41,6 +41,7 @@ a {
   text-decoration: none;
   color: $text;
   transition: all 0.2s ease;
+  cursor: pointer;
 
   &:hover,
   &:focus {
@@ -50,4 +51,8 @@ a {
   &:active {
     color: rgba($decor-1, 0.6);
   }
+}
+
+svg {
+  fill: currentColor;
 }
