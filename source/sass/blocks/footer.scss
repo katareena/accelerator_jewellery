@@ -1,10 +1,9 @@
 .footer {
   width: 100%;
-  padding-top: 90px;
+  padding-top: 75px;
   padding-bottom: 100px;
   background-color: $black;
   color: $white;
-  // position: relative;
 
   @media (max-width: $tablet-width) {
     padding-top: 50px;
@@ -18,10 +17,8 @@
   max-width: 1230px;
   padding-left: 30px;
   padding-right: 30px;
-  // min-height: 115px;
   margin: 0 auto;
   display: flex;
-  justify-content: space-between;
   align-items: center;
 
   @media (max-width: $tablet-width) {
@@ -35,13 +32,34 @@
   }
 
   @media (max-width: $mobile-width) {
-    min-width: 320px;
-    max-width: 767px;
+    width: 320px;
+    flex-shrink: 0;
+    max-width: none;
+    min-width: 0;
     padding-left: 15px;
     padding-right: 15px;
+    margin: 0 auto;
   }
 }
 
 .footer__inner {
   display: flex;
+  justify-content: space-between;
+  margin-top: 11px;
+  width: 100%;
+  min-width: 505px;
+  max-width: 580px;
+
+  @media (max-width: $tablet-width) {
+    min-width: 493px;
+    max-width: 572px;
+  }
+
+  @media (max-width: $mobile-width) {
+    width: 320px;
+    flex-shrink: 0;
+    max-width: none;
+    min-width: 0;
+    flex-direction: column;
+  }
 }

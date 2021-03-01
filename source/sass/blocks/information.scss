@@ -1,3 +1,48 @@
 .information {
   display: flex;
+  width: 100%;
+  min-width: 320px;
+  max-width: 360px;
+  padding-left: 4px;
+  justify-content: space-between;
+
+  @media (max-width: $tablet-width) {
+    min-width: 295px;
+    max-width: 374px;
+    padding-left: 0;
+  }
+
+  @media (max-width: $mobile-width) {
+    width: 320px;
+    flex-shrink: 0;
+    max-width: none;
+    min-width: none;
+    flex-direction: column;
+    margin-right: 0;
+    margin-bottom: 37px;
+  }
+}
+
+.information__list {
+  @include list-reset;
+}
+
+.information__list:not(:last-child) {
+  @media (max-width: $tablet-width) {
+    margin-right: 87px;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+}
+
+.information__item {
+  padding-top: 10px;
+  padding-bottom: 11px;
+}
+
+.information__link {
+  color: $white;
 }
