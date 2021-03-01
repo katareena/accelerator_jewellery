@@ -1,0 +1,36 @@
+.footer {
+  width: 100%;
+  background-color: $black;
+  color: $white;
+  // position: relative;
+}
+
+.footer__wrap {
+  width: 100%;
+  min-width: 1024px;
+  max-width: 1230px;
+  padding-left: 30px;
+  padding-right: 30px;
+  min-height: 115px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  // @media (max-width: $tablet-width) {
+  //   min-width: auto;
+  //   max-width: auto;
+  //   min-height: auto;
+  //   height: 40px;
+  //   padding: 0;
+  //   margin-bottom: 34px;
+  // }
+
+  // @media (max-width: $mobile-width) {
+  //   margin-bottom: 24px;
+  // }
+}
+
+// .footer__inner {
+
+// }

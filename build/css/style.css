@@ -161,7 +161,7 @@ svg {
   @media (max-width: 1023px) {
     .header__inner {
       min-width: auto;
-      max-width: auto;
+      max-width: none;
       min-height: auto;
       height: 40px;
       padding: 0;
@@ -523,7 +523,7 @@ svg {
   @media (max-width: 1023px) {
     .site-nav__inner {
       min-width: auto;
-      max-width: auto;
+      max-width: none;
       padding: 0; } }
 
 .site-nav__list {
@@ -579,5 +579,34 @@ svg {
     font-size: 24px;
     line-height: calc(36 / 24);
     color: #ffffff; } }
+
+.footer {
+  width: 100%;
+  background-color: #000000;
+  color: #ffffff; }
+
+.footer__wrap {
+  width: 100%;
+  min-width: 1024px;
+  max-width: 1230px;
+  padding-left: 30px;
+  padding-right: 30px;
+  min-height: 115px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+.authorization {
+  display: none; }
+
+.added {
+  display: none; }
 
 /*# sourceMappingURL=style.css.map */
