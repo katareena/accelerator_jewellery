@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Jewellery store</title>
+  <meta name="description" content="Jewellery store and workshop">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preload" href="fonts/poppins-v15-latin-regular.woff2" type="font/woff2" as="font">
+  <link rel="preload" href="fonts/poppins-v15-latin-500.woff2" type="font/woff2" as="font">
+  <link rel="preload" href="fonts/poppins-v15-latin-700.woff2" type="font/woff2" as="font">
+  <link rel="preload" href="fonts/cormorant-garamond-v9-latin-regular.woff2" type="font/woff2" as="font">
+  <link rel="preload" href="fonts/cormorant-garamond-v9-latin-italic.woff2" type="font/woff2" as="font">
+  <link rel="preload" href="fonts/cormorant-garamond-v9-latin-500italic.woff2" type="font/woff2" as="font">
+  <link rel="preload" href="fonts/cormorant-garamond-v9-latin-600.woff2" type="font/woff2" as="font">
+  <link rel="preload" href="fonts/cormorant-garamond-v9-latin-700.woff2" type="font/woff2" as="font">
+  <link rel="preload" crossorigin="anonymous" href="fonts/poppins-v15-latin-regular.woff" type="font/woff" as="font">
+  <link rel="preload" crossorigin="anonymous" href="fonts/poppins-v15-latin-500.woff" type="font/woff" as="font">
+  <link rel="preload" crossorigin="anonymous" href="fonts/poppins-v15-latin-700.woff" type="font/woff" as="font">
+  <link rel="preload" crossorigin="anonymous" href="fonts/cormorant-garamond-v9-latin-regular.woff" type="font/woff" as="font">
+  <link rel="preload" crossorigin="anonymous" href="fonts/cormorant-garamond-v9-latin-italic.woff" type="font/woff" as="font">
+  <link rel="preload" crossorigin="anonymous" href="fonts/cormorant-garamond-v9-latin-500italic.woff" type="font/woff" as="font">
+  <link rel="preload" crossorigin="anonymous" href="fonts/cormorant-garamond-v9-latin-600.woff" type="font/woff" as="font">
+  <link rel="preload" crossorigin="anonymous" href="fonts/cormorant-garamond-v9-latin-700.woff" type="font/woff" as="font">
+  <link href="css/style.min.css" rel="stylesheet">
+  <link rel="shortcut icon" href="img/favicon.ico">
+</head>
+
+<body>
+  <header class="header">
+    <h1 class="visually-hidden">Jewellery store and workshop</h1>
+
+    <div class="header__menu">
+      <button class="header__menu-btn header__menu-btn--burger-js">
+        <svg width="28" height="23" viewBox="0 0 28 23" aria-hidden="true">
+          <use xlink:href="img/sprite_auto.svg#icon-burger"></use>
+        </svg>
+      </button>
+      <a class="header__menu-logo" href="#">
+        <svg width="66" height="66" viewBox="0 0 66 66" aria-hidden="true">
+          <use xlink:href="img/sprite_auto.svg#icon-logo"></use>
+        </svg>
+      </a>
+      <a class="header__menu-btn header__menu-btn--basket-js" href="#">
+        <svg width="22" height="20" viewBox="0 0 21 20" aria-hidden="true">
+          <use xlink:href="img/sprite_auto.svg#icon-basket"></use>
+        </svg>
+      </a>
+    </div>
+
+    <div class="header__dropdown header__dropdown--open">
+
+      <div class="header__inner">
+
+        <div class="user-search">
+          <form class="user-search__form" action="https://echo.htmlacademy.ru" method="get">
+            <div class="user-search__box">
+              <svg width="18" height="21" viewBox="0 0 16 15" aria-hidden="true">
+                <use xlink:href="img/sprite_auto.svg#icon-loupe"></use>
+              </svg>
+              <input id="search-field" type="search" name="search" autocomplete="off" placeholder="Type here to search">
+              <label class="visually-hidden" for="search-field">Field of searching</label>
+            </div>
+          </form>
+        </div>
+
+        <a class="header__logo" href="#">
+          <svg width="66" height="66" viewBox="0 0 66 66" aria-hidden="true">
+            <use xlink:href="img/sprite_auto.svg#icon-logo"></use>
+          </svg>
+        </a>
+
+        <ul class="user-nav">
+          <li class="user-nav__item">
+            <a class="user-nav__link" href="authorization.html">Login</a>
+          </li>
+          <li class="user-nav__item user-nav__item--basket">
+            <a class="user-nav__link" href="#">
+              <p>Cart <span>0</span></p>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <nav class="site-nav">
+        <div class="site-nav__inner">
+          <ul class="site-nav__list">
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="#">What’s new</a>
+            </li>
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="#">Chokers</a>
+            </li>
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="#">Necklaces</a>
+            </li>
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="#">Rings</a>
+            </li>
+            <li class="site-nav__item">
+              <a class="site-nav__link site-nav__link--technic" href="#">Earrings</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <ul class="header__info-list">
+        <li class="header__info-item">
+          <a class="header__info-link" href="#">About CH</a>
+        </li>
+        <li class="header__info-item">
+          <a class="header__info-link" href="#">Stores & Hours</a>
+        </li>
+        <li class="header__info-item">
+          <a class="header__info-link" href="#">Contact Us</a>
+        </li>
+      </ul>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <section class="authorization">
+      <div class="authorization__wrap">
+        <h2>Log In</h2>
+        <form class="authorization__form" action="https://echo.htmlacademy.ru" method="post">
+          <div class="authorization__item">
+            <label for="user-mail">Your E-mail</label>
+            <input id="user-mail" type="email" name="email" autocomplete="off" placeholder="Your E-mail">
+            <p id="message-mail"></p>
+          </div>
+
+          <div class="authorization__item">
+            <label for="user-password">Password</label>
+            <input id="user-password" type="password" name="password" autocomplete="off" maxlength="8" minlength="6" placeholder="Password">
+            <p id="message-password"></p>
+            <a class="authorization__reminder" href="#">Forgot your password?</a>
+          </div>
+
+          <button class="authorization__entry" type="submit">Log In</button>
+          <div class="authorization__box">
+            <p>Don’t have an account?</p>
+            <a class="authorization__registration" href="#">Sign up</a>
+          </div>
+          <button class="authorization__close" type="button" aria-label="Close form"></button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer__wrap">
+      <section class="subscription">
+        <h2>The good stuff in your inbox</h2>
+        <p>News and updates from CH. No spam, we promise.</p>
+        <form class="subscription__form" action="#" method="post">
+          <div class="subscription__box">
+            <label class="visually-hidden" for="subscription-field">Leave your contacts for subscription</label>
+            <input id="subscription-field" type="email" name="subscription" autocomplete="off" placeholder="Your E-mail">
+            <button class="subscription__btn">Sign Up
+              <svg width="29" height="9" viewBox="0 0 29 9" aria-hidden="true">
+                <use xlink:href="img/sprite_auto.svg#icon-arrow"></use>
+              </svg>
+            </button>
+          </div>
+        </form>
+      </section>
+
+      <ul class="information">
+        <li class="information__item">
+          <a class="information__link" href="#">Ordering & Payment</a>
+        </li>
+        <li class="information__item">
+          <a class="information__link" href="#">Terms & Conditions</a>
+        </li>
+        <li class="information__item">
+          <a class="information__link" href="#">Returns & Exchanges</a>
+        </li>
+        <li class="information__item">
+          <a class="information__link" href="#">Delivery</a>
+        </li>
+        <li class="information__item">
+          <a class="information__link" href="#">About CH</a>
+        </li>
+        <li class="information__item">
+          <a class="information__link" href="#">Stores & Hours</a>
+        </li>
+        <li class="information__item">
+          <a class="information__link" href="#">Jobs</a>
+        </li>
+        <li class="information__item">
+          <a class="information__link" href="#">Contact Us</a>
+        </li>
+      </ul>
+
+      <ul class="social">
+        <li class="social__item">
+          <a class="social__link" href="https://www.facebook.com/">
+            <svg width="8" height="15" viewBox="0 0 8 15" aria-hidden="true">
+              <use xlink:href="img/sprite_auto.svg#icon-fb"></use>
+            </svg>
+            Facebook
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link" href="https://www.instagram.com/">
+            <svg width="15" height="15" viewBox="0 0 15 15" aria-hidden="true">
+              <use xlink:href="img/sprite_auto.svg#icon-inst"></use>
+            </svg>
+            Instagram
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link" href="https://www.pinterest.ru/">
+            <svg width="15" height="15" viewBox="0 0 15 15" aria-hidden="true">
+              <use xlink:href="img/sprite_auto.svg#icon-pint"></use>
+            </svg>
+            Pinterest
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link" href="https://twitter.com/">
+            <svg width="15" height="13" viewBox="0 0 15 13" aria-hidden="true">
+              <use xlink:href="img/sprite_auto.svg#icon-twitter"></use>
+            </svg>
+            Twitter
+          </a>
+        </li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="js/vendor.js" defer=""></script>
+  <script src="js/main.js" defer=""></script>
+</body>
+
+</html>
