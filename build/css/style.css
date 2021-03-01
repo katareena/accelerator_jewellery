@@ -100,7 +100,7 @@ body {
   font-family: "Poppins", "Tahoma", sans-serif;
   font-weight: 500;
   font-size: 16px;
-  line-height: calc(20.8 / 16);
+  line-height: calc(21 / 16);
   color: #1d1613;
   background-color: #ffffff;
   width: 100%;
@@ -582,8 +582,14 @@ svg {
 
 .footer {
   width: 100%;
+  padding-top: 90px;
+  padding-bottom: 100px;
   background-color: #000000;
   color: #ffffff; }
+  @media (max-width: 1023px) {
+    .footer {
+      padding-top: 50px;
+      padding-bottom: 60px; } }
 
 .footer__wrap {
   width: 100%;
@@ -591,7 +597,6 @@ svg {
   max-width: 1230px;
   padding-left: 30px;
   padding-right: 30px;
-  min-height: 115px;
   margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -602,6 +607,139 @@ svg {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center; }
+  @media (max-width: 1023px) {
+    .footer__wrap {
+      min-width: 768px;
+      max-width: 1023px;
+      padding-left: 45px;
+      padding-right: 45px;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-pack: start;
+          -ms-flex-pack: start;
+              justify-content: flex-start;
+      -webkit-box-align: start;
+          -ms-flex-align: start;
+              align-items: flex-start; } }
+  @media (max-width: 767px) {
+    .footer__wrap {
+      min-width: 320px;
+      max-width: 767px;
+      padding-left: 15px;
+      padding-right: 15px; } }
+
+.footer__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+.subscription {
+  width: 500px; }
+  @media (max-width: 1023px) {
+    .subscription {
+      width: 560px; } }
+  @media (max-width: 767px) {
+    .subscription {
+      width: 290px; } }
+
+.subscription h2 {
+  font-family: "Cormorant Garamond", "Tahoma", sans-serif;
+  font-weight: 700;
+  font-size: 34px;
+  line-height: calc(44 / 34);
+  letter-spacing: 0.8px;
+  margin: 0;
+  margin-bottom: 8px; }
+  @media (max-width: 1023px) {
+    .subscription h2 {
+      margin-bottom: 10px; } }
+  @media (max-width: 767px) {
+    .subscription h2 {
+      margin-bottom: 13px;
+      padding-right: 77px; } }
+
+.subscription p {
+  font-weight: 400;
+  letter-spacing: -0.02px;
+  color: #9b9997;
+  margin: 0;
+  margin-bottom: 33px; }
+  @media (max-width: 767px) {
+    .subscription p {
+      padding-right: 64px; } }
+
+.subscription__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-bottom: solid 1px #ffffff;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease; }
+
+.subscription__form:hover,
+.subscription__form:focus,
+.subscription__form:active {
+  border-bottom: solid 1px #a87b62; }
+
+.subscription__form input {
+  font-family: "Poppins", "Tahoma", sans-serif;
+  font-size: 14px;
+  line-height: calc(21 / 14);
+  width: 100%;
+  height: 41px;
+  background-color: #000000;
+  color: #ffffff;
+  border: none; }
+  @media (max-width: 1023px) {
+    .subscription__form input {
+      height: 39px; } }
+
+.subscription__btn {
+  width: 135px;
+  padding: 0;
+  background-color: #000000;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  padding-left: 3px; }
+  @media (max-width: 1023px) {
+    .subscription__btn {
+      padding-left: 6px; } }
+  @media (max-width: 767px) {
+    .subscription__btn {
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
+      width: 110px; } }
+
+.subscription__btn span {
+  font-family: "Poppins", "Tahoma", sans-serif;
+  font-size: 16px;
+  line-height: calc(24 / 16);
+  margin-right: 9px; }
+
+.subscription__btn svg {
+  stroke: #ffffff;
+  stroke-width: 1px; }
+
+.subscription__btn:hover,
+.subscription__btn:focus,
+.subscription__btn:hover svg,
+.subscription__btn:focus svg {
+  stroke: #a87b62;
+  color: #a87b62;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease; }
+
+.subscription__btn:active,
+.subscription__btn:active svg {
+  opacity: 0.6; }
+
+.information {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
 
 .authorization {
   display: none; }
