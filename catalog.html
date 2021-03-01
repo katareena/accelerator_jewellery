@@ -470,80 +470,88 @@
       <section class="subscription">
         <h2>The good stuff in your inbox</h2>
         <p>News and updates from CH. No spam, we promise.</p>
-        <form class="subscription__form" action="#" method="post">
-          <div class="subscription__box">
-            <label class="visually-hidden" for="subscription-field">Leave your contacts for subscription</label>
-            <input id="subscription-field" type="email" name="subscription" autocomplete="off" placeholder="Your E-mail">
-            <button class="subscription__btn">Sign Up
-              <svg width="29" height="9" viewBox="0 0 29 9" aria-hidden="true">
-                <use xlink:href="img/sprite_auto.svg#icon-arrow"></use>
-              </svg>
-            </button>
-          </div>
+        <form class="subscription__form" action="https://echo.htmlacademy.ru" method="post">
+          <label class="visually-hidden" for="subscription-field">Leave your contacts for subscription</label>
+          <input id="subscription-field" type="email" name="subscription" autocomplete="off" placeholder="Your E-mail">
+          <button class="subscription__btn" type="submit">
+            <span>Sign Up</span>
+            <svg width="29" height="10" viewBox="0 0 29 10" aria-hidden="true">
+              <use xlink:href="img/sprite_auto.svg#icon-arrow"></use>
+            </svg>
+          </button>
         </form>
+        <p id="subscription-message">Please enter the valid E-mail</p>
       </section>
 
-      <ul class="information">
-        <li class="information__item">
-          <a class="information__link" href="#">Ordering & Payment</a>
-        </li>
-        <li class="information__item">
-          <a class="information__link" href="#">Terms & Conditions</a>
-        </li>
-        <li class="information__item">
-          <a class="information__link" href="#">Returns & Exchanges</a>
-        </li>
-        <li class="information__item">
-          <a class="information__link" href="#">Delivery</a>
-        </li>
-        <li class="information__item">
-          <a class="information__link" href="#">About CH</a>
-        </li>
-        <li class="information__item">
-          <a class="information__link" href="#">Stores & Hours</a>
-        </li>
-        <li class="information__item">
-          <a class="information__link" href="#">Jobs</a>
-        </li>
-        <li class="information__item">
-          <a class="information__link" href="#">Contact Us</a>
-        </li>
-      </ul>
+      <div class="footer__inner">
+        <section class="information">
+          <h2 class="visually-hidden">Information</h2>
+          <ul class="information__list">
+            <li class="information__item">
+              <a class="information__link" href="#">Ordering & Payment</a>
+            </li>
+            <li class="information__item">
+              <a class="information__link" href="#">Terms & Conditions</a>
+            </li>
+            <li class="information__item">
+              <a class="information__link" href="#">Returns & Exchanges</a>
+            </li>
+            <li class="information__item">
+              <a class="information__link" href="#">Delivery</a>
+            </li>
+          </ul>
 
-      <ul class="social">
-        <li class="social__item">
-          <a class="social__link" href="https://www.facebook.com/">
-            <svg width="8" height="15" viewBox="0 0 8 15" aria-hidden="true">
-              <use xlink:href="img/sprite_auto.svg#icon-fb"></use>
-            </svg>
-            Facebook
-          </a>
-        </li>
-        <li class="social__item">
-          <a class="social__link" href="https://www.instagram.com/">
-            <svg width="15" height="15" viewBox="0 0 15 15" aria-hidden="true">
-              <use xlink:href="img/sprite_auto.svg#icon-inst"></use>
-            </svg>
-            Instagram
-          </a>
-        </li>
-        <li class="social__item">
-          <a class="social__link" href="https://www.pinterest.ru/">
-            <svg width="15" height="15" viewBox="0 0 15 15" aria-hidden="true">
-              <use xlink:href="img/sprite_auto.svg#icon-pint"></use>
-            </svg>
-            Pinterest
-          </a>
-        </li>
-        <li class="social__item">
-          <a class="social__link" href="https://twitter.com/">
-            <svg width="15" height="13" viewBox="0 0 15 13" aria-hidden="true">
-              <use xlink:href="img/sprite_auto.svg#icon-twitter"></use>
-            </svg>
-            Twitter
-          </a>
-        </li>
-      </ul>
+          <ul class="information__list">
+            <li class="information__item">
+              <a class="information__link" href="#">About CH</a>
+            </li>
+            <li class="information__item">
+              <a class="information__link" href="#">Stores & Hours</a>
+            </li>
+            <li class="information__item">
+              <a class="information__link" href="#">Jobs</a>
+            </li>
+            <li class="information__item">
+              <a class="information__link" href="#">Contact Us</a>
+            </li>
+          </ul>
+        </section>
+
+        <ul class="social">
+          <li class="social__item">
+            <a class="social__link social__link--fb" href="https://www.facebook.com/">
+              <svg width="10" height="15" viewBox="0 0 10 15" aria-hidden="true">
+                <use xlink:href="img/sprite_auto.svg#icon-fb"></use>
+              </svg>
+              <span>Facebook</span>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link social__link--inst" href="https://www.instagram.com/">
+              <svg width="15" height="15" viewBox="0 0 15 15" aria-hidden="true">
+                <use xlink:href="img/sprite_auto.svg#icon-inst"></use>
+              </svg>
+              <span>Instagram</span>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link" href="https://www.pinterest.ru/">
+              <svg width="15" height="15" viewBox="0 0 15 15" aria-hidden="true">
+                <use xlink:href="img/sprite_auto.svg#icon-pint"></use>
+              </svg>
+              <span>Pinterest</span>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link" href="https://twitter.com/">
+              <svg width="15" height="13" viewBox="0 0 15 13" aria-hidden="true">
+                <use xlink:href="img/sprite_auto.svg#icon-twitter"></use>
+              </svg>
+              <span>Twitter</span>
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
   </footer>
 
