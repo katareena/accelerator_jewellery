@@ -161,21 +161,23 @@
       <section class="subscription">
         <h2>The good stuff in your inbox</h2>
         <p>News and updates from CH. No spam, we promise.</p>
-        <form class="subscription__form" action="#" method="post">
+        <form class="subscription__form" action="https://echo.htmlacademy.ru" method="post">
           <label class="visually-hidden" for="subscription-field">Leave your contacts for subscription</label>
           <input id="subscription-field" type="email" name="subscription" autocomplete="off"
             placeholder="Your E-mail">
-          <button class="subscription__btn">
+          <button class="subscription__btn" type="submit">
             <span>Sign Up</span>
             <svg width="29" height="10" viewBox="0 0 29 10" aria-hidden="true">
               <use xlink:href="img/sprite_auto.svg#icon-arrow"></use>
             </svg>
           </button>
         </form>
+        <p id="subscription-message">Please enter the valid E-mail</p>
       </section>
 
       <div class="footer__inner">
         <section class="information">
+          <h2 class="visually-hidden">Information</h2>
           <ul class="information__list">
             <li class="information__item">
               <a class="information__link" href="#">Ordering & Payment</a>
