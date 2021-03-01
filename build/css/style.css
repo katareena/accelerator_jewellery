@@ -665,7 +665,7 @@ svg {
     .subscription {
       width: 560px;
       margin-right: 0;
-      margin-bottom: 25px; } }
+      margin-bottom: 4px; } }
   @media (max-width: 767px) {
     .subscription {
       width: 290px; } }
@@ -763,6 +763,13 @@ svg {
 .subscription__btn:active,
 .subscription__btn:active svg {
   opacity: 0.6; }
+
+.subscription p:last-child {
+  margin: 0;
+  font-family: "Poppins", "Tahoma", sans-serif;
+  font-size: 12px;
+  line-height: calc(21 / 12);
+  color: transparent; }
 
 .information {
   display: -webkit-box;
