@@ -1,6 +1,15 @@
 .blog {
   width: inherit;
   position: relative;
+  margin-bottom: 90px;
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 35px;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 30px;
+  }
 }
 
 .blog h2 {
@@ -27,7 +36,7 @@
 
   @media (max-width: $tablet-width) {
     flex-direction: column;
-    width: 600px;
+    width: 678px;
     margin: 0 auto;
   }
 
@@ -47,6 +56,8 @@
   @media (max-width: $tablet-width) {
     flex: 0 0 100%;
     max-width: 100%;
+    padding-left: 0;
+    padding-right: 0;
   }
 
   @media (max-width: $mobile-width) {

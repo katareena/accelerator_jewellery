@@ -1,0 +1,148 @@
+.questions {
+  width: 100%;
+  margin-bottom: 120px;
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 95px;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 85px;
+  }
+}
+
+.questions h2 {
+  @include title;
+  letter-spacing: 1px;
+  margin-bottom: 50px;
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 49px;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 29px;
+  }
+}
+
+.questions__list {
+  width: 100%;
+  min-width: 900px;
+  max-width: 970px;
+  margin: 0 auto;
+
+  @media (max-width: $tablet-width) {
+    min-width: 678px;
+  }
+
+  @media (max-width: $mobile-width) {
+    min-width: 290px;
+  }
+}
+
+.questions__item {
+  width: inherit;
+  padding-top: 43px;
+  padding-left: 42px;
+  padding-right: 399px;
+  padding-bottom: 40px;
+  border-top: 1px solid $decor-1;
+  border-left: 1px solid $decor-1;
+  border-right: 1px solid $decor-1;
+  position: relative;
+
+  @media (max-width: $tablet-width) {
+    padding-top: 42px;
+    padding-left: 50px;
+    padding-right: 90px;
+    padding-bottom: 41px;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding-top: 15px;
+    padding-left: 25px;
+    padding-right: 55px;
+    padding-bottom: 17px;
+  }
+}
+
+.questions__item:last-child {
+  border-bottom: 1px solid $decor-1;
+}
+
+
+.questions__item h3 {
+  margin: 0;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: calc(23 / 18);
+
+  @media (max-width: $mobile-width) {
+    font-size: 15px;
+    line-height: calc(22 / 15);
+  }
+}
+
+.questions__item p {
+  margin: 0;
+  font-weight: 400;
+  padding-left: 6px;
+  padding-top: 8px;
+
+  @media (max-width: $tablet-width) {
+    padding-left: 0;
+    padding-top: 27px;
+  }
+
+  @media (max-width: $mobile-width) {
+    font-size: 14px;
+    line-height: calc(20 / 14);
+    padding-top: 15px;
+  }
+}
+
+.questions__btn {
+  padding: 0;
+  position: absolute;
+  width: 13px;
+  height: 13px;
+  top: 53px;
+  right: 49px;
+  border: none;
+  border-left: solid 1px $decor-1;
+  border-top: solid 1px $decor-1;
+  transform: rotate(45deg);
+  background-color: transparent;
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  @media (max-width: $tablet-width) {
+    width: 17px;
+    height: 17px;
+    top: 51px;
+    right: 52px;
+  }
+
+  @media (max-width: $mobile-width) {
+    top: 25px;
+    right: 25px;
+  }
+}
+
+.questions__item:hover .questions__btn,
+.questions__item:focus .questions__btn {
+  transform: rotate(45deg) scale(1.5);
+  outline: none;
+}
+
+.questions__item:active .questions__btn {
+  opacity: 0.4;
+}
+
+.questions__btn--closed {
+  transform: rotate(225deg);
+}
+
+.none {
+  display: none;
+}
