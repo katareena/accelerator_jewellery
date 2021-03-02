@@ -1,0 +1,18 @@
+.pagination__list {
+  @include list-reset;
+  display: flex;
+  justify-content: center;
+}
+
+.pagination__link {
+  color: $decor-2;
+  display: block;
+  width: 18px;
+  height: 25px;
+  text-align: center;
+  margin: 2px;
+}
+
+.pagination__link--active {
+  color: $text;
+}

@@ -25,6 +25,7 @@
   }
 
   burgerBtn.addEventListener('click', openDropdownHandler)
-  document.addEventListener("DOMContentLoaded", preSetDropdown);
+  document.addEventListener('DOMContentLoaded', preSetDropdown);
+  window.addEventListener('resize', preSetDropdown);
 
 })();

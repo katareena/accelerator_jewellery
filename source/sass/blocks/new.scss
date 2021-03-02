@@ -1,0 +1,152 @@
+.new {
+  width: inherit;
+  position: relative;
+  margin-bottom: 109px;
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 60px;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 50px;
+  }
+}
+
+.new h2 {
+  @include title;
+  margin-bottom: 25px;
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 18px;
+  }
+}
+
+.new__shop-link {
+  @include title-extension;
+  width: 83px;
+  margin-bottom: 43px;
+
+  &::before {
+    bottom: 0;
+  }
+
+  @media (max-width: $tablet-width) {
+    &::before {
+      bottom: -7px;
+    }
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 30px;
+  }
+}
+
+.new__btn {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  position: absolute;
+  width: 40px;
+  height: 50px;
+  top: 23px;
+
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  &:hover,
+  &:focus {
+    transform: scale(1.5);
+  }
+
+  &:active {
+    opacity: 0.4;
+  }
+
+  @media (max-width: $mobile-width) {
+    display: none;
+  }
+}
+
+.new__btn--previous {
+  left: 0;
+  margin-left: -22px;
+
+  @media (max-width: $tablet-width) {
+    margin-top: 5px;
+    margin-left: -5px;
+  }
+}
+
+.new__btn--next {
+  top: 28px;
+  right: 0;
+  margin-right: -3px;
+}
+
+.new__wrap {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px;
+  margin-bottom: 30px;
+
+  @media (max-width: $tablet-width) {
+    height: 450px;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    margin-bottom: 8px;
+  }
+
+  @media (max-width: $mobile-width) {
+    height: 255px;
+  }
+}
+
+.new__slide {
+  flex: 0 0 25%;
+  max-width: 25%;
+
+  flex-shrink: 0;
+  padding: 15px;
+  text-align: center;
+
+  @media (max-width: $tablet-width) {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+
+.new__link img {
+  margin-bottom: 15px;
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 12px;
+    width: 324px;
+    height: 340px;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 12px;
+    width: 130px;
+    height: 136px;
+  }
+}
+
+.new__link h3 {
+  font-weight: 500;
+  letter-spacing: -1.5px;
+  margin: 0;
+
+  @media (max-width: $mobile-width) {
+    font-size: 16px;
+    line-height: calc(21 / 16);
+    letter-spacing: -0.1px;
+  }
+}
+
+.new__link p {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: calc(28 / 14);
+  margin: 0;
+}

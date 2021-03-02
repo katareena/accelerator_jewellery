@@ -27,7 +27,7 @@
     as="font">
   <link rel="preload" crossorigin="anonymous" href="fonts/cormorant-garamond-v9-latin-700.woff" type="font/woff"
     as="font">
-  <link rel="preload" href="css/style.min.css" as="style">
+  <!-- <link rel="preload" href="css/style.min.css" as="style"> -->
   <link href="css/style.min.css" rel="stylesheet">
   <link rel="shortcut icon" href="img/favicon.ico">
 </head>
@@ -126,19 +126,27 @@
   </header>
 
   <main class="main">
-    <div class="main__wrap">
-      <section class="introduction">
+    <section class="introduction">
+      <div class="introduction__text">
         <h2>perfection</h2>
         <p>made to be yours</p>
-      </section>
+      </div>
+    </section>
 
+    <div class="main__wrap">
       <section class="new">
         <h2>New In</h2>
         <a class="new__shop-link" href="catalog.html">Shop Now</a>
-        <div class="control">
-          <button class="control__btn control__btn--previous" type="button"></button>
-          <button class="control__btn control__btn--next" type="button"></button>
-        </div>
+        <button class="new__btn new__btn--previous" type="button">
+          <svg width="36" height="20" viewBox="0 0 36 20"  aria-hidden="true">
+            <use xlink:href="img/sprite_auto.svg#icon-arrow-prev"></use>
+          </svg>
+        </button>
+        <button class="new__btn new__btn--next" type="button">
+          <svg width="36" height="20" viewBox="0 0 36 20"  aria-hidden="true">
+            <use xlink:href="img/sprite_auto.svg#icon-arrow-next"></use>
+          </svg>
+        </button>
         <div class="new__wrap">
           <article class="new__slide">
             <a class="new__link" href="#">
@@ -251,73 +259,76 @@
         <h2>Blog</h2>
         <a href="#">Read All</a>
         <div class="blog__inner">
-          <div class="blog__box">
-            <picture>
-              <source type="image/webp" media="(max-width: 767px)"
-                srcset="img/blog-1-mobile@1x.webp 1x, img/blog-1-mobile@2x.webp 2x" />
-              <source type="image/webp" media="(max-width: 1023px)"
-                srcset="img/blog-1-tablet@1x.webp 1x, img/blog-1-tablet@2x.webp 2x" />
-              <source type="image/webp" srcset="img/blog-1-desktop@1x.webp 1x, img/blog-1-desktop@2x.webp 2x" />
-
-              <!-- 1х: 290px; 2x: 580px -->
-              <source media="(max-width: 767px)" srcset="img/blog-1-mobile@1x.jpg 1x, img/blog-1-mobile@2x.jpg 2x" />
-              <!-- 1х: 339px; 2x: 678px -->
-              <source media="(max-width: 1023px)" srcset="img/blog-1-tablet@1x.jpg 1x, img/blog-1-tablet@2x.jpg 2x" />
-              <!-- 1х: 285px; 2x: 570px -->
-              <img src="img/blog-1-desktop@1x.jpg" srcset="img/blog-1-desktop@2x.jpg 2x" alt="Jewellery" width="285"
-                height="300" />
-            </picture>
+          <div class="blog__box blog__box--combined">
             <div class="blog__item">
-              <p>September 30, 2019</p>
-              <h3>How to care for your jewellery</h3>
-              <a href="#">Read Article</a>
+              <picture>
+                <source type="image/webp" media="(max-width: 767px)"
+                  srcset="img/blog-1-mobile@1x.webp 1x, img/blog-1-mobile@2x.webp 2x" />
+                <source type="image/webp" media="(max-width: 1023px)"
+                  srcset="img/blog-1-tablet@1x.webp 1x, img/blog-1-tablet@2x.webp 2x" />
+                <source type="image/webp" srcset="img/blog-1-desktop@1x.webp 1x, img/blog-1-desktop@2x.webp 2x" />
+
+                <!-- 1х: 290px; 2x: 580px -->
+                <source media="(max-width: 767px)" srcset="img/blog-1-mobile@1x.jpg 1x, img/blog-1-mobile@2x.jpg 2x" />
+                <!-- 1х: 339px; 2x: 678px -->
+                <source media="(max-width: 1023px)" srcset="img/blog-1-tablet@1x.jpg 1x, img/blog-1-tablet@2x.jpg 2x" />
+                <!-- 1х: 285px; 2x: 570px -->
+                <img src="img/blog-1-desktop@1x.jpg" srcset="img/blog-1-desktop@2x.jpg 2x" alt="Jewellery" width="285"
+                  height="300" />
+              </picture>
+              <div class="blog__text">
+                <p>September 30, 2019</p>
+                <h3>How to care for your jewellery</h3>
+                <a href="#">Read Article</a>
+              </div>
+            </div>
+            <div class="blog__item">
+              <div class="blog__text blog__text--order">
+                <p>September 23, 2019</p>
+                <h3>Power of crystals</h3>
+                <a href="#">Read Article</a>
+              </div>
+              <picture>
+                <source type="image/webp" media="(max-width: 767px)"
+                  srcset="img/blog-2-mobile@1x.webp 1x, img/blog-2-mobile@2x.webp 2x" />
+                <source type="image/webp" media="(max-width: 1023px)"
+                  srcset="img/blog-2-tablet@1x.webp 1x, img/blog-2-tablet@2x.webp 2x" />
+                <source type="image/webp" srcset="img/blog-2-desktop@1x.webp 1x, img/blog-2-desktop@2x.webp 2x" />
+
+                <!-- 1х: 290px; 2x: 580px -->
+                <source media="(max-width: 767px)" srcset="img/blog-2-mobile@1x.jpg 1x, img/blog-2-mobile@2x.jpg 2x" />
+                <!-- 1х: 339px; 2x: 678px -->
+                <source media="(max-width: 1023px)" srcset="img/blog-2-tablet@1x.jpg 1x, img/blog-2-tablet@2x.jpg 2x" />
+                <!-- 1х: 285px; 2x: 570px -->
+                <img src="img/blog-2-desktop@1x.jpg" srcset="img/blog-2-desktop@2x.jpg 2x" alt="Jewellery" width="285"
+                  height="300" />
+              </picture>
             </div>
           </div>
-          <div class="blog__box">
+          <div class="blog__box blog__box--sole">
             <picture>
               <source type="image/webp" media="(max-width: 767px)"
-                srcset="img/blog-2-mobile@1x.webp 1x, img/blog-2-mobile@2x.webp 2x" />
+                srcset="img/blog-3-mobile@1x.webp 1x, img/blog-3-mobile@2x.webp 2x" />
               <source type="image/webp" media="(max-width: 1023px)"
-                srcset="img/blog-2-tablet@1x.webp 1x, img/blog-2-tablet@2x.webp 2x" />
-              <source type="image/webp" srcset="img/blog-2-desktop@1x.webp 1x, img/blog-2-desktop@2x.webp 2x" />
+                srcset="img/blog-3-tablet@1x.webp 1x, img/blog-3-tablet@2x.webp 2x" />
+              <source type="image/webp" srcset="img/blog-3-desktop@1x.webp 1x, img/blog-3-desktop@2x.webp 2x" />
 
               <!-- 1х: 290px; 2x: 580px -->
-              <source media="(max-width: 767px)" srcset="img/blog-2-mobile@1x.jpg 1x, img/blog-2-mobile@2x.jpg 2x" />
+              <source media="(max-width: 767px)" srcset="img/blog-3-mobile@1x.jpg 1x, img/blog-3-mobile@2x.jpg 2x" />
               <!-- 1х: 339px; 2x: 678px -->
-              <source media="(max-width: 1023px)" srcset="img/blog-2-tablet@1x.jpg 1x, img/blog-2-tablet@2x.jpg 2x" />
-              <!-- 1х: 285px; 2x: 570px -->
-              <img src="img/blog-2-desktop@1x.jpg" srcset="img/blog-2-desktop@2x.jpg 2x" alt="Jewellery" width="285"
-                height="300" />
+              <source media="(max-width: 1023px)" srcset="img/blog-3-tablet@1x.jpg 1x, img/blog-3-tablet@2x.jpg 2x" />
+              <!-- 1х: 570px; 2x: 1040px -->
+              <img src="img/blog-3-desktop@1x.jpg" srcset="img/blog-3-desktop@2x.jpg 2x" alt="Jewellery" width="570"
+                height="630" />
             </picture>
-            <div class="blog__item">
-              <p>September 23, 2019</p>
-              <h2>Power of crystals</h2>
+            <div class="blog__text blog__text--sole">
+              <p>September 16, 2019</p>
+              <h3>AW 19 trends</h3>
               <a href="#">Read Article</a>
             </div>
           </div>
         </div>
-        <div class="blog__inner">
-          <picture>
-            <source type="image/webp" media="(max-width: 767px)"
-              srcset="img/blog-3-mobile@1x.webp 1x, img/blog-3-mobile@2x.webp 2x" />
-            <source type="image/webp" media="(max-width: 1023px)"
-              srcset="img/blog-3-tablet@1x.webp 1x, img/blog-3-tablet@2x.webp 2x" />
-            <source type="image/webp" srcset="img/blog-3-desktop@1x.webp 1x, img/blog-3-desktop@2x.webp 2x" />
 
-            <!-- 1х: 290px; 2x: 580px -->
-            <source media="(max-width: 767px)" srcset="img/blog-3-mobile@1x.jpg 1x, img/blog-3-mobile@2x.jpg 2x" />
-            <!-- 1х: 339px; 2x: 678px -->
-            <source media="(max-width: 1023px)" srcset="img/blog-3-tablet@1x.jpg 1x, img/blog-3-tablet@2x.jpg 2x" />
-            <!-- 1х: 570px; 2x: 1040px -->
-            <img src="img/blog-3-desktop@1x.jpg" srcset="img/blog-3-desktop@2x.jpg 2x" alt="Jewellery" width="570"
-              height="630" />
-          </picture>
-          <div class="blog__item">
-            <p>September 16, 2019</p>
-            <h2>AW 19 trends</h2>
-            <a href="#">Read Article</a>
-          </div>
-        </div>
       </section>
 
       <section class="questions">

@@ -1,0 +1,26 @@
+.main {
+  width: 100%;
+}
+
+.main__wrap {
+  width: inherit;
+  min-width: 1024px;
+  max-width: 1230px;
+  padding-left: 30px;
+  padding-right: 30px;
+  margin: 0 auto;
+
+  @media (max-width: $tablet-width) {
+    min-width: 767px;
+    max-width: 1023px;
+    padding-left: 45px;
+    padding-right: 45px;
+  }
+
+  @media (max-width: $mobile-width) {
+    min-width: 320px;
+    max-width: 767px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
