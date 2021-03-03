@@ -4,8 +4,12 @@
   justify-content: center;
 }
 
-.pagination__link {
+.pagination__item {
   color: $decor-2;
+}
+
+.pagination__link {
+  color: inherit;
   display: block;
   width: 18px;
   height: 25px;
@@ -13,6 +17,10 @@
   margin: 2px;
 }
 
-.pagination__link--active {
-  color: $text;
+.pagination__item--active {
+  color: inherit;
+}
+
+.pagination__link--hide {
+  display: none;
 }

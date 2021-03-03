@@ -18,7 +18,7 @@
     }
   };
 
-  items.forEach(function (el) {
+  items.forEach(el => {
     el.addEventListener('click', clickPressHandler);
     el.addEventListener('keydown', enterPressHandler);
   });

@@ -36,6 +36,46 @@
   }
 }
 
+@mixin intro {
+  width: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $decor-1;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@mixin intro-text {
+  font-family: "Cormorant Garamond", "Tahoma", sans-serif;
+  text-align: center;
+  color: $white;
+}
+
+@mixin page-wrap {
+  width: inherit;
+  min-width: 1024px;
+  max-width: 1230px;
+  padding-left: 30px;
+  padding-right: 30px;
+  margin: 0 auto;
+
+  @media (max-width: $tablet-width) {
+    min-width: 767px;
+    max-width: 1023px;
+    padding-left: 45px;
+    padding-right: 45px;
+  }
+
+  @media (max-width: $mobile-width) {
+    min-width: 320px;
+    max-width: 767px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
 // @mixin input {
 //   font-family: "Poppins", "Tahoma", sans-serif;
 //   font-weight: 500;
