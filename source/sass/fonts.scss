@@ -4,8 +4,9 @@
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url("../fonts/poppins-v15-latin-regular.woff2") format("woff2"); /* Super Modern Browsers */
-  src: url("../fonts/poppins-v15-latin-regular.woff") format("woff"); /* Modern Browsers */
+  src:
+    url("../fonts/poppins-v15-latin-regular.woff2") format("woff2"), /* Super Modern Browsers */
+    url("../fonts/poppins-v15-latin-regular.woff") format("woff"); /* Modern Browsers */
 }
 
 /* poppins-500 - latin */
@@ -14,8 +15,9 @@
   font-style: normal;
   font-weight: 500;
   font-display: swap;
-  src: url("../fonts/poppins-v15-latin-500.woff2") format("woff2"); /* Super Modern Browsers */
-  src: url("../fonts/poppins-v15-latin-500.woff") format("woff"); /* Modern Browsers */
+  src:
+    url("../fonts/poppins-v15-latin-500.woff2") format("woff2"), /* Super Modern Browsers */
+    url("../fonts/poppins-v15-latin-500.woff") format("woff"); /* Modern Browsers */
 }
 
 /* poppins-700 - latin */
@@ -24,8 +26,9 @@
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: url("../fonts/poppins-v15-latin-700.woff2") format("woff2"); /* Super Modern Browsers */
-  src: url("../fonts/poppins-v15-latin-700.woff") format("woff"); /* Modern Browsers */
+  src:
+    url("../fonts/poppins-v15-latin-700.woff2") format("woff2"), /* Super Modern Browsers */
+    url("../fonts/poppins-v15-latin-700.woff") format("woff"); /* Modern Browsers */
 }
 
 /* cormorant-garamond-regular - latin */
@@ -34,8 +37,9 @@
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url("../fonts/cormorant-garamond-v9-latin-regular.woff2") format("woff2"); /* Super Modern Browsers */
-  src: url("../fonts/cormorant-garamond-v9-latin-regular.woff") format("woff"); /* Modern Browsers */
+  src:
+    url("../fonts/cormorant-garamond-v9-latin-regular.woff2") format("woff2"), /* Super Modern Browsers */
+    url("../fonts/cormorant-garamond-v9-latin-regular.woff") format("woff"); /* Modern Browsers */
 }
 
 /* cormorant-garamond-italic - latin */
@@ -44,8 +48,9 @@
   font-style: italic;
   font-weight: 400;
   font-display: swap;
-  src: url("../fonts/cormorant-garamond-v9-latin-italic.woff2") format("woff2"); /* Super Modern Browsers */
-  src: url("../fonts/cormorant-garamond-v9-latin-italic.woff") format("woff"); /* Modern Browsers */
+  src:
+    url("../fonts/cormorant-garamond-v9-latin-italic.woff2") format("woff2"), /* Super Modern Browsers */
+    url("../fonts/cormorant-garamond-v9-latin-italic.woff") format("woff"); /* Modern Browsers */
 }
 
 /* cormorant-garamond-500italic - latin */
@@ -54,9 +59,9 @@
   font-style: italic;
   font-weight: 500;
   font-display: swap;
-  src: url("../fonts/cormorant-garamond-v9-latin-500italic.woff2")
-    format("woff2"); /* Super Modern Browsers */
-  src: url("../fonts/cormorant-garamond-v9-latin-500italic.woff") format("woff"); /* Modern Browsers */
+  src:
+    url("../fonts/cormorant-garamond-v9-latin-500italic.woff2") format("woff2"), /* Super Modern Browsers */
+    url("../fonts/cormorant-garamond-v9-latin-500italic.woff") format("woff"); /* Modern Browsers */
 }
 
 /* cormorant-garamond-600 - latin */
@@ -65,8 +70,9 @@
   font-style: normal;
   font-weight: 600;
   font-display: swap;
-  src: url("../fonts/cormorant-garamond-v9-latin-600.woff2") format("woff2"); /* Super Modern Browsers */
-  src: url("../fonts/cormorant-garamond-v9-latin-600.woff") format("woff"); /* Modern Browsers */
+  src:
+    url("../fonts/cormorant-garamond-v9-latin-600.woff2") format("woff2"), /* Super Modern Browsers */
+    url("../fonts/cormorant-garamond-v9-latin-600.woff") format("woff"); /* Modern Browsers */
 }
 
 /* cormorant-garamond-700 - latin */
@@ -75,6 +81,7 @@
   font-style: normal;
   font-weight: 700;
   font-display: swap;
-  src: url("../fonts/cormorant-garamond-v9-latin-700.woff2") format("woff2"); /* Super Modern Browsers */
-  src: url("../fonts/cormorant-garamond-v9-latin-700.woff") format("woff"); /* Modern Browsers */
+  src:
+    url("../fonts/cormorant-garamond-v9-latin-700.woff2") format("woff2"), /* Super Modern Browsers */
+    url("../fonts/cormorant-garamond-v9-latin-700.woff") format("woff"); /* Modern Browsers */
 }

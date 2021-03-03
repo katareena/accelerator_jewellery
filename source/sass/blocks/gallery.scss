@@ -41,6 +41,10 @@
 
 .gallery__wrap {
   display: flex;
+
+  // @media (max-width: $tablet-width) {
+  //   min-height: 240px;
+  // }
 }
 
 .gallery__box-1 {
