@@ -1171,38 +1171,46 @@ svg {
   border: none;
   border-left: solid 1px #a87b62;
   border-top: solid 1px #a87b62;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
+  -webkit-transform: rotate(-135deg);
+          transform: rotate(-135deg);
   background-color: transparent;
   cursor: pointer;
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease; }
+  .questions__btn:hover, .questions__btn:focus, .questions__btn:active {
+    outline: none; }
   @media (max-width: 1023px) {
     .questions__btn {
       width: 17px;
       height: 17px;
-      top: 51px;
+      top: 41px;
       right: 52px; } }
   @media (max-width: 767px) {
     .questions__btn {
-      top: 25px;
+      top: 15px;
       right: 25px; } }
 
 .questions__item:hover .questions__btn,
 .questions__item:focus .questions__btn {
-  -webkit-transform: rotate(45deg) scale(1.5);
-          transform: rotate(45deg) scale(1.5);
-  outline: none; }
+  -webkit-transform: rotate(-135deg) scale(1.5);
+          transform: rotate(-135deg) scale(1.5); }
 
 .questions__item:active .questions__btn {
   opacity: 0.4; }
 
-.questions__btn--closed {
-  -webkit-transform: rotate(225deg);
-          transform: rotate(225deg); }
-
-.none {
+.hide {
   display: none; }
+
+.rotate-btn {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg); }
+  .rotate-btn:hover, .rotate-btn:focus, .rotate-btn:active {
+    outline: none; }
+
+.questions__item:hover .rotate-btn,
+.questions__item:focus .rotate-btn {
+  -webkit-transform: rotate(45deg) scale(1.5);
+          transform: rotate(45deg) scale(1.5); }
 
 .gallery {
   width: inherit;
@@ -1292,6 +1300,9 @@ svg {
 
 .gallery__item--margin2 {
   margin-right: 40px; }
+
+.gallery__item img {
+  height: inherit; }
 
 .footer {
   width: 100%;

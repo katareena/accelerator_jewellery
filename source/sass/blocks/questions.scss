@@ -111,38 +111,54 @@
   border: none;
   border-left: solid 1px $decor-1;
   border-top: solid 1px $decor-1;
-  transform: rotate(45deg);
+  transform: rotate(-135deg);
   background-color: transparent;
   cursor: pointer;
   transition: all 0.2s ease;
 
+  &:hover,
+  &:focus,
+  &:active {
+    outline: none;
+  }
+
   @media (max-width: $tablet-width) {
     width: 17px;
     height: 17px;
-    top: 51px;
+    top: 41px;
     right: 52px;
   }
 
   @media (max-width: $mobile-width) {
-    top: 25px;
+    top: 15px;
     right: 25px;
   }
 }
 
 .questions__item:hover .questions__btn,
 .questions__item:focus .questions__btn {
-  transform: rotate(45deg) scale(1.5);
-  outline: none;
+  transform: rotate(-135deg) scale(1.5);
 }
 
 .questions__item:active .questions__btn {
   opacity: 0.4;
 }
 
-.questions__btn--closed {
-  transform: rotate(225deg);
+.hide {
+  display: none;
 }
 
-.none {
-  display: none;
+.rotate-btn {
+  transform: rotate(45deg);
+
+  &:hover,
+  &:focus,
+  &:active {
+    outline: none;
+  }
+}
+
+.questions__item:hover .rotate-btn,
+.questions__item:focus .rotate-btn {
+  transform: rotate(45deg) scale(1.5);
 }
