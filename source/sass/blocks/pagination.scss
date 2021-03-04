@@ -1,3 +1,4 @@
+// ------ for index & catalog-page ------
 .pagination__list {
   @include list-reset;
   display: flex;
@@ -23,4 +24,23 @@
 
 .pagination__link--hide {
   display: none;
+}
+
+// ------ for catalog-page ------
+.pagination--catalog {
+  min-height: 132px;
+  border-top: solid 1px $decor-4;
+  padding-top: 35px;
+}
+
+.pagination__inner {
+  @include page-wrap;
+  padding-left: 330px;
+  padding-right: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.pagination__list--catalog {
+  margin-left: -35px;
 }

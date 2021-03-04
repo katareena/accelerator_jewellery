@@ -29,6 +29,10 @@
   }
 }
 
+.header__inner--catalog {
+  margin-top: 10px;
+}
+
 .header__logo {
   margin-left: -83px;
   margin-top: 15px;
@@ -37,6 +41,10 @@
   @media (max-width: $tablet-width) {
     display: none;
   }
+}
+
+.header__logo--catalog {
+  margin-top: -7px;
 }
 
 .header__menu-logo svg,

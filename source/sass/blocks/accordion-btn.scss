@@ -1,0 +1,65 @@
+.accordion-btn {
+  padding: 0;
+  position: absolute;
+  width: 13px;
+  height: 13px;
+  // for index
+  // top: 43px;
+  // right: 49px;
+  // for catalog
+  // top: 27px;
+  // right: 25px;
+  border: none;
+  border-left: solid 1px $decor-1;
+  border-top: solid 1px $decor-1;
+  transform: rotate(-135deg);
+  background-color: transparent;
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  &:hover,
+  &:focus,
+  &:active {
+    outline: none;
+  }
+
+  @media (max-width: $tablet-width) {
+    width: 17px;
+    height: 17px;
+    // top: 41px;
+    // right: 52px;
+  }
+
+  // @media (max-width: $mobile-width) {
+  //   top: 15px;
+  //   right: 25px;
+  // }
+}
+
+.accordion-item:hover .accordion-btn,
+.accordion-item:focus .accordion-btn {
+  transform: rotate(-135deg) scale(1.5);
+}
+
+.accordion-item:active .accordion-btn {
+  opacity: 0.4;
+}
+
+.hide {
+  display: none;
+}
+
+.rotate-btn {
+  transform: rotate(45deg);
+
+  &:hover,
+  &:focus,
+  &:active {
+    outline: none;
+  }
+}
+
+.accordion-item:hover .rotate-btn,
+.accordion-item:focus .rotate-btn {
+  transform: rotate(45deg) scale(1.5);
+}

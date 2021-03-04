@@ -1,11 +1,11 @@
 'use strict';
 (function () {
-  const items = document.querySelectorAll('.questions__item');
+  const items = document.querySelectorAll('.accordion-item');
 
   function moveAccordion (trgt) {
-    let questions = trgt.dataset.questions;
-    document.querySelector('#' + questions).classList.toggle('hide');
-    document.querySelector('#btn-' + questions).classList.toggle('rotate-btn');
+    let set = trgt.dataset.set;
+    document.querySelector('#' + set).classList.toggle('hide');
+    document.querySelector('#btn-' + set).classList.toggle('rotate-btn');
   };
 
   function clickPressHandler (elem) {

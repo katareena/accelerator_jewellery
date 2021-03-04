@@ -30,15 +30,15 @@
 
 .catalog__title-text {
   @include intro-text;
+  margin-top: -4px;
 }
 
 .catalog__title-text h2 {
   font-weight: 700;
   font-size: 34px;
-  line-height: 1;
+  line-height: 1.4;
   text-transform: uppercase;
   margin: 0;
-  // margin-bottom: 5px;
 }
 
 .catalog__title-text p {
@@ -56,7 +56,37 @@
   @include page-wrap;
   display: flex;
   justify-content: space-between;
-  background-color: plum;
+  margin-bottom: 15px;
+
+  @media (max-width: $tablet-width) {
+    flex-direction: column;
+  }
+}
+
+.catalog__filter-open {
+  display: none;
+
+  @media (max-width: $tablet-width) {
+    font-family: "Poppins","Tahoma",sans-serif;
+    letter-spacing: 1.3px;
+    color: $white;
+    display: block;
+    width: inherit;
+    height: 68px;
+    border: none;
+    background-color: $decor-1;
+    margin-bottom: 78px;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      background-color: rgba($decor-2);
+    }
+
+    &:active {
+      opacity: 0.6;
+    }
+  }
 }
 
 .catalog__filter {
@@ -66,6 +96,9 @@
   margin-right: 30px;
   flex-shrink: 0;
 
+  @media (max-width: $tablet-width) {
+    display: none;
+  }
 }
 
 .catalog__catalog {
@@ -75,21 +108,61 @@
 
 .catalog__list {
   max-width: 900px;
+  max-height: 1495px;
+  overflow: hidden;
   display: flex;
   flex-wrap: wrap;
+  margin-top: -15px;
   margin-right: -15px;
   margin-left: -15px;
-  background-color: yellowgreen;
 }
 
 .catalog__card {
+  flex: 0 0 33.3%;
+  max-width: 33.3%;
+
+  flex-shrink: 0;
   padding: 15px;
+  text-align: center;
+
+  @media (max-width: $tablet-width) {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
 }
 
-.pagination {
-  max-width: 870px;
+.catalog__link img {
+  margin-bottom: 14px;
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 12px;
+    width: 206px;
+    height: 208px;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 12px;
+    width: 130px;
+    height: 136px;
+  }
+
 }
 
-.pagination__list {
-  max-width: inherit;
+.catalog__link h3 {
+  font-weight: 500;
+  letter-spacing: -1.7px;
+  margin: 0;
+
+  @media (max-width: $mobile-width) {
+    font-size: 16px;
+    line-height: calc(21 / 16);
+    letter-spacing: -0.1px;
+  }
+}
+
+.catalog__link p {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: calc(28 / 14);
+  margin: 0;
 }
