@@ -52,6 +52,25 @@
 
 'use strict';
 (function () {
+  const openBtn = document.querySelector('.catalog__filter-open');
+  const closeBtn = document.querySelector('.filter__form-close');
+  const filter = document.querySelector('.catalog__filter');
+
+  function openFilterHandler() {
+    filter.classList.add('catalog__filter--open');
+  }
+
+  function closeFilterHandler() {
+    filter.classList.remove('catalog__filter--open');
+  }
+
+  openBtn.addEventListener('click', openFilterHandler);
+  closeBtn.addEventListener('click', closeFilterHandler);
+
+})();
+
+'use strict';
+(function () {
   const ESCAPE = 27;
   const headerMenu = document.querySelector('.header__menu');
   const burgerBtn = headerMenu.querySelector('.header__menu-btn--burger-js');
@@ -86,6 +105,7 @@
   const MAX_TABLET_WIDTH = 1023;
   const dropdown = document.querySelector('.header__dropdown');
   const answers = document.querySelectorAll('.questions__elem-js');
+  const filter = document.querySelector('.catalog__filter');
 
   function preSetPage () {
     if (document.documentElement.clientWidth <= MAX_TABLET_WIDTH) {
@@ -95,6 +115,8 @@
     answers.forEach(elem => {
       elem.classList.add('hide');
     });
+
+    filter.classList.remove('catalog__filter--open');
   }
 
   window.preSetPage = {

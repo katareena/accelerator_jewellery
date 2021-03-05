@@ -16,6 +16,12 @@
   height: 25px;
   text-align: center;
   margin: 2px;
+
+  @media (max-width: $mobile-width) {
+    width: 26px;
+    margin: 3px;
+  }
+
 }
 
 .pagination__item--active {
@@ -31,6 +37,10 @@
   min-height: 132px;
   border-top: solid 1px $decor-4;
   padding-top: 35px;
+
+  @media (max-width: $mobile-width) {
+    min-height: 125px;
+  }
 }
 
 .pagination__inner {
@@ -41,6 +51,18 @@
   justify-content: space-between;
 }
 
+.pagination__inner > a {
+  @media (max-width: $mobile-width) {
+    display: none;
+  }
+}
+
 .pagination__list--catalog {
   margin-left: -35px;
+
+  @media (max-width: $mobile-width) {
+    margin: 0 auto;
+  }
 }
+
+

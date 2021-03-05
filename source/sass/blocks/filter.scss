@@ -1,3 +1,20 @@
+.filter {
+  @media (max-width: $tablet-width) {
+    background-color: $white;
+    box-shadow: 0px 5px 32px $shadow;
+    width: 100%;
+    max-width: 442px;
+    min-width: 270px;
+    transition-duration: 0.3s;
+  }
+
+  @media (max-width: $mobile-width) {
+    width: 270px;
+    max-width: none;
+    min-width: none;
+  }
+}
+
 .filter__item {
   padding-top: 22px;
   padding-left: 25px;
@@ -9,23 +26,47 @@
   position: relative;
 
   @media (max-width: $tablet-width) {
-    padding-top: 40px;
-    padding-left: 20px;
+    padding-top: 33px;
+    padding-left: 40px;
     padding-right: 50px;
-    padding-bottom: 40px;
+    padding-bottom: 33px;
+    border-left: none;
+    border-right: none;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding-top: 25px;
+    padding-left: 25px;
+    padding-bottom: 22px;
+    border-left: none;
+    border-right: none;
+  }
+}
+
+.filter__item:first-of-type {
+  @media (max-width: $tablet-width) {
+    border-top: none;
   }
 }
 
 .filter__item:last-of-type {
   border-bottom: 1px solid $decor-1;
   margin-bottom: 35px;
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 42px;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 30px;
+  }
 }
 
 .filter__item h4 {
   margin: 0;
   font-weight: 500;
 
-  @media (max-width: $mobile-width) {
+  @media (max-width: $tablet-width) {
     font-size: 18px;
     line-height: calc(23 / 18);
   }
@@ -34,15 +75,16 @@
 .filter__btn {
   top: 27px;
   right: 25px;
-  // @media (max-width: $tablet-width) {
-  //   top: 41px;
-  //   right: 52px;
-  // }
 
-  // @media (max-width: $mobile-width) {
-  //   top: 15px;
-  //   right: 25px;
-  // }
+  @media (max-width: $tablet-width) {
+    top: 41px;
+    right: 45px;
+  }
+
+  @media (max-width: $mobile-width) {
+    top: 36px;
+    right: 17px;
+  }
 }
 
 .filter__settings {
@@ -55,6 +97,11 @@ label {
   font-size: 14px;
   line-height: calc(18 /14);
   cursor: pointer;
+
+  @media (max-width: $tablet-width) {
+    font-size: 16px;
+    line-height: calc(21/16);
+  }
 }
 
 [type="checkbox"] {
@@ -75,6 +122,11 @@ label {
   padding-left: 25px;
   line-height: 31px;
   cursor: pointer;
+
+  @media (max-width: $tablet-width) {
+    padding-left: 27px;
+    line-height: 38px;
+  }
 }
 
 [type="checkbox"]:checked + label::before,
@@ -87,6 +139,13 @@ label {
   height: 15px;
   border: 1px solid $decor-1;
   background-color: transparent;
+
+  @media (max-width: $tablet-width) {
+    left: -1px;
+    top: 11px;
+    width: 17px;
+    height: 17px;
+  }
 }
 
 [type="checkbox"]:checked:hover + label::before,
@@ -113,6 +172,15 @@ label {
   width: 15px;
   height: 15px;
   background-color: $decor-1;
+
+  @media (max-width: $tablet-width) {
+    @media (max-width: $tablet-width) {
+      left: -1px;
+      top: 11px;
+      width: 17px;
+      height: 17px;
+    }
+  }
 }
 
 [type="checkbox"]:not(:checked) + label::after {
@@ -145,24 +213,41 @@ label {
   width: inherit;
   height: 57px;
   padding-top: 28px;
+
+  @media (max-width: $tablet-width) {
+    height: 72px;
+    padding-top: 35px;
+  }
 }
 
 .filter__scale {
   height: 1px;
   background-color: rgba($decor-1, 0.3);
-  width: 200px;
+  width: 96%;
+
+  @media (max-width: $tablet-width) {
+    width: 90%;
+  }
+
+  @media (max-width: $mobile-width) {
+    width: 120%;
+  }
 }
 
 .filter__bar {
-  width: 50%;
+  width: 53%;
   height: 1px;
-  margin-left: 28%;
+  margin-left: 22%;
   background-color: $decor-1;
+
+  @media (max-width: $mobile-width) {
+    margin-left: 20%;
+  }
 }
 
 .filter__control {
   position: absolute;
-  top: 22px;
+  top: 27px;
   left: 0;
 
   display: flex;
@@ -172,11 +257,27 @@ label {
 }
 
 .filter__control--min {
-  left: 36px;
+  left: 19%;
+
+  @media (max-width: $tablet-width) {
+    left: 12.7%;
+  }
+
+  @media (max-width: $mobile-width) {
+    left: 10.5%;
+  }
 }
 
 .filter__control--max {
-  left: 140px;
+  left: 70%;
+
+  @media (max-width: $tablet-width) {
+    left: 62%;
+  }
+
+  @media (max-width: $mobile-width) {
+    left: 80%;
+  }
 }
 
 .filter__toggle {
@@ -189,12 +290,31 @@ label {
   background-color: $decor-1;
   border-radius: 50%;
   cursor: pointer;
+  transition: all 0.2s ease;
+
+  &:hover,
+  &:focus {
+    background-color: $text;
+  }
+
+  &:active {
+    background-color: $decor-2;
+  }
+
+  @media (max-width: $tablet-width) {
+    width: 17px;
+    height: 17px;
+  }
 }
 
 .filter__result {
   font-size: 14px;
   line-height: 1;
   white-space: nowrap;
+
+  @media (max-width: $tablet-width) {
+    font-size: 16px;
+  }
 }
 
 .filter__form-btn {
@@ -217,13 +337,64 @@ label {
   &:active {
     opacity: 0.6;
   }
+
+  @media (max-width: $tablet-width) {
+    width: 82%;
+    margin: 0 auto;
+  }
+
+  @media (max-width: $mobile-width) {
+    width: 85%;
+  }
 }
 
 .filter__form-btn:not(:last-of-type) {
   margin-bottom: 25px;
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 20px;
+  }
+}
+
+.filter__form-btn:last-of-type {
+  @media (max-width: $tablet-width) {
+    margin-bottom: 40px;
+  }
 }
 
 .filter__form-btn--clear {
   background-color: $white;
   color: $black;
+}
+
+.filter__form-close {
+  display: none;
+
+  @media (max-width: $tablet-width) {
+    display: block;
+    position: absolute;
+    top: -13px;
+    right: -13px;
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 50%;
+    background-color: $black;
+    cursor: pointer;
+
+    background-image: url("../img/close.svg");
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position: center;
+
+    &:hover,
+    &:focus {
+      background-size: 70%;
+      background-color: $decor-2;
+    }
+
+    &:active {
+      opacity: 0.6;
+    }
+  }
 }

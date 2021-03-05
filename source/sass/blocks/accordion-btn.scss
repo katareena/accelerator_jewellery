@@ -3,12 +3,6 @@
   position: absolute;
   width: 13px;
   height: 13px;
-  // for index
-  // top: 43px;
-  // right: 49px;
-  // for catalog
-  // top: 27px;
-  // right: 25px;
   border: none;
   border-left: solid 1px $decor-1;
   border-top: solid 1px $decor-1;
@@ -26,14 +20,12 @@
   @media (max-width: $tablet-width) {
     width: 17px;
     height: 17px;
-    // top: 41px;
-    // right: 52px;
   }
 
-  // @media (max-width: $mobile-width) {
-  //   top: 15px;
-  //   right: 25px;
-  // }
+  @media (max-width: $mobile-width) {
+    width: 15px;
+    height: 15px;
+  }
 }
 
 .accordion-item:hover .accordion-btn,

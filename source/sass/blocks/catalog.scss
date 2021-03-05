@@ -60,6 +60,11 @@
 
   @media (max-width: $tablet-width) {
     flex-direction: column;
+    position: relative;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 0;
   }
 }
 
@@ -75,7 +80,7 @@
     height: 68px;
     border: none;
     background-color: $decor-1;
-    margin-bottom: 78px;
+    margin-bottom: 50px;
     cursor: pointer;
 
     &:hover,
@@ -87,6 +92,10 @@
       opacity: 0.6;
     }
   }
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 40px;
+  }
 }
 
 .catalog__filter {
@@ -97,7 +106,49 @@
   flex-shrink: 0;
 
   @media (max-width: $tablet-width) {
+    min-width: none;
+    max-width: none;
+    margin-right: 0;
     display: none;
+    margin-bottom: 60px;
+    position: absolute;
+    top: 80px;
+    left: -460px;
+    transition: left 1s 1s;
+  }
+}
+
+.catalog__filter--open {
+  @media (max-width: $tablet-width) {
+    display: block;
+    top: 90px;
+    left: -20px;
+    animation-name: menuOpenTablet;
+    animation-duration: 1s;
+  }
+
+  @media (max-width: $mobile-width) {
+    left: 25px;
+    animation-name: menuOpenMobile;
+    animation-duration: 1s;
+  }
+}
+
+@keyframes menuOpenTablet {
+  from {
+    left: -460px;
+  }
+  to {
+    left: -20px;
+  }
+}
+
+@keyframes menuOpenMobile {
+  from {
+    left: -460px;
+  }
+  to {
+    left: 25px;
   }
 }
 
@@ -115,6 +166,14 @@
   margin-top: -15px;
   margin-right: -15px;
   margin-left: -15px;
+
+  @media (max-width: $tablet-width) {
+    max-height: 1239px;
+  }
+
+  @media (max-width: $mobile-width) {
+    max-height: 1457px;
+  }
 }
 
 .catalog__card {
@@ -126,8 +185,14 @@
   text-align: center;
 
   @media (max-width: $tablet-width) {
+    padding-bottom: 14px;
+  }
+
+  @media (max-width: $mobile-width) {
     flex: 0 0 50%;
     max-width: 50%;
+
+    padding-bottom: 7px;
   }
 }
 
@@ -135,13 +200,13 @@
   margin-bottom: 14px;
 
   @media (max-width: $tablet-width) {
-    margin-bottom: 12px;
+    margin-bottom: 15px;
     width: 206px;
     height: 208px;
   }
 
   @media (max-width: $mobile-width) {
-    margin-bottom: 12px;
+    margin-bottom: 11px;
     width: 130px;
     height: 136px;
   }
