@@ -132,7 +132,7 @@
       <div class="catalog__wrap">
 
         <button class="catalog__filter-open" type="button" aria-label="button to opening filter of catalog">Filter</button>
-        <form class="catalog__filter filter" method="get" action="https://echo.htmlacademy.ru">
+        <form class="catalog__filter filter catalog__filter--open" method="get" action="https://echo.htmlacademy.ru">
           <h3 class="visually-hidden">Catalog's filter</h3>
 
           <div class="filter__item accordion-item" tabindex="0" data-set="product">
@@ -197,12 +197,12 @@
                 </div>
 
                 <div class="filter__control filter__control--min">
-                  <div class="filter__toggle filter__toggle--min"></div>
+                  <div class="filter__toggle filter__toggle--min" tabindex="0"></div>
                   <div class="filter__result">&#36; 55</div>
                 </div>
 
                 <div class="filter__control filter__control--max">
-                  <div class="filter__toggle filter__toggle--max"></div>
+                  <div class="filter__toggle filter__toggle--max" tabindex="0"></div>
                   <div class="filter__result">&#36; 155</div>
                 </div>
               </div>
@@ -210,8 +210,10 @@
             <button class="filter__btn accordion-btn" id="btn-price" type="button" aria-label="show the settings of filter"></button>
           </div>
 
+          <button class="filter__form-close" type="button" aria-label="button to close the form"></button>
           <button class="filter__form-btn filter__form-btn--submit" type="submit">Apply</button>
           <button class="filter__form-btn filter__form-btn--clear" type="button">Clear All</button>
+
         </form>
 
         <section class="catalog__catalog">
@@ -694,7 +696,7 @@
     </section>
   </main>
 
-  <footer class="footer">
+  <footer class="footer footer--catalog">
     <div class="footer__wrap">
       <section class="subscription">
         <h2>The good stuff in your inbox</h2>
