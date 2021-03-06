@@ -6,8 +6,7 @@
     "@htmlacademy/editorconfig-cli": "1.x",
     "autoprefixer": "9.5.x",
     "browser-sync": "^2.26.14",
-    "eslint": "4.16.0",
-    "eslint-config-htmlacademy": "0.6.0",
+    "eslint": "7.21.0",
     "gh-pages": "^2.2.0",
     "gulp": "4.0.x",
     "gulp-concat": "^2.6.1",
@@ -24,8 +23,7 @@
     "imagemin-jpeg-recompress": "^7.0.x",
     "pixel-glass": "^1.0.13",
     "posthtml-include": "^1.4.3",
-    "stylelint": "10.1.x",
-    "stylelint-config-htmlacademy": "0.1.4"
+    "stylelint": "10.1.x"
   },
   "scripts": {
     "editorconfig": "editorconfig-cli",
@@ -39,7 +37,6 @@
   },
   "browserslist": [
     "last 2 versions",
-    "IE 11",
     "Firefox ESR"
   ],
   "editorconfig-cli": [
@@ -59,8 +56,5 @@
     "normalize-scss": "^7.0.1",
     "picturefill": "^3.0.3",
     "svg4everybody": "^2.1.9"
-  },
-  "eslintIgnore": [
-    "source/js/**/*.js"
-  ]
+  }
 }
