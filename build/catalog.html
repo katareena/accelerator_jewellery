@@ -51,7 +51,7 @@
 
     <div class="header__dropdown header__dropdown--open">
 
-      <div class="header__inner header__inner--catalog">
+      <div class="header__inner header__inner--notindex">
 
         <div class="user-search">
           <form class="user-search__form" action="https://echo.htmlacademy.ru" method="get">
@@ -65,7 +65,7 @@
           </form>
         </div>
 
-        <a class="header__logo header__logo--catalog" href="index.html" aria-label="logo of jewellery store">
+        <a class="header__logo header__logo--notindex" href="index.html" aria-label="logo of jewellery store">
           <svg width="66" height="66" viewBox="0 0 66 66" aria-hidden="true">
             <use xlink:href="img/sprite_auto.svg#icon-logo"></use>
           </svg>
@@ -135,8 +135,11 @@
         <form class="catalog__filter filter catalog__filter--open" method="get" action="https://echo.htmlacademy.ru">
           <h3 class="visually-hidden">Catalog's filter</h3>
 
-          <div class="filter__item accordion-item" tabindex="0" data-set="product">
-            <h4>Product</h4>
+          <div class="filter__item">
+            <h4 class="accordion-item" tabindex="0" data-set="product">
+              <span>Product</span>
+              <button class="filter__btn accordion-btn" id="btn-product" type="button" aria-label="show the settings of filter"></button>
+            </h4>
             <ul class="filter__settings" id="product">
               <li class="filter__checkbox">
                 <input type="checkbox" name="necklaces" id="filter-necklaces" checked="">
@@ -155,11 +158,13 @@
                 <label for="filter-earrings">Earrings</label>
               </li>
             </ul>
-            <button class="filter__btn accordion-btn" id="btn-product" type="button" aria-label="show the settings of filter"></button>
           </div>
 
-          <div class="filter__item accordion-item" tabindex="0" data-set="material">
-            <h4>Material</h4>
+          <div class="filter__item">
+            <h4 class="accordion-item" tabindex="0" data-set="material">
+              <span>Material</span>
+              <button class="filter__btn accordion-btn" id="btn-material" type="button" aria-label="show the settings of filter"></button>
+            </h4>
             <ul class="filter__settings" id="material">
               <li class="filter__checkbox">
                 <input type="checkbox" name="gold" id="filter-gold">
@@ -170,11 +175,13 @@
                 <label for="filter-silver">Silver</label>
               </li>
             </ul>
-            <button class="filter__btn accordion-btn" id="btn-material" type="button" aria-label="show the settings of filter"></button>
           </div>
 
-          <div class="filter__item accordion-item" tabindex="0" data-set="collection">
-            <h4>Collection</h4>
+          <div class="filter__item">
+            <h4 class="accordion-item" tabindex="0" data-set="collection">
+              <span>Collection</span>
+              <button class="filter__btn accordion-btn" id="btn-collection" type="button" aria-label="show the settings of filter"></button>
+            </h4>
             <ul class="filter__settings" id="collection">
               <li class="filter__checkbox">
                 <input type="checkbox" name="flamingo" id="filter-flamingo" checked="">
@@ -185,11 +192,13 @@
                 <label for="filter-dreams">Dreams</label>
               </li>
             </ul>
-            <button class="filter__btn accordion-btn" id="btn-collection" type="button" aria-label="show the settings of filter"></button>
           </div>
 
-          <div class="filter__item accordion-item" tabindex="0" data-set="price">
-            <h4>Price</h4>
+          <div class="filter__item">
+            <h4 class="accordion-item" tabindex="0" data-set="price">
+              <span>Price</span>
+              <button class="filter__btn accordion-btn" id="btn-price" type="button" aria-label="show the settings of filter"></button>
+            </h4>
             <div class="filter__range" id="price">
               <div class="filter__range-inner">
                 <div class="filter__scale">
@@ -207,7 +216,6 @@
                 </div>
               </div>
             </div>
-            <button class="filter__btn accordion-btn" id="btn-price" type="button" aria-label="show the settings of filter"></button>
           </div>
 
           <button class="filter__form-close" type="button" aria-label="button to close the form"></button>
@@ -240,7 +248,7 @@
             </article>
 
             <article class="catalog__card">
-              <a class="catalog__link" href="#">
+              <a class="catalog__link" href="card.html">
                 <picture>
                   <source type="image/webp" media="(max-width: 767px)" srcset="img/catalog-2-mobile@1x.webp 1x, img/catalog-2-mobile@2x.webp 2x">
                   <source type="image/webp" media="(max-width: 1023px)" srcset="img/catalog-2-tablet@1x.webp 1x, img/catalog-2-tablet@2x.webp 2x">
@@ -259,7 +267,7 @@
             </article>
 
             <article class="catalog__card">
-              <a class="catalog__link" href="#">
+              <a class="catalog__link" href="card.html">
                 <picture>
                   <source type="image/webp" media="(max-width: 767px)" srcset="img/catalog-3-mobile@1x.webp 1x, img/catalog-3-mobile@2x.webp 2x">
                   <source type="image/webp" media="(max-width: 1023px)" srcset="img/catalog-3-tablet@1x.webp 1x, img/catalog-3-tablet@2x.webp 2x">
@@ -278,7 +286,7 @@
             </article>
 
             <article class="catalog__card">
-              <a class="catalog__link" href="#">
+              <a class="catalog__link" href="card.html">
                 <picture>
                   <source type="image/webp" media="(max-width: 767px)" srcset="img/catalog-4-mobile@1x.webp 1x, img/catalog-4-mobile@2x.webp 2x">
                   <source type="image/webp" media="(max-width: 1023px)" srcset="img/catalog-4-tablet@1x.webp 1x, img/catalog-4-tablet@2x.webp 2x">
@@ -297,7 +305,7 @@
             </article>
 
             <article class="catalog__card">
-              <a class="catalog__link" href="#">
+              <a class="catalog__link" href="card.html">
                 <picture>
                   <source type="image/webp" media="(max-width: 767px)" srcset="img/catalog-5-mobile@1x.webp 1x, img/catalog-5-mobile@2x.webp 2x">
                   <source type="image/webp" media="(max-width: 1023px)" srcset="img/catalog-5-tablet@1x.webp 1x, img/catalog-5-tablet@2x.webp 2x">
@@ -316,7 +324,7 @@
             </article>
 
             <article class="catalog__card">
-              <a class="catalog__link" href="#">
+              <a class="catalog__link" href="card.html">
                 <picture>
                   <source type="image/webp" media="(max-width: 767px)" srcset="img/catalog-6-mobile@1x.webp 1x, img/catalog-6-mobile@2x.webp 2x">
                   <source type="image/webp" media="(max-width: 1023px)" srcset="img/catalog-6-tablet@1x.webp 1x, img/catalog-6-tablet@2x.webp 2x">
@@ -335,7 +343,7 @@
             </article>
 
             <article class="catalog__card">
-              <a class="catalog__link" href="#">
+              <a class="catalog__link" href="card.html">
                 <picture>
                   <source type="image/webp" media="(max-width: 767px)" srcset="img/catalog-7-mobile@1x.webp 1x, img/catalog-7-mobile@2x.webp 2x">
                   <source type="image/webp" media="(max-width: 1023px)" srcset="img/catalog-7-tablet@1x.webp 1x, img/catalog-7-tablet@2x.webp 2x">
@@ -354,7 +362,7 @@
             </article>
 
             <article class="catalog__card">
-              <a class="catalog__link" href="#">
+              <a class="catalog__link" href="card.html">
                 <picture>
                   <source type="image/webp" media="(max-width: 767px)" srcset="img/catalog-8-mobile@1x.webp 1x, img/catalog-8-mobile@2x.webp 2x">
                   <source type="image/webp" media="(max-width: 1023px)" srcset="img/catalog-8-tablet@1x.webp 1x, img/catalog-8-tablet@2x.webp 2x">
@@ -373,7 +381,7 @@
             </article>
 
             <article class="catalog__card">
-              <a class="catalog__link" href="#">
+              <a class="catalog__link" href="card.html">
                 <picture>
                   <source type="image/webp" media="(max-width: 767px)" srcset="img/catalog-9-mobile@1x.webp 1x, img/catalog-9-mobile@2x.webp 2x">
                   <source type="image/webp" media="(max-width: 1023px)" srcset="img/catalog-9-tablet@1x.webp 1x, img/catalog-9-tablet@2x.webp 2x">
@@ -392,7 +400,7 @@
             </article>
 
             <article class="catalog__card">
-              <a class="catalog__link" href="#">
+              <a class="catalog__link" href="card.html">
                 <picture>
                   <source type="image/webp" media="(max-width: 767px)" srcset="img/catalog-10-mobile@1x.webp 1x, img/catalog-10-mobile@2x.webp 2x">
                   <source type="image/webp" media="(max-width: 1023px)" srcset="img/catalog-10-tablet@1x.webp 1x, img/catalog-10-tablet@2x.webp 2x">
@@ -411,7 +419,7 @@
             </article>
 
             <article class="catalog__card">
-              <a class="catalog__link" href="#">
+              <a class="catalog__link" href="card.html">
                 <picture>
                   <source type="image/webp" media="(max-width: 767px)" srcset="img/catalog-11-mobile@1x.webp 1x, img/catalog-11-mobile@2x.webp 2x">
                   <source type="image/webp" media="(max-width: 1023px)" srcset="img/catalog-11-tablet@1x.webp 1x, img/catalog-11-tablet@2x.webp 2x">
@@ -430,7 +438,7 @@
             </article>
 
             <article class="catalog__card">
-              <a class="catalog__link" href="#">
+              <a class="catalog__link" href="card.html">
                 <picture>
                   <source type="image/webp" media="(max-width: 767px)" srcset="img/catalog-12-mobile@1x.webp 1x, img/catalog-12-mobile@2x.webp 2x">
                   <source type="image/webp" media="(max-width: 1023px)" srcset="img/catalog-12-tablet@1x.webp 1x, img/catalog-12-tablet@2x.webp 2x">
@@ -469,7 +477,7 @@
             </article>
 
             <article class="catalog__card">
-              <a class="catalog__link" href="#">
+              <a class="catalog__link" href="card.html">
                 <picture>
                   <source type="image/webp" media="(max-width: 767px)" srcset="img/catalog-2-mobile@1x.webp 1x, img/catalog-2-mobile@2x.webp 2x">
                   <source type="image/webp" media="(max-width: 1023px)" srcset="img/catalog-2-tablet@1x.webp 1x, img/catalog-2-tablet@2x.webp 2x">
@@ -488,7 +496,7 @@
             </article>
 
             <article class="catalog__card">
-              <a class="catalog__link" href="#">
+              <a class="catalog__link" href="card.html">
                 <picture>
                   <source type="image/webp" media="(max-width: 767px)" srcset="img/catalog-3-mobile@1x.webp 1x, img/catalog-3-mobile@2x.webp 2x">
                   <source type="image/webp" media="(max-width: 1023px)" srcset="img/catalog-3-tablet@1x.webp 1x, img/catalog-3-tablet@2x.webp 2x">
@@ -507,7 +515,7 @@
             </article>
 
             <article class="catalog__card">
-              <a class="catalog__link" href="#">
+              <a class="catalog__link" href="card.html">
                 <picture>
                   <source type="image/webp" media="(max-width: 767px)" srcset="img/catalog-4-mobile@1x.webp 1x, img/catalog-4-mobile@2x.webp 2x">
                   <source type="image/webp" media="(max-width: 1023px)" srcset="img/catalog-4-tablet@1x.webp 1x, img/catalog-4-tablet@2x.webp 2x">
@@ -526,7 +534,7 @@
             </article>
 
             <article class="catalog__card">
-              <a class="catalog__link" href="#">
+              <a class="catalog__link" href="card.html">
                 <picture>
                   <source type="image/webp" media="(max-width: 767px)" srcset="img/catalog-5-mobile@1x.webp 1x, img/catalog-5-mobile@2x.webp 2x">
                   <source type="image/webp" media="(max-width: 1023px)" srcset="img/catalog-5-tablet@1x.webp 1x, img/catalog-5-tablet@2x.webp 2x">
@@ -545,7 +553,7 @@
             </article>
 
             <article class="catalog__card">
-              <a class="catalog__link" href="#">
+              <a class="catalog__link" href="card.html">
                 <picture>
                   <source type="image/webp" media="(max-width: 767px)" srcset="img/catalog-6-mobile@1x.webp 1x, img/catalog-6-mobile@2x.webp 2x">
                   <source type="image/webp" media="(max-width: 1023px)" srcset="img/catalog-6-tablet@1x.webp 1x, img/catalog-6-tablet@2x.webp 2x">
@@ -564,7 +572,7 @@
             </article>
 
             <article class="catalog__card">
-              <a class="catalog__link" href="#">
+              <a class="catalog__link" href="card.html">
                 <picture>
                   <source type="image/webp" media="(max-width: 767px)" srcset="img/catalog-7-mobile@1x.webp 1x, img/catalog-7-mobile@2x.webp 2x">
                   <source type="image/webp" media="(max-width: 1023px)" srcset="img/catalog-7-tablet@1x.webp 1x, img/catalog-7-tablet@2x.webp 2x">
@@ -583,7 +591,7 @@
             </article>
 
             <article class="catalog__card">
-              <a class="catalog__link" href="#">
+              <a class="catalog__link" href="card.html">
                 <picture>
                   <source type="image/webp" media="(max-width: 767px)" srcset="img/catalog-8-mobile@1x.webp 1x, img/catalog-8-mobile@2x.webp 2x">
                   <source type="image/webp" media="(max-width: 1023px)" srcset="img/catalog-8-tablet@1x.webp 1x, img/catalog-8-tablet@2x.webp 2x">
@@ -602,7 +610,7 @@
             </article>
 
             <article class="catalog__card">
-              <a class="catalog__link" href="#">
+              <a class="catalog__link" href="card.html">
                 <picture>
                   <source type="image/webp" media="(max-width: 767px)" srcset="img/catalog-9-mobile@1x.webp 1x, img/catalog-9-mobile@2x.webp 2x">
                   <source type="image/webp" media="(max-width: 1023px)" srcset="img/catalog-9-tablet@1x.webp 1x, img/catalog-9-tablet@2x.webp 2x">
@@ -621,7 +629,7 @@
             </article>
 
             <article class="catalog__card">
-              <a class="catalog__link" href="#">
+              <a class="catalog__link" href="card.html">
                 <picture>
                   <source type="image/webp" media="(max-width: 767px)" srcset="img/catalog-10-mobile@1x.webp 1x, img/catalog-10-mobile@2x.webp 2x">
                   <source type="image/webp" media="(max-width: 1023px)" srcset="img/catalog-10-tablet@1x.webp 1x, img/catalog-10-tablet@2x.webp 2x">
@@ -640,7 +648,7 @@
             </article>
 
             <article class="catalog__card">
-              <a class="catalog__link" href="#">
+              <a class="catalog__link" href="card.html">
                 <picture>
                   <source type="image/webp" media="(max-width: 767px)" srcset="img/catalog-11-mobile@1x.webp 1x, img/catalog-11-mobile@2x.webp 2x">
                   <source type="image/webp" media="(max-width: 1023px)" srcset="img/catalog-11-tablet@1x.webp 1x, img/catalog-11-tablet@2x.webp 2x">
@@ -659,7 +667,7 @@
             </article>
 
             <article class="catalog__card">
-              <a class="catalog__link" href="#">
+              <a class="catalog__link" href="card.html">
                 <picture>
                   <source type="image/webp" media="(max-width: 767px)" srcset="img/catalog-12-mobile@1x.webp 1x, img/catalog-12-mobile@2x.webp 2x">
                   <source type="image/webp" media="(max-width: 1023px)" srcset="img/catalog-12-tablet@1x.webp 1x, img/catalog-12-tablet@2x.webp 2x">

@@ -1,0 +1,88 @@
+.card {
+  display: flex;
+  padding-top: 80px;
+  margin-bottom: 120px;
+}
+
+.card__picture {
+  flex: 0 0 51.3%;
+  max-width: 51.3%;
+
+  display: grid;
+  grid-template-columns: minmax(90px, 100px) minmax(450px, 470px);
+  grid-template-rows: 125px 125px 125px;
+  gap: 30px;
+  grid-auto-flow: column
+}
+
+.card__details {
+  flex: 0 0 48.7%;
+  max-width: 48.7%;
+}
+
+.card__details {
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+.card__details h3,
+.card__details p {
+  margin: 0;
+}
+
+.card__details > h3 {
+  @include title;
+  letter-spacing: 0.2px;
+  text-align: start;
+  margin-bottom: 10px;
+  margin-top: -10px;
+}
+
+.card__details > p {
+  font-weight: 400;
+  font-size: 26px;
+  line-height: calc(34 / 26);
+  letter-spacing: -0.2px;
+  margin-bottom: 40px;
+}
+
+.card__description {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.card__description > span {
+  color: $decor-2;
+  margin-right: 35px;
+}
+
+.card__text {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 8px;
+  padding-bottom: 10px;
+  border-bottom: solid 1px $decor-4;
+  letter-spacing: -0.5px;
+}
+
+.card__text p {
+  letter-spacing: -0.9px;
+}
+
+.card__btn {
+  @include button;
+  margin-top: 50px;
+  margin-bottom: 17px;
+}
+
+.card__conditions {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card__conditions p {
+  font-size: 14px;
+  line-height: 1;
+  letter-spacing: -0.2px;
+  color: $decor-2;
+}

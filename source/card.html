@@ -56,7 +56,7 @@
 
     <div class="header__dropdown header__dropdown--open">
 
-      <div class="header__inner">
+      <div class="header__inner header__inner--notindex">
 
         <div class="user-search">
           <form class="user-search__form" action="https://echo.htmlacademy.ru" method="get">
@@ -70,7 +70,7 @@
           </form>
         </div>
 
-        <a class="header__logo" href="index.html" aria-label="logo of jewellery store">
+        <a class="header__logo header__logo--notindex" href="index.html" aria-label="logo of jewellery store">
           <svg width="66" height="66" viewBox="0 0 66 66" aria-hidden="true">
             <use xlink:href="img/sprite_auto.svg#icon-logo"></use>
           </svg>
@@ -212,16 +212,22 @@
       </section>
 
 
-      <section class="new">
+      <section class="new new--card">
         <h2>You May Also Like</h2>
-        <a class="new__shop-link" href="catalog.html">Shop Now</a>
-        <div class="control">
-          <button class="control__btn control__btn--previous"></button>
-          <button class="control__btn control__btn--next"></button>
-        </div>
-        <div class="new__wrap">
+        <a class="new__shop-link new__shop-link--card" href="catalog.html">Shop Now</a>
+        <button class="new__btn new__btn--previous" type="button" aria-label="go to the previous slide">
+          <svg width="36" height="20" viewBox="0 0 36 20"  aria-hidden="true">
+            <use xlink:href="img/sprite_auto.svg#icon-arrow-prev"></use>
+          </svg>
+        </button>
+        <button class="new__btn new__btn--next" type="button" aria-label="go to the next slide">
+          <svg width="36" height="20" viewBox="0 0 36 20"  aria-hidden="true">
+            <use xlink:href="img/sprite_auto.svg#icon-arrow-next"></use>
+          </svg>
+        </button>
+        <div class="new__wrap new__wrap--card">
           <article class="new__slide">
-            <a class="new__link" href="#">
+            <a class="new__link" href="card.html" aria-label="card of product">
               <picture>
                 <source type="image/webp" media="(max-width: 767px)"
                   srcset="img/product-1-mobile@1x.webp 1x, img/product-1-mobile@2x.webp 2x" />
@@ -245,7 +251,7 @@
           </article>
 
           <article class="new__slide">
-            <a class="new__link" href="#">
+            <a class="new__link" href="card.html" aria-label="card of product">
               <picture>
                 <source type="image/webp" media="(max-width: 767px)"
                   srcset="img/product-2-mobile@1x.webp 1x, img/product-2-mobile@2x.webp 2x" />
@@ -269,7 +275,7 @@
           </article>
 
           <article class="new__slide">
-            <a class="new__link" href="#">
+            <a class="new__link" href="card.html" aria-label="card of product">
               <picture>
                 <source type="image/webp" media="(max-width: 767px)"
                   srcset="img/product-3-mobile@1x.webp 1x, img/product-3-mobile@2x.webp 2x" />
@@ -293,7 +299,7 @@
           </article>
 
           <article class="new__slide">
-            <a class="new__link" href="#">
+            <a class="new__link" href="card.html" aria-label="card of product">
               <picture>
                 <source type="image/webp" media="(max-width: 767px)"
                   srcset="img/product-4-mobile@1x.webp 1x, img/product-4-mobile@2x.webp 2x" />
@@ -319,9 +325,9 @@
 
         <div class="pagination">
           <ul class="pagination__list">
-            <li class="pagination__item"><a class="pagination__link pagination__link--active" href="#">1</a></li>
-            <li class="pagination__item"><a class="pagination__link" href="#">2</a></li>
-            <li class="pagination__item"><a class="pagination__link" href="#">3</a></li>
+            <li class="pagination__item pagination__item--card"><a class="pagination__link pagination__link--active" href="#">1</a></li>
+            <li class="pagination__item pagination__item--card"><a class="pagination__link" href="#">2</a></li>
+            <li class="pagination__item pagination__item--card"><a class="pagination__link" href="#">3</a></li>
           </ul>
         </div>
       </section>

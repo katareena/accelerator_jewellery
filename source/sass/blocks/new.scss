@@ -12,6 +12,10 @@
   }
 }
 
+.new--card {
+  margin-bottom: 120px;
+}
+
 .new h2 {
   @include title;
   margin-bottom: 25px;
@@ -19,6 +23,11 @@
   @media (max-width: $tablet-width) {
     margin-bottom: 18px;
   }
+}
+
+.new--card h2 {
+  letter-spacing: -0.2px;
+  margin-bottom: 17px;
 }
 
 .new__shop-link {
@@ -38,6 +47,12 @@
 
   @media (max-width: $mobile-width) {
     margin-bottom: 30px;
+  }
+}
+
+.new__shop-link--card {
+  &::before {
+    bottom: -8px;
   }
 }
 
@@ -101,6 +116,10 @@
   @media (max-width: $mobile-width) {
     height: 255px;
   }
+}
+
+.new__wrap--card {
+  margin-bottom: 35px;
 }
 
 .new__slide {

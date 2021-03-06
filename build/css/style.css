@@ -154,7 +154,7 @@ svg {
     .header__inner {
       margin-bottom: 24px; } }
 
-.header__inner--catalog {
+.header__inner--notindex {
   margin-top: 10px; }
 
 .header__logo {
@@ -165,7 +165,7 @@ svg {
     .header__logo {
       display: none; } }
 
-.header__logo--catalog {
+.header__logo--notindex {
   margin-top: -7px; }
 
 .header__menu-logo svg,
@@ -675,6 +675,9 @@ svg {
     .new {
       margin-bottom: 50px; } }
 
+.new--card {
+  margin-bottom: 120px; }
+
 .new h2 {
   margin: 0;
   font-family: "Cormorant Garamond", "Tahoma", sans-serif;
@@ -687,6 +690,10 @@ svg {
   @media (max-width: 1023px) {
     .new h2 {
       margin-bottom: 18px; } }
+
+.new--card h2 {
+  letter-spacing: -0.2px;
+  margin-bottom: 17px; }
 
 .new__shop-link {
   display: block;
@@ -711,6 +718,9 @@ svg {
   @media (max-width: 767px) {
     .new__shop-link {
       margin-bottom: 30px; } }
+
+.new__shop-link--card::before {
+  bottom: -8px; }
 
 .new__btn {
   padding: 0;
@@ -765,6 +775,9 @@ svg {
   @media (max-width: 767px) {
     .new__wrap {
       height: 255px; } }
+
+.new__wrap--card {
+  margin-bottom: 35px; }
 
 .new__slide {
   display: none;
@@ -892,6 +905,10 @@ svg {
   @media (max-width: 767px) {
     .pagination__list--catalog {
       margin: 0 auto; } }
+
+.pagination__item--card {
+  -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+          filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)); }
 
 .blog {
   width: inherit;
@@ -2081,7 +2098,12 @@ svg {
 
 .filter__item h4 {
   margin: 0;
-  font-weight: 500; }
+  font-weight: 500;
+  width: 110%;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  z-index: 10;
+  cursor: pointer; }
   @media (max-width: 1023px) {
     .filter__item h4 {
       font-size: 18px;
@@ -2089,7 +2111,8 @@ svg {
 
 .filter__btn {
   top: 27px;
-  right: 25px; }
+  right: 25px;
+  z-index: 1; }
   @media (max-width: 1023px) {
     .filter__btn {
       top: 41px;
@@ -2235,15 +2258,18 @@ label {
 .filter__bar {
   width: 53%;
   height: 1px;
-  margin-left: 22%;
+  margin-left: 25%;
   background-color: #a87b62; }
+  @media (max-width: 1023px) {
+    .filter__bar {
+      margin-left: 22%; } }
   @media (max-width: 767px) {
     .filter__bar {
       margin-left: 20%; } }
 
 .filter__control {
   position: absolute;
-  top: 27px;
+  top: 21px;
   left: 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2255,6 +2281,9 @@ label {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center; }
+  @media (max-width: 1023px) {
+    .filter__control {
+      top: 27px; } }
 
 .filter__control--min {
   left: 19%; }
@@ -2303,6 +2332,8 @@ label {
       font-size: 16px; } }
 
 .filter__form-btn {
+  display: block;
+  text-align: center;
   font-family: "Poppins","Tahoma",sans-serif;
   letter-spacing: 1.3px;
   color: #ffffff;
@@ -2363,5 +2394,124 @@ label {
         background-color: #9b9997; }
       .filter__form-close:active {
         opacity: 0.6; } }
+
+.card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 80px;
+  margin-bottom: 120px; }
+
+.card__picture {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 51.3%;
+          flex: 0 0 51.3%;
+  max-width: 51.3%;
+  display: grid;
+  grid-template-columns: minmax(90px, 100px) minmax(450px, 470px);
+  grid-template-rows: 125px 125px 125px;
+  gap: 30px;
+  grid-auto-flow: column; }
+
+.card__details {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 48.7%;
+          flex: 0 0 48.7%;
+  max-width: 48.7%; }
+
+.card__details {
+  padding-left: 100px;
+  padding-right: 100px; }
+
+.card__details h3,
+.card__details p {
+  margin: 0; }
+
+.card__details > h3 {
+  margin: 0;
+  font-family: "Cormorant Garamond", "Tahoma", sans-serif;
+  font-weight: 700;
+  font-size: 34px;
+  line-height: calc(44 / 34);
+  letter-spacing: 0.5px;
+  text-align: center;
+  letter-spacing: 0.2px;
+  text-align: start;
+  margin-bottom: 10px;
+  margin-top: -10px; }
+
+.card__details > p {
+  font-weight: 400;
+  font-size: 26px;
+  line-height: calc(34 / 26);
+  letter-spacing: -0.2px;
+  margin-bottom: 40px; }
+
+.card__description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 20px; }
+
+.card__description > span {
+  color: #9b9997;
+  margin-right: 35px; }
+
+.card__text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-top: 8px;
+  padding-bottom: 10px;
+  border-bottom: solid 1px #f6f5f4;
+  letter-spacing: -0.5px; }
+
+.card__text p {
+  letter-spacing: -0.9px; }
+
+.card__btn {
+  display: block;
+  text-align: center;
+  font-family: "Poppins","Tahoma",sans-serif;
+  letter-spacing: 1.3px;
+  color: #ffffff;
+  display: block;
+  width: 100%;
+  height: 68px;
+  border: 1px solid #a87b62;
+  background-color: #a87b62;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  margin-top: 50px;
+  margin-bottom: 17px; }
+  .card__btn:hover, .card__btn:focus {
+    background-color: rgba(155, 153, 151, 0.7); }
+  .card__btn:active {
+    opacity: 0.6; }
+  @media (max-width: 1023px) {
+    .card__btn {
+      width: 82%;
+      margin: 0 auto; } }
+  @media (max-width: 767px) {
+    .card__btn {
+      width: 85%; } }
+
+.card__conditions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+
+.card__conditions p {
+  font-size: 14px;
+  line-height: 1;
+  letter-spacing: -0.2px;
+  color: #9b9997; }
 
 /*# sourceMappingURL=style.css.map */
