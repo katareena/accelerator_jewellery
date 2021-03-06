@@ -333,6 +333,7 @@ label {
 
 .filter__form-btn {
   @include button;
+  border: 1px solid $decor-1;
 }
 
 .filter__form-btn:not(:last-of-type) {

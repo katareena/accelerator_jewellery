@@ -5,3 +5,8 @@
 .main__wrap {
   @include page-wrap;
 }
+
+.main__wrap--authorization {
+  padding-top: 30px;
+  padding-bottom: 50px;
+}

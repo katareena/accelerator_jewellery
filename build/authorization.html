@@ -121,35 +121,31 @@
   </header>
 
   <main class="main">
-    <div class="main__wrap">
-
+    <div class="main__wrap main__wrap--authorization">
       <section class="authorization">
         <div class="authorization__wrap">
           <h2>Log In</h2>
           <form class="authorization__form" action="https://echo.htmlacademy.ru" method="post">
             <div class="authorization__item">
-              <label for="user-mail">Your E-mail</label>
+              <p class="hide" id="message-mail">Please enter the valid value</p>
+              <label class="visually-hidden" for="user-mail"></label>
               <input id="user-mail" type="email" name="email" autocomplete="off" placeholder="Your E-mail">
-              <p id="message-mail"></p>
             </div>
 
             <div class="authorization__item">
-              <label for="user-password">Password</label>
+              <p class="hide" id="message-password">Please enter the valid value</p>
+              <label class="visually-hidden" for="user-password"></label>
               <input id="user-password" type="password" name="password" autocomplete="off" maxlength="8" minlength="6" placeholder="Password">
-              <p id="message-password"></p>
-              <a class="authorization__reminder" href="#">Forgot your password?</a>
             </div>
-
+            <a class="authorization__reminder" href="#">Forgot your password?</a>
             <button class="authorization__entry" type="submit">Log In</button>
             <div class="authorization__box">
               <p>Don’t have an account?</p>
               <a class="authorization__registration" href="#">Sign up</a>
             </div>
-            <button class="authorization__close" type="button" aria-label="Close form"></button>
           </form>
         </div>
       </section>
-
     </div>
   </main>
 

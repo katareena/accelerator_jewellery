@@ -102,7 +102,7 @@
   display: block;
   width: 100%;
   height: 68px;
-  border: 1px solid $decor-1;
+  border: none;
   background-color: $decor-1;
   cursor: pointer;
   transition: all 0.2s ease;
@@ -110,78 +110,85 @@
   &:hover,
   &:focus {
     background-color: rgba($decor-2, 0.7);
+    border: none;
   }
 
   &:active {
     opacity: 0.6;
   }
+}
 
-  @media (max-width: $tablet-width) {
-    width: 82%;
-    margin: 0 auto;
+@mixin button-close {
+  cursor: pointer;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 30px;
+  height: 30px;
+  border: none;
+  background-color: transparent;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 10px;
+    height: 22px;
+    width: 3px;
+    background: $black;
+    transform: rotate(45deg);
+
+    @media (max-width: $mobile-width) {
+      top: -10px;
+      right: 0;
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 10px;
+    height: 22px;
+    width: 3px;
+    background: $black;
+    transform: rotate(-45deg);
+
+    @media (max-width: $mobile-width) {
+      top: -10px;
+      right: 0;
+    }
+  }
+
+  &:hover::after,
+  &:focus::after,
+  &:hover::before,
+  &:focus::before {
+    background: $decor-3;
+    opacity: 0.5;
+  }
+
+  &:active::after,
+  &:active::before {
+    opacity: 0.5;
   }
 
   @media (max-width: $mobile-width) {
-    width: 85%;
+    &::before {
+      top: -2px;
+      right: 5px;
+      height: 18px;
+      width: 2px;
+    }
+
+    &::after {
+      top: -2px;
+      right: 5px;
+      height: 18px;
+      width: 2px;
+    }
   }
 }
-
-// @mixin button-close {
-//   cursor: pointer;
-//   position: absolute;
-//   top: 30px;
-//   right: 30px;
-//   width: 30px;
-//   height: 30px;
-//   border: none;
-//   background-color: transparent;
-
-//   &::before {
-//     position: absolute;
-//     top: 0;
-//     right: 10px;
-//     content: "";
-//     height: 22px;
-//     width: 2px;
-//     background: $gradient;
-//     transform: rotate(45deg);
-
-//     @media (max-width: $mobile-width) {
-//       top: -10px;
-//       right: 0;
-//     }
-//   }
-
-//   &::after {
-//     position: absolute;
-//     top: 0;
-//     right: 10px;
-//     content: "";
-//     height: 22px;
-//     width: 2px;
-//     background: $gradient;
-//     transform: rotate(-45deg);
-
-//     @media (max-width: $mobile-width) {
-//       top: -10px;
-//       right: 0;
-//     }
-//   }
-
-//   &:hover::after,
-//   &:focus::after,
-//   &:hover::before,
-//   &:focus::before {
-//     background: $accent-decor-3;
-//     opacity: 0.5;
-//   }
-
-//   &:active::after,
-//   &:active::before {
-//     background: $gradient;
-//     opacity: 0.5;
-//   }
-// }
 
 // @mixin modal {
 //   width: 100vw;

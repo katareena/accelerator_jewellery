@@ -1,3 +1,199 @@
 .authorization {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $white;
+
+}
+
+.authorization--modal {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba($decor-1, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5000;
   display: none;
+}
+
+.authorization--show {
+  display: block;
+  animation-name: bounce;
+  animation-duration: 0.6s;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(-2000px);
+  }
+
+  70% {
+    transform: translateY(30px);
+  }
+
+  90% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.authorization__wrap {
+  width: 430px;
+  min-height: 586px;
+  padding-top: 186px;
+  padding-left: 45px;
+  padding-right: 45px;
+  padding-bottom: 60px;
+  background: $decor-3;
+  box-shadow: 0px 5px 32px $shadow;
+  position: relative;
+
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: 100% 138px;
+  background-image: url('../img/intro-logIn-desktop@1x.jpg');
+
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url('../img/intro-logIn-desktop@2x.jpg');
+  }
+
+  @media (max-width: $tablet-width) {
+    width: 442px;
+    padding-top: 188px;
+    padding-left: 51px;
+    padding-right: 51px;
+  }
+
+  @media (max-width: $mobile-width) {
+    width: 270px;
+    min-height: 470px;
+    padding-top: 120px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 60px;
+    background-size: 100% 84px;
+    background-image: url('../img/intro-logIn-mobile@1x.jpg');
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url('../img/intro-logIn-mobile@2x.jpg');
+    }
+  }
+}
+
+.authorization__wrap--modal {
+  position: fixed;
+  top: 10vh;
+  left: calc(50vw - 215px);
+
+  @media (max-width: $mobile-width) {
+    left: calc(50vw - 135px);
+  }
+}
+
+.authorization__wrap h2 {
+  @include title;
+  margin-bottom: 25px;
+
+  @media (max-width: $mobile-width) {
+    font-size: 24px;
+    line-height: calc(31 / 24);
+    margin-bottom: 19px;
+  }
+}
+
+.authorization__item {
+  margin-bottom: 28px;
+  position: relative;
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 22px;
+  }
+}
+
+.authorization__item p {
+  font-family: "Poppins", "Tahoma", sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1;
+  width: 100%;
+  height: 12px;
+  margin: 0;
+  text-align: start;
+  color: $error;
+
+  position: absolute;
+  bottom: -12px;
+  left: 0;
+}
+
+.authorization__item input {
+  font-family: "Poppins", "Tahoma", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1;
+
+  background-color: $decor-3;
+  border: none;
+  border-bottom: solid 1px $black;
+  width: 100%;
+  height: 38px;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: rgba($white, 0.4);
+  }
+}
+
+.authorization__reminder {
+  font-family: "Poppins", "Tahoma", sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1;
+  color: $decor-2;
+  display: block;
+  text-align: end;
+  margin-top: -20px;
+  margin-bottom: 47px;
+
+  @media (max-width: $mobile-width) {
+    margin-top: -15px;
+    margin-bottom: 39px;
+  }
+}
+
+.authorization__entry {
+  @include button;
+  margin-bottom: 19px;
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 17px;
+  }
+}
+
+.authorization__box {
+  text-align: center;
+  font-size: 14px;
+  line-height: 1;
+}
+
+.authorization__box p {
+  display: inline;
+  text-align: center;
+  color: $decor-2;
+  margin-right: 6px;
+
+  @media (max-width: $mobile-width) {
+    margin-right: 2px;
+  }
+}
+
+.authorization__close {
+  @include button-close;
 }
