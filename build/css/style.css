@@ -2838,6 +2838,7 @@ label {
   cursor: pointer;
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
+  line-height: 68px;
   margin-top: 50px;
   margin-bottom: 17px; }
   .card__btn:hover, .card__btn:focus {

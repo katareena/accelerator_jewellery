@@ -153,6 +153,7 @@
 
 .card__btn {
   @include button;
+  line-height: 68px;
   margin-top: 50px;
   margin-bottom: 17px;
 
