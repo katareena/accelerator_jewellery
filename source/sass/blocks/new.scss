@@ -14,6 +14,10 @@
 
 .new--card {
   margin-bottom: 120px;
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 60px;
+  }
 }
 
 .new h2 {
@@ -28,6 +32,10 @@
 .new--card h2 {
   letter-spacing: -0.2px;
   margin-bottom: 17px;
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 19px;
+  }
 }
 
 .new__shop-link {
@@ -53,6 +61,12 @@
 .new__shop-link--card {
   &::before {
     bottom: -8px;
+  }
+
+  @media (max-width: $mobile-width) {
+    &::before {
+      bottom: -5px;
+    }
   }
 }
 
@@ -120,6 +134,10 @@
 
 .new__wrap--card {
   margin-bottom: 35px;
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 8px;
+  }
 }
 
 .new__slide {
