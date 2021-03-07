@@ -112,6 +112,7 @@
 'use strict';
 (function () {
   const PAGES = {
+    'start': '/',
     'index': '/index.html',
     'catalog': '/catalog.html',
     'card': '/card.html',
@@ -131,7 +132,7 @@
       dropdown.classList.remove('header__dropdown--open');
     }
 
-    if (window.location.pathname === PAGES.index) {
+    if (window.location.pathname === PAGES.index || window.location.pathname === PAGES.start) {
       answers.forEach(elem => {
         elem.classList.add('hide');
       });
