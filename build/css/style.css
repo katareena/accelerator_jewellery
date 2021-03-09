@@ -2652,12 +2652,12 @@ label {
 .authorization--modal {
   width: 100vw;
   height: 100vh;
-  background-color: rgba(168, 123, 98, 0.5);
   position: fixed;
   top: 0;
   left: 0;
   z-index: 5000;
-  display: none; }
+  display: none;
+  background-color: rgba(168, 123, 98, 0.5); }
 
 .authorization--show {
   display: block;
@@ -2916,12 +2916,12 @@ label {
 .added--modal {
   width: 100vw;
   height: 100vh;
-  background-color: rgba(155, 153, 151, 0.5);
   position: fixed;
   top: 0;
   left: 0;
   z-index: 5000;
-  display: none; }
+  display: none;
+  background-color: rgba(155, 153, 151, 0.5); }
 
 .added--show {
   display: block;

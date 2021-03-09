@@ -1,27 +1,14 @@
 .authorization {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: $white;
-
+  @include in-flow
 }
 
 .authorization--modal {
-  width: 100vw;
-  height: 100vh;
+  @include modal;
   background-color: rgba($decor-1, 0.5);
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 5000;
-  display: none;
 }
 
 .authorization--show {
-  display: block;
-  animation-name: bounce;
-  animation-duration: 0.6s;
+  @include show-modal;
 }
 
 @keyframes bounce {

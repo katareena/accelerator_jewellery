@@ -182,7 +182,6 @@
         error_message('message-password', true);
       }
     }
-
   };
 
   window.login = {

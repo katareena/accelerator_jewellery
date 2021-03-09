@@ -71,28 +71,6 @@
   }
 }
 
-// @mixin input {
-//   font-family: "Poppins", "Tahoma", sans-serif;
-//   font-weight: 500;
-//   font-size: 14px;
-//   line-height: calc(21 / 14);
-//   border: none;
-//   border-bottom: solid 1px $text;
-//   padding-bottom: 15px;
-//   padding-top: 15px;
-//   transition: all 0.2s ease;
-
-//   &:hover,
-//   &:focus,
-//   &:active {
-//     border-bottom: solid 1px $decor-2;
-//   }
-
-//   &::placeholder {
-//     color: $decor-2;
-//   }
-// }
-
 @mixin button {
   display: block;
   text-align: center;
@@ -190,38 +168,26 @@
   }
 }
 
-// @mixin modal {
-//   width: 100vw;
-//   height: 100vh;
-//   position: fixed;
-//   top: 0;
-//   left: 0;
-//   z-index: 5000;
+@mixin in-flow {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $white;
+}
 
-//   @media (max-width: $mobile-width) {
-//     height: auto;
-//   }
-// }
+@mixin modal {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5000;
+  display: none;
+}
 
-// @mixin modal-form {
-//   width: 480px;
-//   background-color: $white;
-//   border-radius: 8px;
-//   position: fixed;
-//   top: 15vh;
-//   left: calc(50vw - 240px);
-//   display: flex;
-//   flex-wrap: wrap;
-//   flex-direction: column;
-//   box-shadow: 0 3px 12px rgba($black, 0.1);
-
-//   @media (max-width: $mobile-width) {
-//     width: 100%;
-//     min-width: 320px;
-//     max-width: 767px;
-//     min-height: 768px;
-//     border-radius: 0;
-//     top: 0;
-//     left: 0;
-//   }
-// }
+@mixin show-modal {
+  display: block;
+  animation-name: bounce;
+  animation-duration: 0.6s;
+}
