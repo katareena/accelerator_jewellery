@@ -2930,20 +2930,6 @@ label {
   -webkit-animation-duration: 0.6s;
           animation-duration: 0.6s; }
 
-@keyframes bounce {
-  0% {
-    -webkit-transform: translateY(-2000px);
-            transform: translateY(-2000px); }
-  70% {
-    -webkit-transform: translateY(30px);
-            transform: translateY(30px); }
-  90% {
-    -webkit-transform: translateY(-10px);
-            transform: translateY(-10px); }
-  100% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0); } }
-
 .added__wrap {
   width: 500px;
   min-height: 439px;
@@ -3192,5 +3178,68 @@ label {
 
 .added__link--basket {
   float: right; }
+
+.added__close {
+  cursor: pointer;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 30px;
+  height: 30px;
+  border: none;
+  background-color: transparent; }
+  .added__close::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 10px;
+    height: 22px;
+    width: 3px;
+    background: #000000;
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg); }
+    @media (max-width: 767px) {
+      .added__close::before {
+        top: -10px;
+        right: 0; } }
+  .added__close::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 10px;
+    height: 22px;
+    width: 3px;
+    background: #000000;
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg); }
+    @media (max-width: 767px) {
+      .added__close::after {
+        top: -10px;
+        right: 0; } }
+  .added__close:hover::after, .added__close:focus::after, .added__close:hover::before, .added__close:focus::before {
+    background: #f0eae4;
+    opacity: 0.5; }
+  .added__close:active::after, .added__close:active::before {
+    opacity: 0.5; }
+  @media (max-width: 767px) {
+    .added__close::before {
+      top: -2px;
+      right: 5px;
+      height: 18px;
+      width: 2px; }
+    .added__close::after {
+      top: -2px;
+      right: 5px;
+      height: 18px;
+      width: 2px; } }
+  .added__close:hover::after, .added__close:focus::after, .added__close:hover::before, .added__close:focus::before {
+    background: #a87b62;
+    opacity: 1; }
+
+.basket {
+  width: inherit;
+  height: 47.8vh;
+  padding-top: 100px;
+  font-size: 30px; }
 
 /*# sourceMappingURL=style.css.map */

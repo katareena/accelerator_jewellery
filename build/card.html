@@ -202,7 +202,7 @@
             <p>Size</p>
             <p>18” / 20”</p>
           </div>
-          <a class="card__btn" href="added.html">Add to cart</a>
+          <a class="card__btn" id="add" href="added.html">Add to cart</a>
           <div class="card__conditions">
             <p>14 Day Returns</p>
             <p>2-Year Warranty</p>
@@ -439,11 +439,11 @@
     </div>
   </section>
 
-  <section class="added">
-    <div class="added__wrap">
+  <section class="added added--modal">
+    <div class="added__wrap added__wrap--modal">
       <h2>The item was added to your cart</h2>
 
-      <div class="added__inner">
+      <div class="added__inner-list">
         <article class="added__product">
           <picture>
             <source type="image/webp" media="(max-width: 767px)" srcset="img/cart-card1-mobile@1x.webp 1x, img/cart-card1-mobile@2x.webp 2x">
@@ -460,20 +460,23 @@
           </div>
 
           <div class="added__counter">
-            <button class="added__btn added__btn--minus" type="button" aria-label="plus one"></button>
+            <button class="added__btn added__btn--plus" type="button" aria-label="plus one"></button>
             <div class="added__result">1</div>
-            <button class="added__btn added__btn--plus" type="button" aria-label="minus one"></button>
+            <button class="added__btn added__btn--minus" type="button" aria-label="minus one"></button>
           </div>
         </article>
       </div>
 
-      <div class="added__information">
-        <p>You have <span class="added__number-js">1</span> item in the cart</p>
-        <p>Cart subtotal: <span class="added__cost-js">$ 115</span></p>
-      </div>
+      <div class="added__inner-info">
 
-      <a class="added__link added__link--shopping" href="catalog.html">Continue shopping</a>
-      <a class="added__link added__link--basket" href="basket.html">Checkout</a>
+        <div class="added__information">
+          <p>You have <span class="added__number-js">1</span> item in the cart</p>
+          <p>Cart subtotal: <span class="added__cost-js">$ 115</span></p>
+        </div>
+
+        <a class="added__link added__link--shopping" href="catalog.html">Continue shopping</a>
+        <a class="added__link added__link--basket" href="basket.html">Checkout</a>
+      </div>
       <button class="added__close" type="button" aria-label="Close form"></button>
     </div>
   </section>
