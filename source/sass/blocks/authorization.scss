@@ -197,3 +197,8 @@
 .authorization__close {
   @include button-close;
 }
+
+.authorization__form-input--invalid {
+  box-shadow: 0 0 0 2px $error;
+
+}

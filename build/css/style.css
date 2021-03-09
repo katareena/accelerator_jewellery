@@ -2896,6 +2896,10 @@ label {
       height: 18px;
       width: 2px; } }
 
+.authorization__form-input--invalid {
+  -webkit-box-shadow: 0 0 0 2px #dd2e0f;
+          box-shadow: 0 0 0 2px #dd2e0f; }
+
 .added {
   width: 100%;
   display: -webkit-box;

@@ -36,7 +36,7 @@
 
   window.preSetPage = {
     preSetPage: preSetPage
-  }
+  };
 
   document.addEventListener('DOMContentLoaded', preSetPage);
   window.addEventListener('resize', preSetPage);

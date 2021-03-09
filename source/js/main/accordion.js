@@ -3,7 +3,7 @@
   const items = document.querySelectorAll('.accordion-item');
 
   function moveAccordion (trgt) {
-    let set = trgt.dataset.set;
+    const set = trgt.dataset.set;
     document.querySelector('#' + set).classList.toggle('hide');
     document.querySelector('#btn-' + set).classList.toggle('rotate-btn');
   };

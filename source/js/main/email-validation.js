@@ -8,14 +8,14 @@
   function validateInputHandler () {
     if (input.value == '') {
       message.style.color = 'transparent';
-      submitBtn.disabled = 'true'
+      submitBtn.disabled = 'true';
     } else {
       if (!input.value.includes('@') || !input.value.includes('.')) {
         message.style.color = COLOR_ERROR;
-        submitBtn.disabled = 'true'
+        submitBtn.disabled = 'true';
       } else {
         message.style.color = 'transparent';
-        submitBtn.disabled = ''
+        submitBtn.disabled = '';
       }
     }
   }
