@@ -16,7 +16,6 @@
     const closeBtn = modal.querySelector('.added__close');
 
     // --------------- form open/close ---------------
-
     function closeModalHandler() {
       modal.classList.remove('added--show');
       window.scroll.getScroll();
