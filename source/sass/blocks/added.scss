@@ -187,6 +187,8 @@
   border: none;
   background: transparent;
   cursor: pointer;
+
+
 }
 
 .added__btn--plus::before {
@@ -239,6 +241,22 @@
     left: 2px;
   }
 }
+
+.added__btn--plus,
+.added__btn--minus {
+  &:hover::after,
+  &:focus::after,
+  &:hover::before,
+  &:focus::before {
+    border: solid 1.5px $text;
+  }
+
+  &:active::after,
+  &:active::before {
+    border: solid 1.5px $decor-1;
+  }
+}
+
 
 .added__information {
   display: flex;

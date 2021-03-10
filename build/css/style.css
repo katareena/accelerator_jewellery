@@ -3119,6 +3119,18 @@ label {
       bottom: 15px;
       left: 2px; } }
 
+.added__btn--plus:hover::after, .added__btn--plus:focus::after, .added__btn--plus:hover::before, .added__btn--plus:focus::before,
+.added__btn--minus:hover::after,
+.added__btn--minus:focus::after,
+.added__btn--minus:hover::before,
+.added__btn--minus:focus::before {
+  border: solid 1.5px #1d1613; }
+
+.added__btn--plus:active::after, .added__btn--plus:active::before,
+.added__btn--minus:active::after,
+.added__btn--minus:active::before {
+  border: solid 1.5px #a87b62; }
+
 .added__information {
   display: -webkit-box;
   display: -ms-flexbox;
