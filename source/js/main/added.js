@@ -1,3 +1,4 @@
+'use strict';
 (function () {
   const PAGES = {
     'start': '/',
@@ -15,24 +16,10 @@
     const closeBtn = modal.querySelector('.added__close');
 
     // --------------- form open/close ---------------
-    function preventScroll() {
-      const body = document.body;
-      body.style.height = '100vh';
-      body.style.overflowY = 'hidden';
-    };
-
-    function getScroll() {
-      const body = document.body;
-      body.style.position = '';
-      body.style.top = '';
-      body.style.height = '';
-      body.style.overflowY = '';
-      window.scrollTo(0, parseInt(scrollY || '0') * -1);
-    };
 
     function closeModalHandler() {
       modal.classList.remove('added--show');
-      getScroll();
+      window.scroll.getScroll();
       closeBtn.removeEventListener('click', closeModalHandler);
       modal.removeEventListener('click', window.login.closeOverlayHandler);
       window.removeEventListener('keydown', window.login.closeEscHandler);
@@ -55,9 +42,8 @@
     };
 
     function openModalHandler(evt) {
-      // if (window.location.pathname === PAGES.card) {}
       evt.preventDefault();
-      preventScroll();
+      window.scroll.preventScroll();
       modal.classList.add('added--show');
       closeBtn.addEventListener('click', closeModalHandler);
       modal.addEventListener('click', closeOverlayHandler);

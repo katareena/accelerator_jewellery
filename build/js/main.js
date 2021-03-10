@@ -25,6 +25,7 @@
 
 })();
 
+'use strict';
 (function () {
   const PAGES = {
     'start': '/',
@@ -42,24 +43,10 @@
     const closeBtn = modal.querySelector('.added__close');
 
     // --------------- form open/close ---------------
-    function preventScroll() {
-      const body = document.body;
-      body.style.height = '100vh';
-      body.style.overflowY = 'hidden';
-    };
-
-    function getScroll() {
-      const body = document.body;
-      body.style.position = '';
-      body.style.top = '';
-      body.style.height = '';
-      body.style.overflowY = '';
-      window.scrollTo(0, parseInt(scrollY || '0') * -1);
-    };
 
     function closeModalHandler() {
       modal.classList.remove('added--show');
-      getScroll();
+      window.scroll.getScroll();
       closeBtn.removeEventListener('click', closeModalHandler);
       modal.removeEventListener('click', window.login.closeOverlayHandler);
       window.removeEventListener('keydown', window.login.closeEscHandler);
@@ -82,9 +69,8 @@
     };
 
     function openModalHandler(evt) {
-      // if (window.location.pathname === PAGES.card) {}
       evt.preventDefault();
-      preventScroll();
+      window.scroll.preventScroll();
       modal.classList.add('added--show');
       closeBtn.addEventListener('click', closeModalHandler);
       modal.addEventListener('click', closeOverlayHandler);
@@ -159,24 +145,24 @@
   const passwordInput = modal.querySelector('#user-password');
 
   // --------------- form open/close ---------------
-  function preventScroll() {
-    const body = document.body;
-    body.style.height = '100vh';
-    body.style.overflowY = 'hidden';
-  };
+  // function preventScroll() {
+  //   const body = document.body;
+  //   body.style.height = '100vh';
+  //   body.style.overflowY = 'hidden';
+  // };
 
-  function getScroll() {
-    const body = document.body;
-    body.style.position = '';
-    body.style.top = '';
-    body.style.height = '';
-    body.style.overflowY = '';
-    window.scrollTo(0, parseInt(scrollY || '0') * -1);
-  };
+  // function getScroll() {
+  //   const body = document.body;
+  //   body.style.position = '';
+  //   body.style.top = '';
+  //   body.style.height = '';
+  //   body.style.overflowY = '';
+  //   window.scrollTo(0, parseInt(scrollY || '0') * -1);
+  // };
 
   function closeModalHandler() {
     modal.classList.remove('authorization--show');
-    getScroll();
+    window.scroll.getScroll();
     closeBtn.removeEventListener('click', closeModalHandler);
     modal.removeEventListener('click', window.login.closeOverlayHandler);
     window.removeEventListener('keydown', window.login.closeEscHandler);
@@ -208,7 +194,7 @@
   function openModalHandler(evt) {
     evt.preventDefault();
     form.reset();
-    preventScroll();
+    window.scroll.preventScroll();
     modal.classList.add('authorization--show');
     mailInput.focus();
     closeBtn.addEventListener('click', closeModalHandler);
@@ -392,6 +378,29 @@
 
   document.addEventListener('DOMContentLoaded', preSetPage);
   window.addEventListener('resize', preSetPage);
+})();
+
+'use strict';
+(function () {
+  function preventScroll() {
+    const body = document.body;
+    body.style.height = '100vh';
+    body.style.overflowY = 'hidden';
+  };
+
+  function getScroll() {
+    const body = document.body;
+    body.style.position = '';
+    body.style.top = '';
+    body.style.height = '';
+    body.style.overflowY = '';
+    window.scrollTo(0, parseInt(scrollY || '0') * -1);
+  };
+
+  window.scroll = {
+    preventScroll: preventScroll,
+    getScroll: getScroll
+  };
 })();
 
 'use strict';

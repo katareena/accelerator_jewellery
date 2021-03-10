@@ -9,24 +9,24 @@
   const passwordInput = modal.querySelector('#user-password');
 
   // --------------- form open/close ---------------
-  function preventScroll() {
-    const body = document.body;
-    body.style.height = '100vh';
-    body.style.overflowY = 'hidden';
-  };
+  // function preventScroll() {
+  //   const body = document.body;
+  //   body.style.height = '100vh';
+  //   body.style.overflowY = 'hidden';
+  // };
 
-  function getScroll() {
-    const body = document.body;
-    body.style.position = '';
-    body.style.top = '';
-    body.style.height = '';
-    body.style.overflowY = '';
-    window.scrollTo(0, parseInt(scrollY || '0') * -1);
-  };
+  // function getScroll() {
+  //   const body = document.body;
+  //   body.style.position = '';
+  //   body.style.top = '';
+  //   body.style.height = '';
+  //   body.style.overflowY = '';
+  //   window.scrollTo(0, parseInt(scrollY || '0') * -1);
+  // };
 
   function closeModalHandler() {
     modal.classList.remove('authorization--show');
-    getScroll();
+    window.scroll.getScroll();
     closeBtn.removeEventListener('click', closeModalHandler);
     modal.removeEventListener('click', window.login.closeOverlayHandler);
     window.removeEventListener('keydown', window.login.closeEscHandler);
@@ -58,7 +58,7 @@
   function openModalHandler(evt) {
     evt.preventDefault();
     form.reset();
-    preventScroll();
+    window.scroll.preventScroll();
     modal.classList.add('authorization--show');
     mailInput.focus();
     closeBtn.addEventListener('click', closeModalHandler);
