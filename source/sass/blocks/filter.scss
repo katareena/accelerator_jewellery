@@ -6,6 +6,7 @@
     max-width: 442px;
     min-width: 270px;
     transition-duration: 0.3s;
+    z-index: 10;
   }
 
   @media (max-width: $mobile-width) {
