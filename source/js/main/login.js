@@ -61,7 +61,6 @@
   openBtn.addEventListener('click', openModalHandler);
 
   // --------------- form validation ---------------
-
   let isStorageSupport = true;
   let storage = '';
 
