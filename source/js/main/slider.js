@@ -1,134 +1,131 @@
 'use strict';
 (function () {
-  // var MIN_WIDTH_DESKTOP = 1024;
-  // var slides = document.getElementsByClassName('new__slide');
-  // var extraDots = document.getElementsByClassName('pagination__item--extra');
-  // var slideIndex;
-  // var size;
+  // ----------- slider ------------
+  const PAGES = {
+    'start': '/',
+    'index': '/index.html',
+    'catalog': '/catalog.html',
+    'card': '/card.html',
+    'authorization': '/authorization.html',
+    'added': '/added.html'
+  };
 
-  // function initSlider() {
-  //   slideIndex = 1;
+  if (window.location.pathname === PAGES.start || window.location.pathname === PAGES.index || window.location.pathname === PAGES.card) {
+    const MIN_WIDTH_DESKTOP = 1024;
+    const slides = document.querySelectorAll('.slider__item');
+    const innerSlider = document.querySelector('.slider__inner');
+    const sliderWidth = document.querySelector('.slider').offsetWidth;
+    const nextBtn = document.querySelector('.advertisement__btn--next');
+    const prevBtn = document.querySelector('.advertisement__btn--previous');
 
-  //   for (var i = 0; i < slides.length; i++) {
-  //     slides[i].classList.remove('new__slide--active');
-  //   }
+    const widthArray = [];
+    let innerSliderWidth = 0;
+    let offset = 0; //сдвиг слева
+    let step = 0; //шаги сдвига
+    let remains = 0; //сдвиг справа
+    // sliderWidth - ширина телевизора
+    // innerSliderWidth - ширина всей линии слайдов
 
+    function setWidthinnerSlider() {
+      for (let i = 0; i < slides.length; i++) {
+        widthArray.push(slides[i].offsetWidth);
+        innerSliderWidth += slides[i].offsetWidth;
+      }
+    };
+    setWidthinnerSlider();
 
-  //   if (document.documentElement.clientWidth < MIN_WIDTH_DESKTOP) {
-  //     size = 2;
-  //     for (var i = 0; i < size; i++) {
-  //       slides[i].classList.add('new__slide--active');
-  //     }
-  //     for (var i = 0; i < extraDots.length; i++) {
-  //       extraDots[i].classList.remove('pagination__link--hide');
-  //     }
+    function movePrev(n) {
+      remains = innerSliderWidth - sliderWidth - (offset + widthArray[step]*n);
+      if (offset > 0) {
+        offset = offset - widthArray[step]*n;
+        innerSlider.style.left = -offset + 'px';
+      } else {
+        innerSlider.style.left = -(innerSliderWidth - sliderWidth) + 'px';
+        offset = (innerSliderWidth - sliderWidth);
+        remains = 0;
+        step = -1;
+      }
 
-  //   } else {
-  //     size = 4;
-  //     for (var i = 0; i < size; i++) {
-  //       slides[i].classList.add('new__slide--active');
-  //     }
-  //     for (var i = 0; i < extraDots.length; i++) {
-  //       extraDots[i].classList.add('pagination__link--hide');
-  //     }
-  //   }
-  // }
+      if (step + 1 == slides.length) {
+        offset = 0;
+        step = 0;
+      } else {
+        step++;
+      }
+    }
 
-  // initSlider();
+    function moveNext(n) {
+      remains = innerSliderWidth - sliderWidth - (offset + widthArray[step]*n);
+      if (remains >= 0) {
+        offset = offset + widthArray[step]*n;
+        innerSlider.style.left = -offset + 'px';
+      } else {
+        innerSlider.style.left = 0 + 'px';
+        offset = 0;
+        step = -1;
+      }
 
-  // function moveSlides(n) {
-  //   var dots = document.getElementsByClassName('pagination__item');
+      if (step + 1 == slides.length) {
+        offset = 0;
+        step = 0;
+      } else {
+        step++;
+      }
+    }
 
-  //   if (n > dots.length) {
-  //     slideIndex = 1
-  //   }
-  //   if (n < 1) {
-  //     slideIndex = dots.length
-  //   }
-  //   for (var i = 0; i < slides.length; i++) {
-  //     slides[i].classList.remove('new__slide--active');
-  //   }
-  //   for (var i = (slideIndex - 1)* size; i < (slideIndex - 1)* size + size; i++) {
-  //     slides[i].classList.add('new__slide--active');
-  //   }
+    prevBtn.addEventListener('click', function () {
+      if (document.documentElement.clientWidth < MIN_WIDTH_DESKTOP) {
+        movePrev(2);
+      } else {
+        movePrev(4);
+      }
+    });
 
-  //   for (var i = 0; i < dots.length; i++) {
-  //     dots[i].classList.remove('pagination__item--active');
-  //   }
-  //   dots[slideIndex - 1].classList.add('pagination__item--active');
-  // }
+    nextBtn.addEventListener('click', function () {
+      if (document.documentElement.clientWidth < MIN_WIDTH_DESKTOP) {
+        moveNext(2);
+      } else {
+        moveNext(4);
+      }
+    });
 
-  // function prevSlide(evt) {
-  //   evt.preventDefault();
-  //   slideIndex = slideIndex - 1;
-  //   moveSlides(slideIndex);
-  // }
+  // ----------- touch slider ------------
+    const MIN_WIDTH_TABLET = 768;
+    let xDown = null;
 
-  // function nextSlide(evt) {
-  //   evt.preventDefault();
-  //   moveSlides(slideIndex += 1);
-  // }
+    function getTouches(evt) {
+      return evt.touches || evt.originalEvent.touches;
+    };
 
-  // var prevBtn = document.querySelector('.new__btn--previous');
-  // var nextBtn = document.querySelector('.new__btn--next');
+    function handleTouchStart(evt) {
+      const firstTouch = getTouches(evt)[0];
+      xDown = firstTouch.clientX;
+    };
 
-  // prevBtn.addEventListener('click', prevSlide);
-  // nextBtn.addEventListener('click', nextSlide);
+    function handleTouchMove(evt) {
+      if(window.innerWidth < MIN_WIDTH_TABLET) {
+        if (! xDown) {
+          return;
+        }
 
-  // document.addEventListener('DOMContentLoaded', initSlider);
-  // window.addEventListener('resize', initSlider);
+        const xUp = evt.touches[0].clientX;
+        const xDiff = xDown - xUp;
 
-  // -------- touch slider --------
+        if (xDiff> 0) {
+          /* left swipe */
+          console.log('left');
+          moveNext(2);
+        } else {
+          /* right swipe */
+          console.log('right');
+          movePrev(2);
+        }
+        /* reset values */
+        xDown = null;
+      }
+    };
 
-  // var xDown = null;
-  // var yDown = null;
-
-  // function getTouches(evt) {
-  //   return evt.touches || evt.originalEvent.touches;
-  // };
-
-  // function handleTouchStart(evt) {
-  //   var firstTouch = getTouches(evt)[0];
-  //   xDown = firstTouch.clientX;
-  //   yDown = firstTouch.clientY;
-  // };
-
-  // function handleTouchMove(evt) {
-  //   if ( ! xDown || ! yDown ) {
-  //     return;
-  //   }
-
-  //   let xUp = evt.touches[0].clientX;
-  //   let yUp = evt.touches[0].clientY;
-
-  //   let xDiff = xDown - xUp;
-  //   let yDiff = yDown - yUp;
-
-  //   if ( Math.abs( xDiff ) > Math.abs( yDiff ) ) {/*most significant*/
-  //     if ( xDiff > 0 ) {
-  //       /* left swipe */
-  //       console.log('left');
-  //       plusSlide(evt);
-  //     } else {
-  //       /* right swipe */
-  //       console.log('right');
-  //       minusSlide(evt);
-  //     }
-  //   } else {
-  //     if ( yDiff > 0 ) {
-  //       /* up swipe */
-  //       console.log('up');
-  //     } else {
-  //       /* down swipe */
-  //       console.log('down');
-  //     }
-  //   }
-  //   /* reset values */
-  //   xDown = null;
-  //   yDown = null;
-  // };
-
-  // document.addEventListener('touchstart', handleTouchStart, false);
-  // document.addEventListener('touchmove', handleTouchMove, false);
-
+    document.addEventListener('touchstart', handleTouchStart, false);
+    document.addEventListener('touchmove', handleTouchMove, false);
+  }
 })();
