@@ -51,7 +51,7 @@
 
     <div class="header__dropdown header__dropdown--open">
 
-      <div class="header__inner">
+      <div class="header__inner header__inner--notindex">
 
         <div class="user-search">
           <form class="user-search__form" action="https://echo.htmlacademy.ru" method="get">
@@ -65,7 +65,7 @@
           </form>
         </div>
 
-        <a class="header__logo" href="index.html" aria-label="logo of jewellery store">
+        <a class="header__logo header__logo--notindex" href="index.html" aria-label="logo of jewellery store">
           <svg width="66" height="66" viewBox="0 0 66 66" aria-hidden="true">
             <use xlink:href="img/sprite_auto.svg#icon-logo"></use>
           </svg>
@@ -73,7 +73,7 @@
 
         <ul class="user-nav">
           <li class="user-nav__item">
-            <a class="user-nav__link" href="authorization.html">Login</a>
+            <a class="user-nav__link" id="login" href="authorization.html">Login</a>
           </li>
           <li class="user-nav__item user-nav__item--basket">
             <a class="user-nav__link" href="#" aria-label="go to basket">
@@ -125,48 +125,62 @@
 
       <section class="card">
         <div class="card__picture">
-          <picture>
-            <source type="image/webp" media="(max-width: 1023px)" srcset="img/card1-1-tablet@1x.webp 1x, img/card1-1-tablet@2x.webp 2x">
-            <source type="image/webp" srcset="img/card1-1-desktop@1x.webp 1x, img/card1-1-desktop@2x.webp 2x">
+          <div class="card__picture-item">
+            <picture>
+              <source type="image/webp" media="(max-width: 767px)" srcset="img/card1-4-mobile@1x.webp 1x, img/card1-4-mobile@2x.webp 2x">
+              <source type="image/webp" media="(max-width: 1023px)" srcset="img/card1-4-tablet@1x.webp 1x, img/card1-4-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/card1-4-desktop@1x.webp 1x, img/card1-4-desktop@2x.webp 2x">
 
-            <!-- 1х: 97px; 2x: 196px -->
-            <source media="(max-width: 1023px)" srcset="img/card1-1-tablet@1x.jpg 1x, img/card1-1-tablet@2x.jpg 2x">
-            <!-- 1х: 100px; 2x: 200px -->
-            <img src="img/card1-1-desktop@1x.jpg" srcset="img/card1-1-desktop@2x.jpg 2x" alt="Jewellery" width="100" height="125">
-          </picture>
+              <!-- 1х: 1х: 290px; 2x: 580px -->
+              <source media="(max-width: 767px)" srcset="img/card1-4-mobile@1x.jpg 1x, img/card1-4-mobile@2x.jpg 2x">
+              <!-- 1х: 319px; 2x: 638px -->
+              <source media="(max-width: 1023px)" srcset="img/card1-4-tablet@1x.jpg 1x, img/card1-4-tablet@2x.jpg 2x">
+              <!-- 1х: 470px; 2x: 940px -->
+              <img src="img/card1-4-desktop@1x.jpg" srcset="img/card1-4-desktop@2x.jpg 2x" alt="Jewellery" width="470" height="435">
+            </picture>
+          </div>
 
-          <picture>
-            <source type="image/webp" media="(max-width: 1023px)" srcset="img/card1-2-tablet@1x.webp 1x, img/card1-2-tablet@2x.webp 2x">
-            <source type="image/webp" srcset="img/card1-2-desktop@1x.webp 1x, img/card1-2-desktop@2x.webp 2x">
+          <div class="card__picture-item">
+            <picture>
+              <source type="image/webp" media="(max-width: 1023px)" srcset="img/card1-1-tablet@1x.webp 1x, img/card1-1-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/card1-1-desktop@1x.webp 1x, img/card1-1-desktop@2x.webp 2x">
 
-            <!-- 1х: 97px; 2x: 196px -->
-            <source media="(max-width: 1023px)" srcset="img/card1-2-tablet@1x.jpg 1x, img/card1-2-tablet@2x.jpg 2x">
-            <!-- 1х: 100px; 2x: 200px -->
-            <img src="img/card1-2-desktop@1x.jpg" srcset="img/card1-2-desktop@2x.jpg 2x" alt="Jewellery" width="100" height="125">
-          </picture>
+              <!-- 1х: 97px; 2x: 196px -->
+              <source media="(max-width: 1023px)" srcset="img/card1-1-tablet@1x.jpg 1x, img/card1-1-tablet@2x.jpg 2x">
+              <!-- 1х: 100px; 2x: 200px -->
+              <img src="img/card1-1-desktop@1x.jpg" srcset="img/card1-1-desktop@2x.jpg 2x" alt="Jewellery" width="100" height="125">
+            </picture>
+          </div>
 
-          <picture>
-            <source type="image/webp" media="(max-width: 1023px)" srcset="img/card1-3-tablet@1x.webp 1x, img/card1-3-tablet@2x.webp 2x">
-            <source type="image/webp" srcset="img/card1-3-desktop@1x.webp 1x, img/card1-3-desktop@2x.webp 2x">
+          <div class="card__picture-item">
+            <picture>
+              <source type="image/webp" media="(max-width: 1023px)" srcset="img/card1-2-tablet@1x.webp 1x, img/card1-2-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/card1-2-desktop@1x.webp 1x, img/card1-2-desktop@2x.webp 2x">
 
-            <!-- 1х: 97px; 2x: 196px -->
-            <source media="(max-width: 1023px)" srcset="img/card1-3-tablet@1x.jpg 1x, img/card1-3-tablet@2x.jpg 2x">
-            <!-- 1х: 100px; 2x: 200px -->
-            <img src="img/card1-3-desktop@1x.jpg" srcset="img/card1-3-desktop@2x.jpg 2x" alt="Jewellery" width="100" height="125">
-          </picture>
+              <!-- 1х: 97px; 2x: 196px -->
+              <source media="(max-width: 1023px)" srcset="img/card1-2-tablet@1x.jpg 1x, img/card1-2-tablet@2x.jpg 2x">
+              <!-- 1х: 100px; 2x: 200px -->
+              <img src="img/card1-2-desktop@1x.jpg" srcset="img/card1-2-desktop@2x.jpg 2x" alt="Jewellery" width="100" height="125">
+            </picture>
+          </div>
 
-          <picture>
-            <source type="image/webp" media="(max-width: 767px)" srcset="img/card1-4-mobile@1x.webp 1x, img/card1-4-mobile@2x.webp 2x">
-            <source type="image/webp" media="(max-width: 1023px)" srcset="img/card1-4-tablet@1x.webp 1x, img/card1-4-tablet@2x.webp 2x">
-            <source type="image/webp" srcset="img/card1-4-desktop@1x.webp 1x, img/card1-4-desktop@2x.webp 2x">
+          <div class="card__picture-item">
+            <picture>
+              <source type="image/webp" media="(max-width: 1023px)" srcset="img/card1-3-tablet@1x.webp 1x, img/card1-3-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/card1-3-desktop@1x.webp 1x, img/card1-3-desktop@2x.webp 2x">
 
-            <!-- 1х: 1х: 290px; 2x: 580px -->
-            <source media="(max-width: 767px)" srcset="img/card1-4-mobile@1x.jpg 1x, img/card1-4-mobile@2x.jpg 2x">
-            <!-- 1х: 319px; 2x: 638px -->
-            <source media="(max-width: 1023px)" srcset="img/card1-4-tablet@1x.jpg 1x, img/card1-4-tablet@2x.jpg 2x">
-            <!-- 1х: 470px; 2x: 940px -->
-            <img src="img/card1-4-desktop@1x.jpg" srcset="img/card1-4-desktop@2x.jpg 2x" alt="Jewellery" width="470" height="435">
-          </picture>
+              <!-- 1х: 97px; 2x: 196px -->
+              <source media="(max-width: 1023px)" srcset="img/card1-3-tablet@1x.jpg 1x, img/card1-3-tablet@2x.jpg 2x">
+              <!-- 1х: 100px; 2x: 200px -->
+              <img src="img/card1-3-desktop@1x.jpg" srcset="img/card1-3-desktop@2x.jpg 2x" alt="Jewellery" width="100" height="125">
+            </picture>
+          </div>
+
+          <div class="card__counter">
+            <span class="card__number">1</span>
+            <span>of</span>
+            <span class="card__total">4</span>
+          </div>
         </div>
 
         <div class="card__details">
@@ -188,7 +202,7 @@
             <p>Size</p>
             <p>18” / 20”</p>
           </div>
-          <button class="card__btn" type="button">Add to cart</button>
+          <a class="card__btn" id="add" href="added.html">Add to cart</a>
           <div class="card__conditions">
             <p>14 Day Returns</p>
             <p>2-Year Warranty</p>
@@ -198,98 +212,264 @@
       </section>
 
 
-      <section class="new">
+      <section class="advertisement advertisement--card">
         <h2>You May Also Like</h2>
-        <a class="new__shop-link" href="catalog.html">Shop Now</a>
-        <div class="control">
-          <button class="control__btn control__btn--previous"></button>
-          <button class="control__btn control__btn--next"></button>
-        </div>
-        <div class="new__wrap">
-          <article class="new__slide">
-            <a class="new__link" href="#">
-              <picture>
-                <source type="image/webp" media="(max-width: 767px)" srcset="img/product-1-mobile@1x.webp 1x, img/product-1-mobile@2x.webp 2x">
-                <source type="image/webp" media="(max-width: 1023px)" srcset="img/product-1-tablet@1x.webp 1x, img/product-1-tablet@2x.webp 2x">
-                <source type="image/webp" srcset="img/product-1-desktop@1x.webp 1x, img/product-1-desktop@2x.webp 2x">
+        <a class="advertisement__shop-link advertisement__shop-link--card" href="catalog.html">Shop Now</a>
+        <button class="advertisement__btn advertisement__btn--previous" type="button" aria-label="go to the previous slide">
+          <svg width="36" height="20" viewBox="0 0 36 20" aria-hidden="true">
+            <use xlink:href="img/sprite_auto.svg#icon-arrow-prev"></use>
+          </svg>
+        </button>
+        <button class="advertisement__btn advertisement__btn--next" type="button" aria-label="go to the next slide">
+          <svg width="36" height="20" viewBox="0 0 36 20" aria-hidden="true">
+            <use xlink:href="img/sprite_auto.svg#icon-arrow-next"></use>
+          </svg>
+        </button>
 
-                <!-- 1х: 130px; 2x: 260px -->
-                <source media="(max-width: 767px)" srcset="img/product-1-mobile@1x.jpg 1x, img/product-1-mobile@2x.jpg 2x">
-                <!-- 1х: 324px; 2x: 648px -->
-                <source media="(max-width: 1023px)" srcset="img/product-1-tablet@1x.jpg 1x, img/product-1-tablet@2x.jpg 2x">
-                <!-- 1х: 270px; 2x: 540px -->
-                <img src="img/product-1-desktop@1x.jpg" srcset="img/product-1-desktop@2x.jpg 2x" alt="Jewellery" width="270" height="284">
-              </picture>
-              <h3>Necklace with amethyst</h3>
-              <p>&#36; 145</p>
-            </a>
-          </article>
+        <div class="slider slider--card">
+            <div class="slider__inner">
 
-          <article class="new__slide">
-            <a class="new__link" href="#">
-              <picture>
-                <source type="image/webp" media="(max-width: 767px)" srcset="img/product-2-mobile@1x.webp 1x, img/product-2-mobile@2x.webp 2x">
-                <source type="image/webp" media="(max-width: 1023px)" srcset="img/product-2-tablet@1x.webp 1x, img/product-2-tablet@2x.webp 2x">
-                <source type="image/webp" srcset="img/product-2-desktop@1x.webp 1x, img/product-2-desktop@2x.webp 2x">
+              <article class="slider__item">
+                <a class="slider__link" href="card.html" aria-label="card of product">
+                  <picture>
+                    <source type="image/webp" media="(max-width: 767px)" srcset="img/product-1-mobile@1x.webp 1x, img/product-1-mobile@2x.webp 2x">
+                    <source type="image/webp" media="(max-width: 1023px)" srcset="img/product-1-tablet@1x.webp 1x, img/product-1-tablet@2x.webp 2x">
+                    <source type="image/webp" srcset="img/product-1-desktop@1x.webp 1x, img/product-1-desktop@2x.webp 2x">
 
-                <!-- 1х: 130px; 2x: 260px -->
-                <source media="(max-width: 767px)" srcset="img/product-2-mobile@1x.jpg 1x, img/product-2-mobile@2x.jpg 2x">
-                <!-- 1х: 324px; 2x: 648px -->
-                <source media="(max-width: 1023px)" srcset="img/product-2-tablet@1x.jpg 1x, img/product-2-tablet@2x.jpg 2x">
-                <!-- 1х: 270px; 2x: 540px -->
-                <img src="img/product-2-desktop@1x.jpg" srcset="img/product-2-desktop@2x.jpg 2x" alt="Jewellery" width="270" height="284">
-              </picture>
-              <h3>Layered сhoker</h3>
-              <p>&#36; 115</p>
-            </a>
-          </article>
+                    <!-- 1х: 130px; 2x: 260px -->
+                    <source media="(max-width: 767px)" srcset="img/product-1-mobile@1x.jpg 1x, img/product-1-mobile@2x.jpg 2x">
+                    <!-- 1х: 324px; 2x: 648px -->
+                    <source media="(max-width: 1023px)" srcset="img/product-1-tablet@1x.jpg 1x, img/product-1-tablet@2x.jpg 2x">
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <img src="img/product-1-desktop@1x.jpg" srcset="img/product-1-desktop@2x.jpg 2x" alt="Jewellery" width="270" height="284">
+                  </picture>
+                  <h3>Necklace with amethyst</h3>
+                  <p>&#36; 145</p>
+                </a>
+              </article>
+              <article class="slider__item">
+                <a class="slider__link" href="card.html" aria-label="card of product">
+                  <picture>
+                    <source type="image/webp" media="(max-width: 767px)" srcset="img/product-2-mobile@1x.webp 1x, img/product-2-mobile@2x.webp 2x">
+                    <source type="image/webp" media="(max-width: 1023px)" srcset="img/product-2-tablet@1x.webp 1x, img/product-2-tablet@2x.webp 2x">
+                    <source type="image/webp" srcset="img/product-2-desktop@1x.webp 1x, img/product-2-desktop@2x.webp 2x">
 
-          <article class="new__slide">
-            <a class="new__link" href="#">
-              <picture>
-                <source type="image/webp" media="(max-width: 767px)" srcset="img/product-3-mobile@1x.webp 1x, img/product-3-mobile@2x.webp 2x">
-                <source type="image/webp" media="(max-width: 1023px)" srcset="img/product-3-tablet@1x.webp 1x, img/product-3-tablet@2x.webp 2x">
-                <source type="image/webp" srcset="img/product-3-desktop@1x.webp 1x, img/product-3-desktop@2x.webp 2x">
+                    <!-- 1х: 130px; 2x: 260px -->
+                    <source media="(max-width: 767px)" srcset="img/product-2-mobile@1x.jpg 1x, img/product-2-mobile@2x.jpg 2x">
+                    <!-- 1х: 324px; 2x: 648px -->
+                    <source media="(max-width: 1023px)" srcset="img/product-2-tablet@1x.jpg 1x, img/product-2-tablet@2x.jpg 2x">
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <img src="img/product-2-desktop@1x.jpg" srcset="img/product-2-desktop@2x.jpg 2x" alt="Jewellery" width="270" height="284">
+                  </picture>
+                  <h3>Layered сhoker</h3>
+                  <p>&#36; 115</p>
+                </a>
+              </article>
+              <article class="slider__item">
+                <a class="slider__link" href="card.html" aria-label="card of product">
+                  <picture>
+                    <!-- <source type="image/webp" media="(max-width: 767px)"
+                      srcset="img/product-3-mobile@1x.webp 1x, img/product-3-mobile@2x.webp 2x" />
+                    <source type="image/webp" media="(max-width: 1023px)"
+                      srcset="img/product-3-tablet@1x.webp 1x, img/product-3-tablet@2x.webp 2x" /> -->
+                    <source type="image/webp" srcset="img/product-3-desktop@1x.webp 1x, img/product-3-desktop@2x.webp 2x">
 
-                <!-- 1х: 130px; 2x: 260px -->
-                <source media="(max-width: 767px)" srcset="img/product-3-mobile@1x.jpg 1x, img/product-3-mobile@2x.jpg 2x">
-                <!-- 1х: 324px; 2x: 648px -->
-                <source media="(max-width: 1023px)" srcset="img/product-3-tablet@1x.jpg 1x, img/product-3-tablet@2x.jpg 2x">
-                <!-- 1х: 270px; 2x: 540px -->
-                <img src="img/product-3-desktop@1x.jpg" srcset="img/product-3-desktop@2x.jpg 2x" alt="Jewellery" width="270" height="284">
-              </picture>
-              <h3>Gold chain</h3>
-              <p>&#36; 215</p>
-            </a>
-          </article>
+                    <!-- 1х: 130px; 2x: 260px -->
+                    <!-- <source media="(max-width: 767px)"
+                      srcset="img/product-3-mobile@1x.jpg 1x, img/product-3-mobile@2x.jpg 2x" /> -->
+                    <!-- 1х: 324px; 2x: 648px -->
+                    <!-- <source media="(max-width: 1023px)"
+                      srcset="img/product-3-tablet@1x.jpg 1x, img/product-3-tablet@2x.jpg 2x" /> -->
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <img src="img/product-3-desktop@1x.jpg" srcset="img/product-3-desktop@2x.jpg 2x" alt="Jewellery" width="270" height="284">
+                  </picture>
+                  <h3>Gold chain</h3>
+                  <p>&#36; 215</p>
+                </a>
+              </article>
+              <article class="slider__item">
+                <a class="slider__link" href="card.html" aria-label="card of product">
+                  <picture>
+                    <!-- <source type="image/webp" media="(max-width: 767px)"
+                      srcset="img/product-4-mobile@1x.webp 1x, img/product-4-mobile@2x.webp 2x" />
+                    <source type="image/webp" media="(max-width: 1023px)"
+                      srcset="img/product-4-tablet@1x.webp 1x, img/product-4-tablet@2x.webp 2x" /> -->
+                    <source type="image/webp" srcset="img/product-4-desktop@1x.webp 1x, img/product-4-desktop@2x.webp 2x">
 
-          <article class="new__slide">
-            <a class="new__link" href="#">
-              <picture>
-                <source type="image/webp" media="(max-width: 767px)" srcset="img/product-4-mobile@1x.webp 1x, img/product-4-mobile@2x.webp 2x">
-                <source type="image/webp" media="(max-width: 1023px)" srcset="img/product-4-tablet@1x.webp 1x, img/product-4-tablet@2x.webp 2x">
-                <source type="image/webp" srcset="img/product-4-desktop@1x.webp 1x, img/product-4-desktop@2x.webp 2x">
+                    <!-- 1х: 130px; 2x: 260px -->
+                    <!-- <source media="(max-width: 767px)"
+                      srcset="img/product-4-mobile@1x.jpg 1x, img/product-4-mobile@2x.jpg 2x" /> -->
+                    <!-- 1х: 324px; 2x: 648px -->
+                    <!-- <source media="(max-width: 1023px)"
+                      srcset="img/product-4-tablet@1x.jpg 1x, img/product-4-tablet@2x.jpg 2x" /> -->
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <img src="img/product-4-desktop@1x.jpg" srcset="img/product-4-desktop@2x.jpg 2x" alt="Jewellery" width="270" height="284">
+                  </picture>
+                  <h3>Galaxy earrings</h3>
+                  <p>&#36; 95</p>
+                </a>
+              </article>
 
-                <!-- 1х: 130px; 2x: 260px -->
-                <source media="(max-width: 767px)" srcset="img/product-4-mobile@1x.jpg 1x, img/product-4-mobile@2x.jpg 2x">
-                <!-- 1х: 324px; 2x: 648px -->
-                <source media="(max-width: 1023px)" srcset="img/product-4-tablet@1x.jpg 1x, img/product-4-tablet@2x.jpg 2x">
-                <!-- 1х: 270px; 2x: 540px -->
-                <img src="img/product-4-desktop@1x.jpg" srcset="img/product-4-desktop@2x.jpg 2x" alt="Jewellery" width="270" height="284">
-              </picture>
-              <h3>Galaxy earrings</h3>
-              <p>&#36; 95</p>
-            </a>
-          </article>
-        </div>
+              <article class="slider__item">
+                <a class="slider__link" href="card.html" aria-label="card of product">
+                  <picture>
+                    <source type="image/webp" media="(max-width: 767px)" srcset="img/product-1-mobile@1x.webp 1x, img/product-1-mobile@2x.webp 2x">
+                    <source type="image/webp" media="(max-width: 1023px)" srcset="img/product-1-tablet@1x.webp 1x, img/product-1-tablet@2x.webp 2x">
+                    <source type="image/webp" srcset="img/product-1-desktop@1x.webp 1x, img/product-1-desktop@2x.webp 2x">
 
-        <div class="pagination">
-          <ul class="pagination__list">
-            <li class="pagination__item"><a class="pagination__link pagination__link--active" href="#">1</a></li>
-            <li class="pagination__item"><a class="pagination__link" href="#">2</a></li>
-            <li class="pagination__item"><a class="pagination__link" href="#">3</a></li>
-          </ul>
-        </div>
+                    <!-- 1х: 130px; 2x: 260px -->
+                    <source media="(max-width: 767px)" srcset="img/product-1-mobile@1x.jpg 1x, img/product-1-mobile@2x.jpg 2x">
+                    <!-- 1х: 324px; 2x: 648px -->
+                    <source media="(max-width: 1023px)" srcset="img/product-1-tablet@1x.jpg 1x, img/product-1-tablet@2x.jpg 2x">
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <img src="img/product-1-desktop@1x.jpg" srcset="img/product-1-desktop@2x.jpg 2x" alt="Jewellery" width="270" height="284">
+                  </picture>
+                  <h3>Necklace with amethyst</h3>
+                  <p>&#36; 145</p>
+                </a>
+              </article>
+              <article class="slider__item">
+                <a class="slider__link" href="card.html" aria-label="card of product">
+                  <picture>
+                    <source type="image/webp" media="(max-width: 767px)" srcset="img/product-1-mobile@1x.webp 1x, img/product-1-mobile@2x.webp 2x">
+                    <source type="image/webp" media="(max-width: 1023px)" srcset="img/product-1-tablet@1x.webp 1x, img/product-1-tablet@2x.webp 2x">
+                    <source type="image/webp" srcset="img/product-1-desktop@1x.webp 1x, img/product-1-desktop@2x.webp 2x">
+
+                    <!-- 1х: 130px; 2x: 260px -->
+                    <source media="(max-width: 767px)" srcset="img/product-1-mobile@1x.jpg 1x, img/product-1-mobile@2x.jpg 2x">
+                    <!-- 1х: 324px; 2x: 648px -->
+                    <source media="(max-width: 1023px)" srcset="img/product-1-tablet@1x.jpg 1x, img/product-1-tablet@2x.jpg 2x">
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <img src="img/product-1-desktop@1x.jpg" srcset="img/product-1-desktop@2x.jpg 2x" alt="Jewellery" width="270" height="284">
+                  </picture>
+                  <h3>Necklace with amethyst</h3>
+                  <p>&#36; 145</p>
+                </a>
+              </article>
+              <article class="slider__item">
+                <a class="slider__link" href="card.html" aria-label="card of product">
+                  <picture>
+                    <source type="image/webp" media="(max-width: 767px)" srcset="img/product-1-mobile@1x.webp 1x, img/product-1-mobile@2x.webp 2x">
+                    <source type="image/webp" media="(max-width: 1023px)" srcset="img/product-1-tablet@1x.webp 1x, img/product-1-tablet@2x.webp 2x">
+                    <source type="image/webp" srcset="img/product-1-desktop@1x.webp 1x, img/product-1-desktop@2x.webp 2x">
+
+                    <!-- 1х: 130px; 2x: 260px -->
+                    <source media="(max-width: 767px)" srcset="img/product-1-mobile@1x.jpg 1x, img/product-1-mobile@2x.jpg 2x">
+                    <!-- 1х: 324px; 2x: 648px -->
+                    <source media="(max-width: 1023px)" srcset="img/product-1-tablet@1x.jpg 1x, img/product-1-tablet@2x.jpg 2x">
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <img src="img/product-1-desktop@1x.jpg" srcset="img/product-1-desktop@2x.jpg 2x" alt="Jewellery" width="270" height="284">
+                  </picture>
+                  <h3>Necklace with amethyst</h3>
+                  <p>&#36; 145</p>
+                </a>
+              </article>
+              <article class="slider__item">
+                <a class="slider__link" href="card.html" aria-label="card of product">
+                  <picture>
+                    <source type="image/webp" media="(max-width: 767px)" srcset="img/product-1-mobile@1x.webp 1x, img/product-1-mobile@2x.webp 2x">
+                    <source type="image/webp" media="(max-width: 1023px)" srcset="img/product-1-tablet@1x.webp 1x, img/product-1-tablet@2x.webp 2x">
+                    <source type="image/webp" srcset="img/product-1-desktop@1x.webp 1x, img/product-1-desktop@2x.webp 2x">
+
+                    <!-- 1х: 130px; 2x: 260px -->
+                    <source media="(max-width: 767px)" srcset="img/product-1-mobile@1x.jpg 1x, img/product-1-mobile@2x.jpg 2x">
+                    <!-- 1х: 324px; 2x: 648px -->
+                    <source media="(max-width: 1023px)" srcset="img/product-1-tablet@1x.jpg 1x, img/product-1-tablet@2x.jpg 2x">
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <img src="img/product-1-desktop@1x.jpg" srcset="img/product-1-desktop@2x.jpg 2x" alt="Jewellery" width="270" height="284">
+                  </picture>
+                  <h3>Necklace with amethyst</h3>
+                  <p>&#36; 145</p>
+                </a>
+              </article>
+
+              <article class="slider__item">
+                <a class="slider__link" href="card.html" aria-label="card of product">
+                  <picture>
+                    <source type="image/webp" media="(max-width: 767px)" srcset="img/product-2-mobile@1x.webp 1x, img/product-2-mobile@2x.webp 2x">
+                    <source type="image/webp" media="(max-width: 1023px)" srcset="img/product-2-tablet@1x.webp 1x, img/product-2-tablet@2x.webp 2x">
+                    <source type="image/webp" srcset="img/product-2-desktop@1x.webp 1x, img/product-2-desktop@2x.webp 2x">
+
+                    <!-- 1х: 130px; 2x: 260px -->
+                    <source media="(max-width: 767px)" srcset="img/product-2-mobile@1x.jpg 1x, img/product-2-mobile@2x.jpg 2x">
+                    <!-- 1х: 324px; 2x: 648px -->
+                    <source media="(max-width: 1023px)" srcset="img/product-2-tablet@1x.jpg 1x, img/product-2-tablet@2x.jpg 2x">
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <img src="img/product-2-desktop@1x.jpg" srcset="img/product-2-desktop@2x.jpg 2x" alt="Jewellery" width="270" height="284">
+                  </picture>
+                  <h3>Layered сhoker</h3>
+                  <p>&#36; 115</p>
+                </a>
+              </article>
+              <article class="slider__item">
+                <a class="slider__link" href="card.html" aria-label="card of product">
+                  <picture>
+                    <source type="image/webp" media="(max-width: 767px)" srcset="img/product-2-mobile@1x.webp 1x, img/product-2-mobile@2x.webp 2x">
+                    <source type="image/webp" media="(max-width: 1023px)" srcset="img/product-2-tablet@1x.webp 1x, img/product-2-tablet@2x.webp 2x">
+                    <source type="image/webp" srcset="img/product-2-desktop@1x.webp 1x, img/product-2-desktop@2x.webp 2x">
+
+                    <!-- 1х: 130px; 2x: 260px -->
+                    <source media="(max-width: 767px)" srcset="img/product-2-mobile@1x.jpg 1x, img/product-2-mobile@2x.jpg 2x">
+                    <!-- 1х: 324px; 2x: 648px -->
+                    <source media="(max-width: 1023px)" srcset="img/product-2-tablet@1x.jpg 1x, img/product-2-tablet@2x.jpg 2x">
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <img src="img/product-2-desktop@1x.jpg" srcset="img/product-2-desktop@2x.jpg 2x" alt="Jewellery" width="270" height="284">
+                  </picture>
+                  <h3>Layered сhoker</h3>
+                  <p>&#36; 115</p>
+                </a>
+              </article>
+              <article class="slider__item">
+                <a class="slider__link" href="card.html" aria-label="card of product">
+                  <picture>
+                    <source type="image/webp" media="(max-width: 767px)" srcset="img/product-2-mobile@1x.webp 1x, img/product-2-mobile@2x.webp 2x">
+                    <source type="image/webp" media="(max-width: 1023px)" srcset="img/product-2-tablet@1x.webp 1x, img/product-2-tablet@2x.webp 2x">
+                    <source type="image/webp" srcset="img/product-2-desktop@1x.webp 1x, img/product-2-desktop@2x.webp 2x">
+
+                    <!-- 1х: 130px; 2x: 260px -->
+                    <source media="(max-width: 767px)" srcset="img/product-2-mobile@1x.jpg 1x, img/product-2-mobile@2x.jpg 2x">
+                    <!-- 1х: 324px; 2x: 648px -->
+                    <source media="(max-width: 1023px)" srcset="img/product-2-tablet@1x.jpg 1x, img/product-2-tablet@2x.jpg 2x">
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <img src="img/product-2-desktop@1x.jpg" srcset="img/product-2-desktop@2x.jpg 2x" alt="Jewellery" width="270" height="284">
+                  </picture>
+                  <h3>Layered сhoker</h3>
+                  <p>&#36; 115</p>
+                </a>
+              </article>
+              <article class="slider__item">
+                <a class="slider__link" href="card.html" aria-label="card of product">
+                  <picture>
+                    <source type="image/webp" media="(max-width: 767px)" srcset="img/product-2-mobile@1x.webp 1x, img/product-2-mobile@2x.webp 2x">
+                    <source type="image/webp" media="(max-width: 1023px)" srcset="img/product-2-tablet@1x.webp 1x, img/product-2-tablet@2x.webp 2x">
+                    <source type="image/webp" srcset="img/product-2-desktop@1x.webp 1x, img/product-2-desktop@2x.webp 2x">
+
+                    <!-- 1х: 130px; 2x: 260px -->
+                    <source media="(max-width: 767px)" srcset="img/product-2-mobile@1x.jpg 1x, img/product-2-mobile@2x.jpg 2x">
+                    <!-- 1х: 324px; 2x: 648px -->
+                    <source media="(max-width: 1023px)" srcset="img/product-2-tablet@1x.jpg 1x, img/product-2-tablet@2x.jpg 2x">
+                    <!-- 1х: 270px; 2x: 540px -->
+                    <img src="img/product-2-desktop@1x.jpg" srcset="img/product-2-desktop@2x.jpg 2x" alt="Jewellery" width="270" height="284">
+                  </picture>
+                  <h3>Layered сhoker</h3>
+                  <p>&#36; 115</p>
+                </a>
+              </article>
+            </div>
+          </div>
+
+          <div class="pagination">
+            <ul class="pagination__list">
+              <template id="pin">
+                <li class="pagination__item"><a class="pagination__link" href="#"></a></li>
+              </template>
+            </ul>
+            <!-- <div class="pagination__counter">
+              <span class="pagination__number"></span>
+              <span>of</span>
+              <span class="pagination__total"></span>
+            </div> -->
+          </div>
       </section>
 
     </div>
@@ -385,23 +565,22 @@
     </div>
   </footer>
 
-  <section class="authorization">
-    <div class="authorization__wrap">
+  <section class="authorization authorization--modal">
+    <div class="authorization__wrap authorization__wrap--modal">
       <h2>Log In</h2>
       <form class="authorization__form" action="https://echo.htmlacademy.ru" method="post">
         <div class="authorization__item">
-          <label for="user-mail">Your E-mail</label>
+          <p class="hide" id="message-mail">Please enter the valid value</p>
+          <label class="visually-hidden" for="user-mail"></label>
           <input id="user-mail" type="email" name="email" autocomplete="off" placeholder="Your E-mail">
-          <p id="message-mail"></p>
         </div>
 
         <div class="authorization__item">
-          <label for="user-password">Password</label>
+          <p class="hide" id="message-password">Please enter the valid value</p>
+          <label class="visually-hidden" for="user-password"></label>
           <input id="user-password" type="password" name="password" autocomplete="off" maxlength="8" minlength="6" placeholder="Password">
-          <p id="message-password"></p>
-          <a class="authorization__reminder" href="#">Forgot your password?</a>
         </div>
-
+        <a class="authorization__reminder" href="#">Forgot your password?</a>
         <button class="authorization__entry" type="submit">Log In</button>
         <div class="authorization__box">
           <p>Don’t have an account?</p>
@@ -412,21 +591,18 @@
     </div>
   </section>
 
-  <section class="added">
-    <div class="added__wrap">
+  <section class="added added--modal">
+    <div class="added__wrap added__wrap--modal">
       <h2>The item was added to your cart</h2>
 
-      <div class="added__inner">
+      <div class="added__inner-list">
         <article class="added__product">
           <picture>
             <source type="image/webp" media="(max-width: 767px)" srcset="img/cart-card1-mobile@1x.webp 1x, img/cart-card1-mobile@2x.webp 2x">
-            <source type="image/webp" media="(max-width: 1023px)" srcset="img/cart-card1-tablet@1x.webp 1x, img/cart-card1-tablet@2x.webp 2x">
             <source type="image/webp" srcset="img/cart-card1-desktop@1x.webp 1x, img/cart-card1-desktop@2x.webp 2x">
 
             <!-- 1х: 70px; 2x: 140px -->
             <source media="(max-width: 767px)" srcset="img/cart-card1-mobile@1x.jpg 1x, img/cart-card1-mobile@2x.jpg 2x">
-            <!-- 1х: 88px; 2x: 196px -->
-            <source media="(max-width: 1023px)" srcset="img/cart-card1-tablet@1x.jpg 1x, img/cart-card1-tablet@2x.jpg 2x">
             <!-- 1х: 84px; 2x: 168px -->
             <img src="img/cart-card1-desktop@1x.jpg" srcset="img/cart-card1-desktop@2x.jpg 2x" alt="Jewellery" width="84" height="79">
           </picture>
@@ -436,20 +612,23 @@
           </div>
 
           <div class="added__counter">
-            <button class="added__btn added__btn--minus" type="button" aria-label="plus one"></button>
+            <button class="added__btn added__btn--plus" type="button" aria-label="plus one"></button>
             <div class="added__result">1</div>
-            <button class="added__btn added__btn--plus" type="button" aria-label="minus one"></button>
+            <button class="added__btn added__btn--minus" type="button" aria-label="minus one"></button>
           </div>
         </article>
       </div>
 
-      <div class="added__information">
-        <p>You have <span class="added__number-js">1</span> item in the cart</p>
-        <p>Cart subtotal: <span class="added__cost-js">$ 115</span></p>
-      </div>
+      <div class="added__inner-info">
 
-      <a class="added__link added__link--shopping" href="catalog.html">Continue shopping</a>
-      <a class="added__link added__link--basket" href="basket.html">Checkout</a>
+        <div class="added__information">
+          <p>You have <span class="added__number-js">1</span> item in the cart</p>
+          <p>Cart subtotal: <span class="added__cost-js">$ 115</span></p>
+        </div>
+
+        <a class="added__link added__link--shopping" href="catalog.html">Continue shopping</a>
+        <a class="added__link added__link--basket" href="basket.html">Checkout</a>
+      </div>
       <button class="added__close" type="button" aria-label="Close form"></button>
     </div>
   </section>

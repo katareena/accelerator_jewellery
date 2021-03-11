@@ -51,7 +51,7 @@
 
     <div class="header__dropdown header__dropdown--open">
 
-      <div class="header__inner header__inner--catalog">
+      <div class="header__inner header__inner--notindex">
 
         <div class="user-search">
           <form class="user-search__form" action="https://echo.htmlacademy.ru" method="get">
@@ -65,7 +65,7 @@
           </form>
         </div>
 
-        <a class="header__logo header__logo--catalog" href="index.html" aria-label="logo of jewellery store">
+        <a class="header__logo header__logo--notindex" href="index.html" aria-label="logo of jewellery store">
           <svg width="66" height="66" viewBox="0 0 66 66" aria-hidden="true">
             <use xlink:href="img/sprite_auto.svg#icon-logo"></use>
           </svg>
@@ -73,7 +73,7 @@
 
         <ul class="user-nav">
           <li class="user-nav__item">
-            <a class="user-nav__link" href="authorization.html">Login</a>
+            <a class="user-nav__link" id="login" href="authorization.html">Login</a>
           </li>
           <li class="user-nav__item user-nav__item--basket">
             <a class="user-nav__link" href="#" aria-label="go to basket">
@@ -135,8 +135,11 @@
         <form class="catalog__filter filter catalog__filter--open" method="get" action="https://echo.htmlacademy.ru">
           <h3 class="visually-hidden">Catalog's filter</h3>
 
-          <div class="filter__item accordion-item" tabindex="0" data-set="product">
-            <h4>Product</h4>
+          <div class="filter__item">
+            <h4 class="accordion-item" tabindex="0" data-set="product">
+              <span>Product</span>
+              <button class="filter__btn accordion-btn" id="btn-product" type="button" aria-label="show the settings of filter"></button>
+            </h4>
             <ul class="filter__settings" id="product">
               <li class="filter__checkbox">
                 <input type="checkbox" name="necklaces" id="filter-necklaces" checked="">
@@ -155,11 +158,13 @@
                 <label for="filter-earrings">Earrings</label>
               </li>
             </ul>
-            <button class="filter__btn accordion-btn" id="btn-product" type="button" aria-label="show the settings of filter"></button>
           </div>
 
-          <div class="filter__item accordion-item" tabindex="0" data-set="material">
-            <h4>Material</h4>
+          <div class="filter__item">
+            <h4 class="accordion-item" tabindex="0" data-set="material">
+              <span>Material</span>
+              <button class="filter__btn accordion-btn" id="btn-material" type="button" aria-label="show the settings of filter"></button>
+            </h4>
             <ul class="filter__settings" id="material">
               <li class="filter__checkbox">
                 <input type="checkbox" name="gold" id="filter-gold">
@@ -170,11 +175,13 @@
                 <label for="filter-silver">Silver</label>
               </li>
             </ul>
-            <button class="filter__btn accordion-btn" id="btn-material" type="button" aria-label="show the settings of filter"></button>
           </div>
 
-          <div class="filter__item accordion-item" tabindex="0" data-set="collection">
-            <h4>Collection</h4>
+          <div class="filter__item">
+            <h4 class="accordion-item" tabindex="0" data-set="collection">
+              <span>Collection</span>
+              <button class="filter__btn accordion-btn" id="btn-collection" type="button" aria-label="show the settings of filter"></button>
+            </h4>
             <ul class="filter__settings" id="collection">
               <li class="filter__checkbox">
                 <input type="checkbox" name="flamingo" id="filter-flamingo" checked="">
@@ -185,11 +192,13 @@
                 <label for="filter-dreams">Dreams</label>
               </li>
             </ul>
-            <button class="filter__btn accordion-btn" id="btn-collection" type="button" aria-label="show the settings of filter"></button>
           </div>
 
-          <div class="filter__item accordion-item" tabindex="0" data-set="price">
-            <h4>Price</h4>
+          <div class="filter__item">
+            <h4 class="accordion-item" tabindex="0" data-set="price">
+              <span>Price</span>
+              <button class="filter__btn accordion-btn" id="btn-price" type="button" aria-label="show the settings of filter"></button>
+            </h4>
             <div class="filter__range" id="price">
               <div class="filter__range-inner">
                 <div class="filter__scale">
@@ -207,7 +216,6 @@
                 </div>
               </div>
             </div>
-            <button class="filter__btn accordion-btn" id="btn-price" type="button" aria-label="show the settings of filter"></button>
           </div>
 
           <button class="filter__form-close" type="button" aria-label="button to close the form"></button>
@@ -220,469 +228,682 @@
           <h3 class="visually-hidden">Catalog</h3>
 
           <div class="catalog__list">
-            <article class="catalog__card">
-              <a class="catalog__link" href="card.html">
-                <picture>
-                  <source type="image/webp" media="(max-width: 767px)" srcset="img/catalog-1-mobile@1x.webp 1x, img/catalog-1-mobile@2x.webp 2x">
-                  <source type="image/webp" media="(max-width: 1023px)" srcset="img/catalog-1-tablet@1x.webp 1x, img/catalog-1-tablet@2x.webp 2x">
-                  <source type="image/webp" srcset="img/catalog-1-desktop@1x.webp 1x, img/catalog-1-desktop@2x.webp 2x">
+            <div class="catalog__list-inner slider-inner">
+              <div class="catalog__list-box catalog__list-box--active">
 
-                  <!-- 1х: 130px; 2x: 260px -->
-                  <source media="(max-width: 767px)" srcset="img/catalog-1-mobile@1x.jpg 1x, img/catalog-1-mobile@2x.jpg 2x">
-                  <!-- 1х: 324px; 2x: 648px -->
-                  <source media="(max-width: 1023px)" srcset="img/catalog-1-tablet@1x.jpg 1x, img/catalog-1-tablet@2x.jpg 2x">
-                  <!-- 1х: 270px; 2x: 540px -->
-                  <img src="img/catalog-1-desktop@1x.jpg" srcset="img/catalog-1-desktop@2x.jpg 2x" alt="Jewellery" width="270" height="272">
-                </picture>
-                <h3>Double pearl earrings</h3>
-                <p>&#36; 115</p>
-              </a>
-            </article>
+                <article class="catalog__card slider-item">
+                  <a class="catalog__link" href="card.html">
+                    <picture>
+                      <source type="image/webp" media="(max-width: 767px)" srcset="img/catalog-1-mobile@1x.webp 1x, img/catalog-1-mobile@2x.webp 2x">
+                      <source type="image/webp" media="(max-width: 1023px)" srcset="img/catalog-1-tablet@1x.webp 1x, img/catalog-1-tablet@2x.webp 2x">
+                      <source type="image/webp" srcset="img/catalog-1-desktop@1x.webp 1x, img/catalog-1-desktop@2x.webp 2x">
 
-            <article class="catalog__card">
-              <a class="catalog__link" href="#">
-                <picture>
-                  <source type="image/webp" media="(max-width: 767px)" srcset="img/catalog-2-mobile@1x.webp 1x, img/catalog-2-mobile@2x.webp 2x">
-                  <source type="image/webp" media="(max-width: 1023px)" srcset="img/catalog-2-tablet@1x.webp 1x, img/catalog-2-tablet@2x.webp 2x">
-                  <source type="image/webp" srcset="img/catalog-2-desktop@1x.webp 1x, img/catalog-2-desktop@2x.webp 2x">
+                      <!-- 1х: 130px; 2x: 260px -->
+                      <source media="(max-width: 767px)" srcset="img/catalog-1-mobile@1x.jpg 1x, img/catalog-1-mobile@2x.jpg 2x">
+                      <!-- 1х: 324px; 2x: 648px -->
+                      <source media="(max-width: 1023px)" srcset="img/catalog-1-tablet@1x.jpg 1x, img/catalog-1-tablet@2x.jpg 2x">
+                      <!-- 1х: 270px; 2x: 540px -->
+                      <img src="img/catalog-1-desktop@1x.jpg" srcset="img/catalog-1-desktop@2x.jpg 2x" alt="Jewellery" width="270" height="272">
+                    </picture>
+                    <h3>Double pearl earrings</h3>
+                    <p>&#36; 115</p>
+                  </a>
+                </article>
 
-                  <!-- 1х: 130px; 2x: 260px -->
-                  <source media="(max-width: 767px)" srcset="img/catalog-2-mobile@1x.jpg 1x, img/catalog-2-mobile@2x.jpg 2x">
-                  <!-- 1х: 324px; 2x: 648px -->
-                  <source media="(max-width: 1023px)" srcset="img/catalog-2-tablet@1x.jpg 1x, img/catalog-2-tablet@2x.jpg 2x">
-                  <!-- 1х: 270px; 2x: 540px -->
-                  <img src="img/catalog-2-desktop@1x.jpg" srcset="img/catalog-2-desktop@2x.jpg 2x" alt="Jewellery" width="270" height="272">
-                </picture>
-                <h3>Choker with gold bead</h3>
-                <p>&#36; 55</p>
-              </a>
-            </article>
+                <article class="catalog__card slider-item">
+                  <a class="catalog__link" href="card.html">
+                    <picture>
+                      <source type="image/webp" media="(max-width: 767px)" srcset="img/catalog-2-mobile@1x.webp 1x, img/catalog-2-mobile@2x.webp 2x">
+                      <source type="image/webp" media="(max-width: 1023px)" srcset="img/catalog-2-tablet@1x.webp 1x, img/catalog-2-tablet@2x.webp 2x">
+                      <source type="image/webp" srcset="img/catalog-2-desktop@1x.webp 1x, img/catalog-2-desktop@2x.webp 2x">
 
-            <article class="catalog__card">
-              <a class="catalog__link" href="#">
-                <picture>
-                  <source type="image/webp" media="(max-width: 767px)" srcset="img/catalog-3-mobile@1x.webp 1x, img/catalog-3-mobile@2x.webp 2x">
-                  <source type="image/webp" media="(max-width: 1023px)" srcset="img/catalog-3-tablet@1x.webp 1x, img/catalog-3-tablet@2x.webp 2x">
-                  <source type="image/webp" srcset="img/catalog-3-desktop@1x.webp 1x, img/catalog-3-desktop@2x.webp 2x">
+                      <!-- 1х: 130px; 2x: 260px -->
+                      <source media="(max-width: 767px)" srcset="img/catalog-2-mobile@1x.jpg 1x, img/catalog-2-mobile@2x.jpg 2x">
+                      <!-- 1х: 324px; 2x: 648px -->
+                      <source media="(max-width: 1023px)" srcset="img/catalog-2-tablet@1x.jpg 1x, img/catalog-2-tablet@2x.jpg 2x">
+                      <!-- 1х: 270px; 2x: 540px -->
+                      <img src="img/catalog-2-desktop@1x.jpg" srcset="img/catalog-2-desktop@2x.jpg 2x" alt="Jewellery" width="270" height="272">
+                    </picture>
+                    <h3>Choker with gold bead</h3>
+                    <p>&#36; 55</p>
+                  </a>
+                </article>
 
-                  <!-- 1х: 130px; 2x: 260px -->
-                  <source media="(max-width: 767px)" srcset="img/catalog-3-mobile@1x.jpg 1x, img/catalog-3-mobile@2x.jpg 2x">
-                  <!-- 1х: 324px; 2x: 648px -->
-                  <source media="(max-width: 1023px)" srcset="img/catalog-3-tablet@1x.jpg 1x, img/catalog-3-tablet@2x.jpg 2x">
-                  <!-- 1х: 270px; 2x: 540px -->
-                  <img src="img/catalog-3-desktop@1x.jpg" srcset="img/catalog-3-desktop@2x.jpg 2x" alt="Jewellery" width="270" height="272">
-                </picture>
-                <h3>Gold layered necklace</h3>
-                <p>&#36; 155</p>
-              </a>
-            </article>
+                <article class="catalog__card slider-item">
+                  <a class="catalog__link" href="card.html">
+                    <picture>
+                      <source type="image/webp" media="(max-width: 767px)" srcset="img/catalog-3-mobile@1x.webp 1x, img/catalog-3-mobile@2x.webp 2x">
+                      <source type="image/webp" media="(max-width: 1023px)" srcset="img/catalog-3-tablet@1x.webp 1x, img/catalog-3-tablet@2x.webp 2x">
+                      <source type="image/webp" srcset="img/catalog-3-desktop@1x.webp 1x, img/catalog-3-desktop@2x.webp 2x">
 
-            <article class="catalog__card">
-              <a class="catalog__link" href="#">
-                <picture>
-                  <source type="image/webp" media="(max-width: 767px)" srcset="img/catalog-4-mobile@1x.webp 1x, img/catalog-4-mobile@2x.webp 2x">
-                  <source type="image/webp" media="(max-width: 1023px)" srcset="img/catalog-4-tablet@1x.webp 1x, img/catalog-4-tablet@2x.webp 2x">
-                  <source type="image/webp" srcset="img/catalog-4-desktop@1x.webp 1x, img/catalog-4-desktop@2x.webp 2x">
+                      <!-- 1х: 130px; 2x: 260px -->
+                      <source media="(max-width: 767px)" srcset="img/catalog-3-mobile@1x.jpg 1x, img/catalog-3-mobile@2x.jpg 2x">
+                      <!-- 1х: 324px; 2x: 648px -->
+                      <source media="(max-width: 1023px)" srcset="img/catalog-3-tablet@1x.jpg 1x, img/catalog-3-tablet@2x.jpg 2x">
+                      <!-- 1х: 270px; 2x: 540px -->
+                      <img src="img/catalog-3-desktop@1x.jpg" srcset="img/catalog-3-desktop@2x.jpg 2x" alt="Jewellery" width="270" height="272">
+                    </picture>
+                    <h3>Gold layered necklace</h3>
+                    <p>&#36; 155</p>
+                  </a>
+                </article>
 
-                  <!-- 1х: 130px; 2x: 260px -->
-                  <source media="(max-width: 767px)" srcset="img/catalog-4-mobile@1x.jpg 1x, img/catalog-4-mobile@2x.jpg 2x">
-                  <!-- 1х: 324px; 2x: 648px -->
-                  <source media="(max-width: 1023px)" srcset="img/catalog-4-tablet@1x.jpg 1x, img/catalog-4-tablet@2x.jpg 2x">
-                  <!-- 1х: 270px; 2x: 540px -->
-                  <img src="img/catalog-4-desktop@1x.jpg" srcset="img/catalog-4-desktop@2x.jpg 2x" alt="Jewellery" width="270" height="272">
-                </picture>
-                <h3>Blue gemstone pendant</h3>
-                <p>&#36; 105</p>
-              </a>
-            </article>
+                <article class="catalog__card slider-item">
+                  <a class="catalog__link" href="card.html">
+                    <picture>
+                      <source type="image/webp" media="(max-width: 767px)" srcset="img/catalog-4-mobile@1x.webp 1x, img/catalog-4-mobile@2x.webp 2x">
+                      <source type="image/webp" media="(max-width: 1023px)" srcset="img/catalog-4-tablet@1x.webp 1x, img/catalog-4-tablet@2x.webp 2x">
+                      <source type="image/webp" srcset="img/catalog-4-desktop@1x.webp 1x, img/catalog-4-desktop@2x.webp 2x">
 
-            <article class="catalog__card">
-              <a class="catalog__link" href="#">
-                <picture>
-                  <source type="image/webp" media="(max-width: 767px)" srcset="img/catalog-5-mobile@1x.webp 1x, img/catalog-5-mobile@2x.webp 2x">
-                  <source type="image/webp" media="(max-width: 1023px)" srcset="img/catalog-5-tablet@1x.webp 1x, img/catalog-5-tablet@2x.webp 2x">
-                  <source type="image/webp" srcset="img/catalog-5-desktop@1x.webp 1x, img/catalog-5-desktop@2x.webp 2x">
+                      <!-- 1х: 130px; 2x: 260px -->
+                      <source media="(max-width: 767px)" srcset="img/catalog-4-mobile@1x.jpg 1x, img/catalog-4-mobile@2x.jpg 2x">
+                      <!-- 1х: 324px; 2x: 648px -->
+                      <source media="(max-width: 1023px)" srcset="img/catalog-4-tablet@1x.jpg 1x, img/catalog-4-tablet@2x.jpg 2x">
+                      <!-- 1х: 270px; 2x: 540px -->
+                      <img src="img/catalog-4-desktop@1x.jpg" srcset="img/catalog-4-desktop@2x.jpg 2x" alt="Jewellery" width="270" height="272">
+                    </picture>
+                    <h3>Blue gemstone pendant</h3>
+                    <p>&#36; 105</p>
+                  </a>
+                </article>
 
-                  <!-- 1х: 130px; 2x: 260px -->
-                  <source media="(max-width: 767px)" srcset="img/catalog-5-mobile@1x.jpg 1x, img/catalog-5-mobile@2x.jpg 2x">
-                  <!-- 1х: 324px; 2x: 648px -->
-                  <source media="(max-width: 1023px)" srcset="img/catalog-5-tablet@1x.jpg 1x, img/catalog-5-tablet@2x.jpg 2x">
-                  <!-- 1х: 270px; 2x: 540px -->
-                  <img src="img/catalog-5-desktop@1x.jpg" srcset="img/catalog-5-desktop@2x.jpg 2x" alt="Jewellery" width="270" height="272">
-                </picture>
-                <h3>Boho earrings</h3>
-                <p>&#36; 75</p>
-              </a>
-            </article>
+                <article class="catalog__card slider-item">
+                  <a class="catalog__link" href="card.html">
+                    <picture>
+                      <source type="image/webp" media="(max-width: 767px)" srcset="img/catalog-5-mobile@1x.webp 1x, img/catalog-5-mobile@2x.webp 2x">
+                      <source type="image/webp" media="(max-width: 1023px)" srcset="img/catalog-5-tablet@1x.webp 1x, img/catalog-5-tablet@2x.webp 2x">
+                      <source type="image/webp" srcset="img/catalog-5-desktop@1x.webp 1x, img/catalog-5-desktop@2x.webp 2x">
 
-            <article class="catalog__card">
-              <a class="catalog__link" href="#">
-                <picture>
-                  <source type="image/webp" media="(max-width: 767px)" srcset="img/catalog-6-mobile@1x.webp 1x, img/catalog-6-mobile@2x.webp 2x">
-                  <source type="image/webp" media="(max-width: 1023px)" srcset="img/catalog-6-tablet@1x.webp 1x, img/catalog-6-tablet@2x.webp 2x">
-                  <source type="image/webp" srcset="img/catalog-6-desktop@1x.webp 1x, img/catalog-6-desktop@2x.webp 2x">
+                      <!-- 1х: 130px; 2x: 260px -->
+                      <source media="(max-width: 767px)" srcset="img/catalog-5-mobile@1x.jpg 1x, img/catalog-5-mobile@2x.jpg 2x">
+                      <!-- 1х: 324px; 2x: 648px -->
+                      <source media="(max-width: 1023px)" srcset="img/catalog-5-tablet@1x.jpg 1x, img/catalog-5-tablet@2x.jpg 2x">
+                      <!-- 1х: 270px; 2x: 540px -->
+                      <img src="img/catalog-5-desktop@1x.jpg" srcset="img/catalog-5-desktop@2x.jpg 2x" alt="Jewellery" width="270" height="272">
+                    </picture>
+                    <h3>Boho earrings</h3>
+                    <p>&#36; 75</p>
+                  </a>
+                </article>
 
-                  <!-- 1х: 130px; 2x: 260px -->
-                  <source media="(max-width: 767px)" srcset="img/catalog-6-mobile@1x.jpg 1x, img/catalog-6-mobile@2x.jpg 2x">
-                  <!-- 1х: 324px; 2x: 648px -->
-                  <source media="(max-width: 1023px)" srcset="img/catalog-6-tablet@1x.jpg 1x, img/catalog-6-tablet@2x.jpg 2x">
-                  <!-- 1х: 270px; 2x: 540px -->
-                  <img src="img/catalog-6-desktop@1x.jpg" srcset="img/catalog-6-desktop@2x.jpg 2x" alt="Jewellery" width="270" height="272">
-                </picture>
-                <h3>Gold bird necklace</h3>
-                <p>&#36; 135</p>
-              </a>
-            </article>
+                <article class="catalog__card slider-item">
+                  <a class="catalog__link" href="card.html">
+                    <picture>
+                      <source type="image/webp" media="(max-width: 767px)" srcset="img/catalog-6-mobile@1x.webp 1x, img/catalog-6-mobile@2x.webp 2x">
+                      <source type="image/webp" media="(max-width: 1023px)" srcset="img/catalog-6-tablet@1x.webp 1x, img/catalog-6-tablet@2x.webp 2x">
+                      <source type="image/webp" srcset="img/catalog-6-desktop@1x.webp 1x, img/catalog-6-desktop@2x.webp 2x">
 
-            <article class="catalog__card">
-              <a class="catalog__link" href="#">
-                <picture>
-                  <source type="image/webp" media="(max-width: 767px)" srcset="img/catalog-7-mobile@1x.webp 1x, img/catalog-7-mobile@2x.webp 2x">
-                  <source type="image/webp" media="(max-width: 1023px)" srcset="img/catalog-7-tablet@1x.webp 1x, img/catalog-7-tablet@2x.webp 2x">
-                  <source type="image/webp" srcset="img/catalog-7-desktop@1x.webp 1x, img/catalog-7-desktop@2x.webp 2x">
+                      <!-- 1х: 130px; 2x: 260px -->
+                      <source media="(max-width: 767px)" srcset="img/catalog-6-mobile@1x.jpg 1x, img/catalog-6-mobile@2x.jpg 2x">
+                      <!-- 1х: 324px; 2x: 648px -->
+                      <source media="(max-width: 1023px)" srcset="img/catalog-6-tablet@1x.jpg 1x, img/catalog-6-tablet@2x.jpg 2x">
+                      <!-- 1х: 270px; 2x: 540px -->
+                      <img src="img/catalog-6-desktop@1x.jpg" srcset="img/catalog-6-desktop@2x.jpg 2x" alt="Jewellery" width="270" height="272">
+                    </picture>
+                    <h3>Gold bird necklace</h3>
+                    <p>&#36; 135</p>
+                  </a>
+                </article>
 
-                  <!-- 1х: 130px; 2x: 260px -->
-                  <source media="(max-width: 767px)" srcset="img/catalog-7-mobile@1x.jpg 1x, img/catalog-7-mobile@2x.jpg 2x">
-                  <!-- 1х: 324px; 2x: 648px -->
-                  <source media="(max-width: 1023px)" srcset="img/catalog-7-tablet@1x.jpg 1x, img/catalog-7-tablet@2x.jpg 2x">
-                  <!-- 1х: 270px; 2x: 540px -->
-                  <img src="img/catalog-7-desktop@1x.jpg" srcset="img/catalog-7-desktop@2x.jpg 2x" alt="Jewellery" width="270" height="272">
-                </picture>
-                <h3>Black leather choker</h3>
-                <p>&#36; 85</p>
-              </a>
-            </article>
+                <article class="catalog__card slider-item">
+                  <a class="catalog__link" href="card.html">
+                    <picture>
+                      <source type="image/webp" media="(max-width: 767px)" srcset="img/catalog-7-mobile@1x.webp 1x, img/catalog-7-mobile@2x.webp 2x">
+                      <source type="image/webp" media="(max-width: 1023px)" srcset="img/catalog-7-tablet@1x.webp 1x, img/catalog-7-tablet@2x.webp 2x">
+                      <source type="image/webp" srcset="img/catalog-7-desktop@1x.webp 1x, img/catalog-7-desktop@2x.webp 2x">
 
-            <article class="catalog__card">
-              <a class="catalog__link" href="#">
-                <picture>
-                  <source type="image/webp" media="(max-width: 767px)" srcset="img/catalog-8-mobile@1x.webp 1x, img/catalog-8-mobile@2x.webp 2x">
-                  <source type="image/webp" media="(max-width: 1023px)" srcset="img/catalog-8-tablet@1x.webp 1x, img/catalog-8-tablet@2x.webp 2x">
-                  <source type="image/webp" srcset="img/catalog-8-desktop@1x.webp 1x, img/catalog-8-desktop@2x.webp 2x">
+                      <!-- 1х: 130px; 2x: 260px -->
+                      <source media="(max-width: 767px)" srcset="img/catalog-7-mobile@1x.jpg 1x, img/catalog-7-mobile@2x.jpg 2x">
+                      <!-- 1х: 324px; 2x: 648px -->
+                      <source media="(max-width: 1023px)" srcset="img/catalog-7-tablet@1x.jpg 1x, img/catalog-7-tablet@2x.jpg 2x">
+                      <!-- 1х: 270px; 2x: 540px -->
+                      <img src="img/catalog-7-desktop@1x.jpg" srcset="img/catalog-7-desktop@2x.jpg 2x" alt="Jewellery" width="270" height="272">
+                    </picture>
+                    <h3>Black leather choker</h3>
+                    <p>&#36; 85</p>
+                  </a>
+                </article>
 
-                  <!-- 1х: 130px; 2x: 260px -->
-                  <source media="(max-width: 767px)" srcset="img/catalog-8-mobile@1x.jpg 1x, img/catalog-8-mobile@2x.jpg 2x">
-                  <!-- 1х: 324px; 2x: 648px -->
-                  <source media="(max-width: 1023px)" srcset="img/catalog-8-tablet@1x.jpg 1x, img/catalog-8-tablet@2x.jpg 2x">
-                  <!-- 1х: 270px; 2x: 540px -->
-                  <img src="img/catalog-8-desktop@1x.jpg" srcset="img/catalog-8-desktop@2x.jpg 2x" alt="Jewellery" width="270" height="272">
-                </picture>
-                <h3>Necklace with amethyst</h3>
-                <p>&#36; 145</p>
-              </a>
-            </article>
+                <article class="catalog__card slider-item">
+                  <a class="catalog__link" href="card.html">
+                    <picture>
+                      <source type="image/webp" media="(max-width: 767px)" srcset="img/catalog-8-mobile@1x.webp 1x, img/catalog-8-mobile@2x.webp 2x">
+                      <source type="image/webp" media="(max-width: 1023px)" srcset="img/catalog-8-tablet@1x.webp 1x, img/catalog-8-tablet@2x.webp 2x">
+                      <source type="image/webp" srcset="img/catalog-8-desktop@1x.webp 1x, img/catalog-8-desktop@2x.webp 2x">
 
-            <article class="catalog__card">
-              <a class="catalog__link" href="#">
-                <picture>
-                  <source type="image/webp" media="(max-width: 767px)" srcset="img/catalog-9-mobile@1x.webp 1x, img/catalog-9-mobile@2x.webp 2x">
-                  <source type="image/webp" media="(max-width: 1023px)" srcset="img/catalog-9-tablet@1x.webp 1x, img/catalog-9-tablet@2x.webp 2x">
-                  <source type="image/webp" srcset="img/catalog-9-desktop@1x.webp 1x, img/catalog-9-desktop@2x.webp 2x">
+                      <!-- 1х: 130px; 2x: 260px -->
+                      <source media="(max-width: 767px)" srcset="img/catalog-8-mobile@1x.jpg 1x, img/catalog-8-mobile@2x.jpg 2x">
+                      <!-- 1х: 324px; 2x: 648px -->
+                      <source media="(max-width: 1023px)" srcset="img/catalog-8-tablet@1x.jpg 1x, img/catalog-8-tablet@2x.jpg 2x">
+                      <!-- 1х: 270px; 2x: 540px -->
+                      <img src="img/catalog-8-desktop@1x.jpg" srcset="img/catalog-8-desktop@2x.jpg 2x" alt="Jewellery" width="270" height="272">
+                    </picture>
+                    <h3>Necklace with amethyst</h3>
+                    <p>&#36; 145</p>
+                  </a>
+                </article>
 
-                  <!-- 1х: 130px; 2x: 260px -->
-                  <source media="(max-width: 767px)" srcset="img/catalog-9-mobile@1x.jpg 1x, img/catalog-9-mobile@2x.jpg 2x">
-                  <!-- 1х: 324px; 2x: 648px -->
-                  <source media="(max-width: 1023px)" srcset="img/catalog-9-tablet@1x.jpg 1x, img/catalog-9-tablet@2x.jpg 2x">
-                  <!-- 1х: 270px; 2x: 540px -->
-                  <img src="img/catalog-9-desktop@1x.jpg" srcset="img/catalog-9-desktop@2x.jpg 2x" alt="Jewellery" width="270" height="272">
-                </picture>
-                <h3>Elephant earrings</h3>
-                <p>&#36; 95</p>
-              </a>
-            </article>
+                <article class="catalog__card slider-item">
+                  <a class="catalog__link" href="card.html">
+                    <picture>
+                      <source type="image/webp" media="(max-width: 767px)" srcset="img/catalog-9-mobile@1x.webp 1x, img/catalog-9-mobile@2x.webp 2x">
+                      <source type="image/webp" media="(max-width: 1023px)" srcset="img/catalog-9-tablet@1x.webp 1x, img/catalog-9-tablet@2x.webp 2x">
+                      <source type="image/webp" srcset="img/catalog-9-desktop@1x.webp 1x, img/catalog-9-desktop@2x.webp 2x">
 
-            <article class="catalog__card">
-              <a class="catalog__link" href="#">
-                <picture>
-                  <source type="image/webp" media="(max-width: 767px)" srcset="img/catalog-10-mobile@1x.webp 1x, img/catalog-10-mobile@2x.webp 2x">
-                  <source type="image/webp" media="(max-width: 1023px)" srcset="img/catalog-10-tablet@1x.webp 1x, img/catalog-10-tablet@2x.webp 2x">
-                  <source type="image/webp" srcset="img/catalog-10-desktop@1x.webp 1x, img/catalog-10-desktop@2x.webp 2x">
+                      <!-- 1х: 130px; 2x: 260px -->
+                      <source media="(max-width: 767px)" srcset="img/catalog-9-mobile@1x.jpg 1x, img/catalog-9-mobile@2x.jpg 2x">
+                      <!-- 1х: 324px; 2x: 648px -->
+                      <source media="(max-width: 1023px)" srcset="img/catalog-9-tablet@1x.jpg 1x, img/catalog-9-tablet@2x.jpg 2x">
+                      <!-- 1х: 270px; 2x: 540px -->
+                      <img src="img/catalog-9-desktop@1x.jpg" srcset="img/catalog-9-desktop@2x.jpg 2x" alt="Jewellery" width="270" height="272">
+                    </picture>
+                    <h3>Elephant earrings</h3>
+                    <p>&#36; 95</p>
+                  </a>
+                </article>
 
-                  <!-- 1х: 130px; 2x: 260px -->
-                  <source media="(max-width: 767px)" srcset="img/catalog-10-mobile@1x.jpg 1x, img/catalog-10-mobile@2x.jpg 2x">
-                  <!-- 1х: 324px; 2x: 648px -->
-                  <source media="(max-width: 1023px)" srcset="img/catalog-10-tablet@1x.jpg 1x, img/catalog-10-tablet@2x.jpg 2x">
-                  <!-- 1х: 270px; 2x: 540px -->
-                  <img src="img/catalog-10-desktop@1x.jpg" srcset="img/catalog-10-desktop@2x.jpg 2x" alt="Jewellery" width="270" height="272">
-                </picture>
-                <h3>Threader necklace</h3>
-                <p>&#36; 115</p>
-              </a>
-            </article>
+                <article class="catalog__card slider-item">
+                  <a class="catalog__link" href="card.html">
+                    <picture>
+                      <source type="image/webp" media="(max-width: 767px)" srcset="img/catalog-10-mobile@1x.webp 1x, img/catalog-10-mobile@2x.webp 2x">
+                      <source type="image/webp" media="(max-width: 1023px)" srcset="img/catalog-10-tablet@1x.webp 1x, img/catalog-10-tablet@2x.webp 2x">
+                      <source type="image/webp" srcset="img/catalog-10-desktop@1x.webp 1x, img/catalog-10-desktop@2x.webp 2x">
 
-            <article class="catalog__card">
-              <a class="catalog__link" href="#">
-                <picture>
-                  <source type="image/webp" media="(max-width: 767px)" srcset="img/catalog-11-mobile@1x.webp 1x, img/catalog-11-mobile@2x.webp 2x">
-                  <source type="image/webp" media="(max-width: 1023px)" srcset="img/catalog-11-tablet@1x.webp 1x, img/catalog-11-tablet@2x.webp 2x">
-                  <source type="image/webp" srcset="img/catalog-11-desktop@1x.webp 1x, img/catalog-11-desktop@2x.webp 2x">
+                      <!-- 1х: 130px; 2x: 260px -->
+                      <source media="(max-width: 767px)" srcset="img/catalog-10-mobile@1x.jpg 1x, img/catalog-10-mobile@2x.jpg 2x">
+                      <!-- 1х: 324px; 2x: 648px -->
+                      <source media="(max-width: 1023px)" srcset="img/catalog-10-tablet@1x.jpg 1x, img/catalog-10-tablet@2x.jpg 2x">
+                      <!-- 1х: 270px; 2x: 540px -->
+                      <img src="img/catalog-10-desktop@1x.jpg" srcset="img/catalog-10-desktop@2x.jpg 2x" alt="Jewellery" width="270" height="272">
+                    </picture>
+                    <h3>Threader necklace</h3>
+                    <p>&#36; 115</p>
+                  </a>
+                </article>
 
-                  <!-- 1х: 130px; 2x: 260px -->
-                  <source media="(max-width: 767px)" srcset="img/catalog-11-mobile@1x.jpg 1x, img/catalog-11-mobile@2x.jpg 2x">
-                  <!-- 1х: 324px; 2x: 648px -->
-                  <source media="(max-width: 1023px)" srcset="img/catalog-11-tablet@1x.jpg 1x, img/catalog-11-tablet@2x.jpg 2x">
-                  <!-- 1х: 270px; 2x: 540px -->
-                  <img src="img/catalog-11-desktop@1x.jpg" srcset="img/catalog-11-desktop@2x.jpg 2x" alt="Jewellery" width="270" height="272">
-                </picture>
-                <h3>Origami crane necklace</h3>
-                <p>&#36; 105</p>
-              </a>
-            </article>
+                <article class="catalog__card slider-item">
+                  <a class="catalog__link" href="card.html">
+                    <picture>
+                      <source type="image/webp" media="(max-width: 767px)" srcset="img/catalog-11-mobile@1x.webp 1x, img/catalog-11-mobile@2x.webp 2x">
+                      <source type="image/webp" media="(max-width: 1023px)" srcset="img/catalog-11-tablet@1x.webp 1x, img/catalog-11-tablet@2x.webp 2x">
+                      <source type="image/webp" srcset="img/catalog-11-desktop@1x.webp 1x, img/catalog-11-desktop@2x.webp 2x">
 
-            <article class="catalog__card">
-              <a class="catalog__link" href="#">
-                <picture>
-                  <source type="image/webp" media="(max-width: 767px)" srcset="img/catalog-12-mobile@1x.webp 1x, img/catalog-12-mobile@2x.webp 2x">
-                  <source type="image/webp" media="(max-width: 1023px)" srcset="img/catalog-12-tablet@1x.webp 1x, img/catalog-12-tablet@2x.webp 2x">
-                  <source type="image/webp" srcset="img/catalog-12-desktop@1x.webp 1x, img/catalog-12-desktop@2x.webp 2x">
+                      <!-- 1х: 130px; 2x: 260px -->
+                      <source media="(max-width: 767px)" srcset="img/catalog-11-mobile@1x.jpg 1x, img/catalog-11-mobile@2x.jpg 2x">
+                      <!-- 1х: 324px; 2x: 648px -->
+                      <source media="(max-width: 1023px)" srcset="img/catalog-11-tablet@1x.jpg 1x, img/catalog-11-tablet@2x.jpg 2x">
+                      <!-- 1х: 270px; 2x: 540px -->
+                      <img src="img/catalog-11-desktop@1x.jpg" srcset="img/catalog-11-desktop@2x.jpg 2x" alt="Jewellery" width="270" height="272">
+                    </picture>
+                    <h3>Origami crane necklace</h3>
+                    <p>&#36; 105</p>
+                  </a>
+                </article>
 
-                  <!-- 1х: 130px; 2x: 260px -->
-                  <source media="(max-width: 767px)" srcset="img/catalog-12-mobile@1x.jpg 1x, img/catalog-12-mobile@2x.jpg 2x">
-                  <!-- 1х: 324px; 2x: 648px -->
-                  <source media="(max-width: 1023px)" srcset="img/catalog-12-tablet@1x.jpg 1x, img/catalog-12-tablet@2x.jpg 2x">
-                  <!-- 1х: 270px; 2x: 540px -->
-                  <img src="img/catalog-12-desktop@1x.jpg" srcset="img/catalog-12-desktop@2x.jpg 2x" alt="Jewellery" width="270" height="272">
-                </picture>
-                <h3>Marble earrings</h3>
-                <p>&#36; 95</p>
-              </a>
-            </article>
+                <article class="catalog__card slider-item">
+                  <a class="catalog__link" href="card.html">
+                    <picture>
+                      <source type="image/webp" media="(max-width: 767px)" srcset="img/catalog-12-mobile@1x.webp 1x, img/catalog-12-mobile@2x.webp 2x">
+                      <source type="image/webp" media="(max-width: 1023px)" srcset="img/catalog-12-tablet@1x.webp 1x, img/catalog-12-tablet@2x.webp 2x">
+                      <source type="image/webp" srcset="img/catalog-12-desktop@1x.webp 1x, img/catalog-12-desktop@2x.webp 2x">
 
-            <!-- 2 slide -->
-            <article class="catalog__card">
-              <a class="catalog__link" href="card.html">
-                <picture>
-                  <source type="image/webp" media="(max-width: 767px)" srcset="img/catalog-1-mobile@1x.webp 1x, img/catalog-1-mobile@2x.webp 2x">
-                  <source type="image/webp" media="(max-width: 1023px)" srcset="img/catalog-1-tablet@1x.webp 1x, img/catalog-1-tablet@2x.webp 2x">
-                  <source type="image/webp" srcset="img/catalog-1-desktop@1x.webp 1x, img/catalog-1-desktop@2x.webp 2x">
+                      <!-- 1х: 130px; 2x: 260px -->
+                      <source media="(max-width: 767px)" srcset="img/catalog-12-mobile@1x.jpg 1x, img/catalog-12-mobile@2x.jpg 2x">
+                      <!-- 1х: 324px; 2x: 648px -->
+                      <source media="(max-width: 1023px)" srcset="img/catalog-12-tablet@1x.jpg 1x, img/catalog-12-tablet@2x.jpg 2x">
+                      <!-- 1х: 270px; 2x: 540px -->
+                      <img src="img/catalog-12-desktop@1x.jpg" srcset="img/catalog-12-desktop@2x.jpg 2x" alt="Jewellery" width="270" height="272">
+                    </picture>
+                    <h3>Marble earrings</h3>
+                    <p>&#36; 95</p>
+                  </a>
+                </article>
+              </div>
 
-                  <!-- 1х: 130px; 2x: 260px -->
-                  <source media="(max-width: 767px)" srcset="img/catalog-1-mobile@1x.jpg 1x, img/catalog-1-mobile@2x.jpg 2x">
-                  <!-- 1х: 324px; 2x: 648px -->
-                  <source media="(max-width: 1023px)" srcset="img/catalog-1-tablet@1x.jpg 1x, img/catalog-1-tablet@2x.jpg 2x">
-                  <!-- 1х: 270px; 2x: 540px -->
-                  <img src="img/catalog-1-desktop@1x.jpg" srcset="img/catalog-1-desktop@2x.jpg 2x" alt="Jewellery" width="270" height="272">
-                </picture>
-                <h3>Double pearl earrings</h3>
-                <p>&#36; 115</p>
-              </a>
-            </article>
+              <div class="catalog__list-box">
+                <article class="catalog__card slider-item">
+                  <a class="catalog__link" href="card.html">
+                    <picture>
+                      <source type="image/webp" media="(max-width: 767px)" srcset="img/catalog-1-mobile@1x.webp 1x, img/catalog-1-mobile@2x.webp 2x">
+                      <source type="image/webp" media="(max-width: 1023px)" srcset="img/catalog-1-tablet@1x.webp 1x, img/catalog-1-tablet@2x.webp 2x">
+                      <source type="image/webp" srcset="img/catalog-1-desktop@1x.webp 1x, img/catalog-1-desktop@2x.webp 2x">
 
-            <article class="catalog__card">
-              <a class="catalog__link" href="#">
-                <picture>
-                  <source type="image/webp" media="(max-width: 767px)" srcset="img/catalog-2-mobile@1x.webp 1x, img/catalog-2-mobile@2x.webp 2x">
-                  <source type="image/webp" media="(max-width: 1023px)" srcset="img/catalog-2-tablet@1x.webp 1x, img/catalog-2-tablet@2x.webp 2x">
-                  <source type="image/webp" srcset="img/catalog-2-desktop@1x.webp 1x, img/catalog-2-desktop@2x.webp 2x">
+                      <!-- 1х: 130px; 2x: 260px -->
+                      <source media="(max-width: 767px)" srcset="img/catalog-1-mobile@1x.jpg 1x, img/catalog-1-mobile@2x.jpg 2x">
+                      <!-- 1х: 324px; 2x: 648px -->
+                      <source media="(max-width: 1023px)" srcset="img/catalog-1-tablet@1x.jpg 1x, img/catalog-1-tablet@2x.jpg 2x">
+                      <!-- 1х: 270px; 2x: 540px -->
+                      <img src="img/catalog-1-desktop@1x.jpg" srcset="img/catalog-1-desktop@2x.jpg 2x" alt="Jewellery" width="270" height="272">
+                    </picture>
+                    <h3>Double pearl earrings</h3>
+                    <p>&#36; 115</p>
+                  </a>
+                </article>
+                <article class="catalog__card slider-item">
+                  <a class="catalog__link" href="card.html">
+                    <picture>
+                      <source type="image/webp" media="(max-width: 767px)" srcset="img/catalog-1-mobile@1x.webp 1x, img/catalog-1-mobile@2x.webp 2x">
+                      <source type="image/webp" media="(max-width: 1023px)" srcset="img/catalog-1-tablet@1x.webp 1x, img/catalog-1-tablet@2x.webp 2x">
+                      <source type="image/webp" srcset="img/catalog-1-desktop@1x.webp 1x, img/catalog-1-desktop@2x.webp 2x">
 
-                  <!-- 1х: 130px; 2x: 260px -->
-                  <source media="(max-width: 767px)" srcset="img/catalog-2-mobile@1x.jpg 1x, img/catalog-2-mobile@2x.jpg 2x">
-                  <!-- 1х: 324px; 2x: 648px -->
-                  <source media="(max-width: 1023px)" srcset="img/catalog-2-tablet@1x.jpg 1x, img/catalog-2-tablet@2x.jpg 2x">
-                  <!-- 1х: 270px; 2x: 540px -->
-                  <img src="img/catalog-2-desktop@1x.jpg" srcset="img/catalog-2-desktop@2x.jpg 2x" alt="Jewellery" width="270" height="272">
-                </picture>
-                <h3>Choker with gold bead</h3>
-                <p>&#36; 55</p>
-              </a>
-            </article>
+                      <!-- 1х: 130px; 2x: 260px -->
+                      <source media="(max-width: 767px)" srcset="img/catalog-1-mobile@1x.jpg 1x, img/catalog-1-mobile@2x.jpg 2x">
+                      <!-- 1х: 324px; 2x: 648px -->
+                      <source media="(max-width: 1023px)" srcset="img/catalog-1-tablet@1x.jpg 1x, img/catalog-1-tablet@2x.jpg 2x">
+                      <!-- 1х: 270px; 2x: 540px -->
+                      <img src="img/catalog-1-desktop@1x.jpg" srcset="img/catalog-1-desktop@2x.jpg 2x" alt="Jewellery" width="270" height="272">
+                    </picture>
+                    <h3>Double pearl earrings</h3>
+                    <p>&#36; 115</p>
+                  </a>
+                </article>
+                <article class="catalog__card slider-item">
+                  <a class="catalog__link" href="card.html">
+                    <picture>
+                      <source type="image/webp" media="(max-width: 767px)" srcset="img/catalog-1-mobile@1x.webp 1x, img/catalog-1-mobile@2x.webp 2x">
+                      <source type="image/webp" media="(max-width: 1023px)" srcset="img/catalog-1-tablet@1x.webp 1x, img/catalog-1-tablet@2x.webp 2x">
+                      <source type="image/webp" srcset="img/catalog-1-desktop@1x.webp 1x, img/catalog-1-desktop@2x.webp 2x">
 
-            <article class="catalog__card">
-              <a class="catalog__link" href="#">
-                <picture>
-                  <source type="image/webp" media="(max-width: 767px)" srcset="img/catalog-3-mobile@1x.webp 1x, img/catalog-3-mobile@2x.webp 2x">
-                  <source type="image/webp" media="(max-width: 1023px)" srcset="img/catalog-3-tablet@1x.webp 1x, img/catalog-3-tablet@2x.webp 2x">
-                  <source type="image/webp" srcset="img/catalog-3-desktop@1x.webp 1x, img/catalog-3-desktop@2x.webp 2x">
+                      <!-- 1х: 130px; 2x: 260px -->
+                      <source media="(max-width: 767px)" srcset="img/catalog-1-mobile@1x.jpg 1x, img/catalog-1-mobile@2x.jpg 2x">
+                      <!-- 1х: 324px; 2x: 648px -->
+                      <source media="(max-width: 1023px)" srcset="img/catalog-1-tablet@1x.jpg 1x, img/catalog-1-tablet@2x.jpg 2x">
+                      <!-- 1х: 270px; 2x: 540px -->
+                      <img src="img/catalog-1-desktop@1x.jpg" srcset="img/catalog-1-desktop@2x.jpg 2x" alt="Jewellery" width="270" height="272">
+                    </picture>
+                    <h3>Double pearl earrings</h3>
+                    <p>&#36; 115</p>
+                  </a>
+                </article>
+                <article class="catalog__card slider-item">
+                  <a class="catalog__link" href="card.html">
+                    <picture>
+                      <source type="image/webp" media="(max-width: 767px)" srcset="img/catalog-1-mobile@1x.webp 1x, img/catalog-1-mobile@2x.webp 2x">
+                      <source type="image/webp" media="(max-width: 1023px)" srcset="img/catalog-1-tablet@1x.webp 1x, img/catalog-1-tablet@2x.webp 2x">
+                      <source type="image/webp" srcset="img/catalog-1-desktop@1x.webp 1x, img/catalog-1-desktop@2x.webp 2x">
 
-                  <!-- 1х: 130px; 2x: 260px -->
-                  <source media="(max-width: 767px)" srcset="img/catalog-3-mobile@1x.jpg 1x, img/catalog-3-mobile@2x.jpg 2x">
-                  <!-- 1х: 324px; 2x: 648px -->
-                  <source media="(max-width: 1023px)" srcset="img/catalog-3-tablet@1x.jpg 1x, img/catalog-3-tablet@2x.jpg 2x">
-                  <!-- 1х: 270px; 2x: 540px -->
-                  <img src="img/catalog-3-desktop@1x.jpg" srcset="img/catalog-3-desktop@2x.jpg 2x" alt="Jewellery" width="270" height="272">
-                </picture>
-                <h3>Gold layered necklace</h3>
-                <p>&#36; 155</p>
-              </a>
-            </article>
+                      <!-- 1х: 130px; 2x: 260px -->
+                      <source media="(max-width: 767px)" srcset="img/catalog-1-mobile@1x.jpg 1x, img/catalog-1-mobile@2x.jpg 2x">
+                      <!-- 1х: 324px; 2x: 648px -->
+                      <source media="(max-width: 1023px)" srcset="img/catalog-1-tablet@1x.jpg 1x, img/catalog-1-tablet@2x.jpg 2x">
+                      <!-- 1х: 270px; 2x: 540px -->
+                      <img src="img/catalog-1-desktop@1x.jpg" srcset="img/catalog-1-desktop@2x.jpg 2x" alt="Jewellery" width="270" height="272">
+                    </picture>
+                    <h3>Double pearl earrings</h3>
+                    <p>&#36; 115</p>
+                  </a>
+                </article>
+                <article class="catalog__card slider-item">
+                  <a class="catalog__link" href="card.html">
+                    <picture>
+                      <source type="image/webp" media="(max-width: 767px)" srcset="img/catalog-1-mobile@1x.webp 1x, img/catalog-1-mobile@2x.webp 2x">
+                      <source type="image/webp" media="(max-width: 1023px)" srcset="img/catalog-1-tablet@1x.webp 1x, img/catalog-1-tablet@2x.webp 2x">
+                      <source type="image/webp" srcset="img/catalog-1-desktop@1x.webp 1x, img/catalog-1-desktop@2x.webp 2x">
 
-            <article class="catalog__card">
-              <a class="catalog__link" href="#">
-                <picture>
-                  <source type="image/webp" media="(max-width: 767px)" srcset="img/catalog-4-mobile@1x.webp 1x, img/catalog-4-mobile@2x.webp 2x">
-                  <source type="image/webp" media="(max-width: 1023px)" srcset="img/catalog-4-tablet@1x.webp 1x, img/catalog-4-tablet@2x.webp 2x">
-                  <source type="image/webp" srcset="img/catalog-4-desktop@1x.webp 1x, img/catalog-4-desktop@2x.webp 2x">
+                      <!-- 1х: 130px; 2x: 260px -->
+                      <source media="(max-width: 767px)" srcset="img/catalog-1-mobile@1x.jpg 1x, img/catalog-1-mobile@2x.jpg 2x">
+                      <!-- 1х: 324px; 2x: 648px -->
+                      <source media="(max-width: 1023px)" srcset="img/catalog-1-tablet@1x.jpg 1x, img/catalog-1-tablet@2x.jpg 2x">
+                      <!-- 1х: 270px; 2x: 540px -->
+                      <img src="img/catalog-1-desktop@1x.jpg" srcset="img/catalog-1-desktop@2x.jpg 2x" alt="Jewellery" width="270" height="272">
+                    </picture>
+                    <h3>Double pearl earrings</h3>
+                    <p>&#36; 115</p>
+                  </a>
+                </article>
+                <article class="catalog__card slider-item">
+                  <a class="catalog__link" href="card.html">
+                    <picture>
+                      <source type="image/webp" media="(max-width: 767px)" srcset="img/catalog-1-mobile@1x.webp 1x, img/catalog-1-mobile@2x.webp 2x">
+                      <source type="image/webp" media="(max-width: 1023px)" srcset="img/catalog-1-tablet@1x.webp 1x, img/catalog-1-tablet@2x.webp 2x">
+                      <source type="image/webp" srcset="img/catalog-1-desktop@1x.webp 1x, img/catalog-1-desktop@2x.webp 2x">
 
-                  <!-- 1х: 130px; 2x: 260px -->
-                  <source media="(max-width: 767px)" srcset="img/catalog-4-mobile@1x.jpg 1x, img/catalog-4-mobile@2x.jpg 2x">
-                  <!-- 1х: 324px; 2x: 648px -->
-                  <source media="(max-width: 1023px)" srcset="img/catalog-4-tablet@1x.jpg 1x, img/catalog-4-tablet@2x.jpg 2x">
-                  <!-- 1х: 270px; 2x: 540px -->
-                  <img src="img/catalog-4-desktop@1x.jpg" srcset="img/catalog-4-desktop@2x.jpg 2x" alt="Jewellery" width="270" height="272">
-                </picture>
-                <h3>Blue gemstone pendant</h3>
-                <p>&#36; 105</p>
-              </a>
-            </article>
+                      <!-- 1х: 130px; 2x: 260px -->
+                      <source media="(max-width: 767px)" srcset="img/catalog-1-mobile@1x.jpg 1x, img/catalog-1-mobile@2x.jpg 2x">
+                      <!-- 1х: 324px; 2x: 648px -->
+                      <source media="(max-width: 1023px)" srcset="img/catalog-1-tablet@1x.jpg 1x, img/catalog-1-tablet@2x.jpg 2x">
+                      <!-- 1х: 270px; 2x: 540px -->
+                      <img src="img/catalog-1-desktop@1x.jpg" srcset="img/catalog-1-desktop@2x.jpg 2x" alt="Jewellery" width="270" height="272">
+                    </picture>
+                    <h3>Double pearl earrings</h3>
+                    <p>&#36; 115</p>
+                  </a>
+                </article>
+                <article class="catalog__card slider-item">
+                  <a class="catalog__link" href="card.html">
+                    <picture>
+                      <source type="image/webp" media="(max-width: 767px)" srcset="img/catalog-1-mobile@1x.webp 1x, img/catalog-1-mobile@2x.webp 2x">
+                      <source type="image/webp" media="(max-width: 1023px)" srcset="img/catalog-1-tablet@1x.webp 1x, img/catalog-1-tablet@2x.webp 2x">
+                      <source type="image/webp" srcset="img/catalog-1-desktop@1x.webp 1x, img/catalog-1-desktop@2x.webp 2x">
 
-            <article class="catalog__card">
-              <a class="catalog__link" href="#">
-                <picture>
-                  <source type="image/webp" media="(max-width: 767px)" srcset="img/catalog-5-mobile@1x.webp 1x, img/catalog-5-mobile@2x.webp 2x">
-                  <source type="image/webp" media="(max-width: 1023px)" srcset="img/catalog-5-tablet@1x.webp 1x, img/catalog-5-tablet@2x.webp 2x">
-                  <source type="image/webp" srcset="img/catalog-5-desktop@1x.webp 1x, img/catalog-5-desktop@2x.webp 2x">
+                      <!-- 1х: 130px; 2x: 260px -->
+                      <source media="(max-width: 767px)" srcset="img/catalog-1-mobile@1x.jpg 1x, img/catalog-1-mobile@2x.jpg 2x">
+                      <!-- 1х: 324px; 2x: 648px -->
+                      <source media="(max-width: 1023px)" srcset="img/catalog-1-tablet@1x.jpg 1x, img/catalog-1-tablet@2x.jpg 2x">
+                      <!-- 1х: 270px; 2x: 540px -->
+                      <img src="img/catalog-1-desktop@1x.jpg" srcset="img/catalog-1-desktop@2x.jpg 2x" alt="Jewellery" width="270" height="272">
+                    </picture>
+                    <h3>Double pearl earrings</h3>
+                    <p>&#36; 115</p>
+                  </a>
+                </article>
+                <article class="catalog__card slider-item">
+                  <a class="catalog__link" href="card.html">
+                    <picture>
+                      <source type="image/webp" media="(max-width: 767px)" srcset="img/catalog-1-mobile@1x.webp 1x, img/catalog-1-mobile@2x.webp 2x">
+                      <source type="image/webp" media="(max-width: 1023px)" srcset="img/catalog-1-tablet@1x.webp 1x, img/catalog-1-tablet@2x.webp 2x">
+                      <source type="image/webp" srcset="img/catalog-1-desktop@1x.webp 1x, img/catalog-1-desktop@2x.webp 2x">
 
-                  <!-- 1х: 130px; 2x: 260px -->
-                  <source media="(max-width: 767px)" srcset="img/catalog-5-mobile@1x.jpg 1x, img/catalog-5-mobile@2x.jpg 2x">
-                  <!-- 1х: 324px; 2x: 648px -->
-                  <source media="(max-width: 1023px)" srcset="img/catalog-5-tablet@1x.jpg 1x, img/catalog-5-tablet@2x.jpg 2x">
-                  <!-- 1х: 270px; 2x: 540px -->
-                  <img src="img/catalog-5-desktop@1x.jpg" srcset="img/catalog-5-desktop@2x.jpg 2x" alt="Jewellery" width="270" height="272">
-                </picture>
-                <h3>Boho earrings</h3>
-                <p>&#36; 75</p>
-              </a>
-            </article>
+                      <!-- 1х: 130px; 2x: 260px -->
+                      <source media="(max-width: 767px)" srcset="img/catalog-1-mobile@1x.jpg 1x, img/catalog-1-mobile@2x.jpg 2x">
+                      <!-- 1х: 324px; 2x: 648px -->
+                      <source media="(max-width: 1023px)" srcset="img/catalog-1-tablet@1x.jpg 1x, img/catalog-1-tablet@2x.jpg 2x">
+                      <!-- 1х: 270px; 2x: 540px -->
+                      <img src="img/catalog-1-desktop@1x.jpg" srcset="img/catalog-1-desktop@2x.jpg 2x" alt="Jewellery" width="270" height="272">
+                    </picture>
+                    <h3>Double pearl earrings</h3>
+                    <p>&#36; 115</p>
+                  </a>
+                </article>
+                <article class="catalog__card slider-item">
+                  <a class="catalog__link" href="card.html">
+                    <picture>
+                      <source type="image/webp" media="(max-width: 767px)" srcset="img/catalog-1-mobile@1x.webp 1x, img/catalog-1-mobile@2x.webp 2x">
+                      <source type="image/webp" media="(max-width: 1023px)" srcset="img/catalog-1-tablet@1x.webp 1x, img/catalog-1-tablet@2x.webp 2x">
+                      <source type="image/webp" srcset="img/catalog-1-desktop@1x.webp 1x, img/catalog-1-desktop@2x.webp 2x">
 
-            <article class="catalog__card">
-              <a class="catalog__link" href="#">
-                <picture>
-                  <source type="image/webp" media="(max-width: 767px)" srcset="img/catalog-6-mobile@1x.webp 1x, img/catalog-6-mobile@2x.webp 2x">
-                  <source type="image/webp" media="(max-width: 1023px)" srcset="img/catalog-6-tablet@1x.webp 1x, img/catalog-6-tablet@2x.webp 2x">
-                  <source type="image/webp" srcset="img/catalog-6-desktop@1x.webp 1x, img/catalog-6-desktop@2x.webp 2x">
+                      <!-- 1х: 130px; 2x: 260px -->
+                      <source media="(max-width: 767px)" srcset="img/catalog-1-mobile@1x.jpg 1x, img/catalog-1-mobile@2x.jpg 2x">
+                      <!-- 1х: 324px; 2x: 648px -->
+                      <source media="(max-width: 1023px)" srcset="img/catalog-1-tablet@1x.jpg 1x, img/catalog-1-tablet@2x.jpg 2x">
+                      <!-- 1х: 270px; 2x: 540px -->
+                      <img src="img/catalog-1-desktop@1x.jpg" srcset="img/catalog-1-desktop@2x.jpg 2x" alt="Jewellery" width="270" height="272">
+                    </picture>
+                    <h3>Double pearl earrings</h3>
+                    <p>&#36; 115</p>
+                  </a>
+                </article>
+                <article class="catalog__card slider-item">
+                  <a class="catalog__link" href="card.html">
+                    <picture>
+                      <source type="image/webp" media="(max-width: 767px)" srcset="img/catalog-1-mobile@1x.webp 1x, img/catalog-1-mobile@2x.webp 2x">
+                      <source type="image/webp" media="(max-width: 1023px)" srcset="img/catalog-1-tablet@1x.webp 1x, img/catalog-1-tablet@2x.webp 2x">
+                      <source type="image/webp" srcset="img/catalog-1-desktop@1x.webp 1x, img/catalog-1-desktop@2x.webp 2x">
 
-                  <!-- 1х: 130px; 2x: 260px -->
-                  <source media="(max-width: 767px)" srcset="img/catalog-6-mobile@1x.jpg 1x, img/catalog-6-mobile@2x.jpg 2x">
-                  <!-- 1х: 324px; 2x: 648px -->
-                  <source media="(max-width: 1023px)" srcset="img/catalog-6-tablet@1x.jpg 1x, img/catalog-6-tablet@2x.jpg 2x">
-                  <!-- 1х: 270px; 2x: 540px -->
-                  <img src="img/catalog-6-desktop@1x.jpg" srcset="img/catalog-6-desktop@2x.jpg 2x" alt="Jewellery" width="270" height="272">
-                </picture>
-                <h3>Gold bird necklace</h3>
-                <p>&#36; 135</p>
-              </a>
-            </article>
+                      <!-- 1х: 130px; 2x: 260px -->
+                      <source media="(max-width: 767px)" srcset="img/catalog-1-mobile@1x.jpg 1x, img/catalog-1-mobile@2x.jpg 2x">
+                      <!-- 1х: 324px; 2x: 648px -->
+                      <source media="(max-width: 1023px)" srcset="img/catalog-1-tablet@1x.jpg 1x, img/catalog-1-tablet@2x.jpg 2x">
+                      <!-- 1х: 270px; 2x: 540px -->
+                      <img src="img/catalog-1-desktop@1x.jpg" srcset="img/catalog-1-desktop@2x.jpg 2x" alt="Jewellery" width="270" height="272">
+                    </picture>
+                    <h3>Double pearl earrings</h3>
+                    <p>&#36; 115</p>
+                  </a>
+                </article>
+                <article class="catalog__card slider-item">
+                  <a class="catalog__link" href="card.html">
+                    <picture>
+                      <source type="image/webp" media="(max-width: 767px)" srcset="img/catalog-1-mobile@1x.webp 1x, img/catalog-1-mobile@2x.webp 2x">
+                      <source type="image/webp" media="(max-width: 1023px)" srcset="img/catalog-1-tablet@1x.webp 1x, img/catalog-1-tablet@2x.webp 2x">
+                      <source type="image/webp" srcset="img/catalog-1-desktop@1x.webp 1x, img/catalog-1-desktop@2x.webp 2x">
 
-            <article class="catalog__card">
-              <a class="catalog__link" href="#">
-                <picture>
-                  <source type="image/webp" media="(max-width: 767px)" srcset="img/catalog-7-mobile@1x.webp 1x, img/catalog-7-mobile@2x.webp 2x">
-                  <source type="image/webp" media="(max-width: 1023px)" srcset="img/catalog-7-tablet@1x.webp 1x, img/catalog-7-tablet@2x.webp 2x">
-                  <source type="image/webp" srcset="img/catalog-7-desktop@1x.webp 1x, img/catalog-7-desktop@2x.webp 2x">
+                      <!-- 1х: 130px; 2x: 260px -->
+                      <source media="(max-width: 767px)" srcset="img/catalog-1-mobile@1x.jpg 1x, img/catalog-1-mobile@2x.jpg 2x">
+                      <!-- 1х: 324px; 2x: 648px -->
+                      <source media="(max-width: 1023px)" srcset="img/catalog-1-tablet@1x.jpg 1x, img/catalog-1-tablet@2x.jpg 2x">
+                      <!-- 1х: 270px; 2x: 540px -->
+                      <img src="img/catalog-1-desktop@1x.jpg" srcset="img/catalog-1-desktop@2x.jpg 2x" alt="Jewellery" width="270" height="272">
+                    </picture>
+                    <h3>Double pearl earrings</h3>
+                    <p>&#36; 115</p>
+                  </a>
+                </article>
+                <article class="catalog__card slider-item">
+                  <a class="catalog__link" href="card.html">
+                    <picture>
+                      <source type="image/webp" media="(max-width: 767px)" srcset="img/catalog-1-mobile@1x.webp 1x, img/catalog-1-mobile@2x.webp 2x">
+                      <source type="image/webp" media="(max-width: 1023px)" srcset="img/catalog-1-tablet@1x.webp 1x, img/catalog-1-tablet@2x.webp 2x">
+                      <source type="image/webp" srcset="img/catalog-1-desktop@1x.webp 1x, img/catalog-1-desktop@2x.webp 2x">
 
-                  <!-- 1х: 130px; 2x: 260px -->
-                  <source media="(max-width: 767px)" srcset="img/catalog-7-mobile@1x.jpg 1x, img/catalog-7-mobile@2x.jpg 2x">
-                  <!-- 1х: 324px; 2x: 648px -->
-                  <source media="(max-width: 1023px)" srcset="img/catalog-7-tablet@1x.jpg 1x, img/catalog-7-tablet@2x.jpg 2x">
-                  <!-- 1х: 270px; 2x: 540px -->
-                  <img src="img/catalog-7-desktop@1x.jpg" srcset="img/catalog-7-desktop@2x.jpg 2x" alt="Jewellery" width="270" height="272">
-                </picture>
-                <h3>Black leather choker</h3>
-                <p>&#36; 85</p>
-              </a>
-            </article>
+                      <!-- 1х: 130px; 2x: 260px -->
+                      <source media="(max-width: 767px)" srcset="img/catalog-1-mobile@1x.jpg 1x, img/catalog-1-mobile@2x.jpg 2x">
+                      <!-- 1х: 324px; 2x: 648px -->
+                      <source media="(max-width: 1023px)" srcset="img/catalog-1-tablet@1x.jpg 1x, img/catalog-1-tablet@2x.jpg 2x">
+                      <!-- 1х: 270px; 2x: 540px -->
+                      <img src="img/catalog-1-desktop@1x.jpg" srcset="img/catalog-1-desktop@2x.jpg 2x" alt="Jewellery" width="270" height="272">
+                    </picture>
+                    <h3>Double pearl earrings</h3>
+                    <p>&#36; 115</p>
+                  </a>
+                </article>
+              </div>
+              <div class="catalog__list-box">
+                <article class="catalog__card slider-item">
+                  <a class="catalog__link" href="card.html">
+                    <picture>
+                      <source type="image/webp" media="(max-width: 767px)" srcset="img/catalog-4-mobile@1x.webp 1x, img/catalog-4-mobile@2x.webp 2x">
+                      <source type="image/webp" media="(max-width: 1023px)" srcset="img/catalog-4-tablet@1x.webp 1x, img/catalog-4-tablet@2x.webp 2x">
+                      <source type="image/webp" srcset="img/catalog-4-desktop@1x.webp 1x, img/catalog-4-desktop@2x.webp 2x">
 
-            <article class="catalog__card">
-              <a class="catalog__link" href="#">
-                <picture>
-                  <source type="image/webp" media="(max-width: 767px)" srcset="img/catalog-8-mobile@1x.webp 1x, img/catalog-8-mobile@2x.webp 2x">
-                  <source type="image/webp" media="(max-width: 1023px)" srcset="img/catalog-8-tablet@1x.webp 1x, img/catalog-8-tablet@2x.webp 2x">
-                  <source type="image/webp" srcset="img/catalog-8-desktop@1x.webp 1x, img/catalog-8-desktop@2x.webp 2x">
+                      <!-- 1х: 130px; 2x: 260px -->
+                      <source media="(max-width: 767px)" srcset="img/catalog-4-mobile@1x.jpg 1x, img/catalog-4-mobile@2x.jpg 2x">
+                      <!-- 1х: 324px; 2x: 648px -->
+                      <source media="(max-width: 1023px)" srcset="img/catalog-4-tablet@1x.jpg 1x, img/catalog-4-tablet@2x.jpg 2x">
+                      <!-- 1х: 270px; 2x: 540px -->
+                      <img src="img/catalog-4-desktop@1x.jpg" srcset="img/catalog-4-desktop@2x.jpg 2x" alt="Jewellery" width="270" height="272">
+                    </picture>
+                    <h3>Blue gemstone pendant</h3>
+                    <p>&#36; 105</p>
+                  </a>
+                </article>
+                <article class="catalog__card slider-item">
+                  <a class="catalog__link" href="card.html">
+                    <picture>
+                      <source type="image/webp" media="(max-width: 767px)" srcset="img/catalog-4-mobile@1x.webp 1x, img/catalog-4-mobile@2x.webp 2x">
+                      <source type="image/webp" media="(max-width: 1023px)" srcset="img/catalog-4-tablet@1x.webp 1x, img/catalog-4-tablet@2x.webp 2x">
+                      <source type="image/webp" srcset="img/catalog-4-desktop@1x.webp 1x, img/catalog-4-desktop@2x.webp 2x">
 
-                  <!-- 1х: 130px; 2x: 260px -->
-                  <source media="(max-width: 767px)" srcset="img/catalog-8-mobile@1x.jpg 1x, img/catalog-8-mobile@2x.jpg 2x">
-                  <!-- 1х: 324px; 2x: 648px -->
-                  <source media="(max-width: 1023px)" srcset="img/catalog-8-tablet@1x.jpg 1x, img/catalog-8-tablet@2x.jpg 2x">
-                  <!-- 1х: 270px; 2x: 540px -->
-                  <img src="img/catalog-8-desktop@1x.jpg" srcset="img/catalog-8-desktop@2x.jpg 2x" alt="Jewellery" width="270" height="272">
-                </picture>
-                <h3>Necklace with amethyst</h3>
-                <p>&#36; 145</p>
-              </a>
-            </article>
+                      <!-- 1х: 130px; 2x: 260px -->
+                      <source media="(max-width: 767px)" srcset="img/catalog-4-mobile@1x.jpg 1x, img/catalog-4-mobile@2x.jpg 2x">
+                      <!-- 1х: 324px; 2x: 648px -->
+                      <source media="(max-width: 1023px)" srcset="img/catalog-4-tablet@1x.jpg 1x, img/catalog-4-tablet@2x.jpg 2x">
+                      <!-- 1х: 270px; 2x: 540px -->
+                      <img src="img/catalog-4-desktop@1x.jpg" srcset="img/catalog-4-desktop@2x.jpg 2x" alt="Jewellery" width="270" height="272">
+                    </picture>
+                    <h3>Blue gemstone pendant</h3>
+                    <p>&#36; 105</p>
+                  </a>
+                </article>
+                <article class="catalog__card slider-item">
+                  <a class="catalog__link" href="card.html">
+                    <picture>
+                      <source type="image/webp" media="(max-width: 767px)" srcset="img/catalog-4-mobile@1x.webp 1x, img/catalog-4-mobile@2x.webp 2x">
+                      <source type="image/webp" media="(max-width: 1023px)" srcset="img/catalog-4-tablet@1x.webp 1x, img/catalog-4-tablet@2x.webp 2x">
+                      <source type="image/webp" srcset="img/catalog-4-desktop@1x.webp 1x, img/catalog-4-desktop@2x.webp 2x">
 
-            <article class="catalog__card">
-              <a class="catalog__link" href="#">
-                <picture>
-                  <source type="image/webp" media="(max-width: 767px)" srcset="img/catalog-9-mobile@1x.webp 1x, img/catalog-9-mobile@2x.webp 2x">
-                  <source type="image/webp" media="(max-width: 1023px)" srcset="img/catalog-9-tablet@1x.webp 1x, img/catalog-9-tablet@2x.webp 2x">
-                  <source type="image/webp" srcset="img/catalog-9-desktop@1x.webp 1x, img/catalog-9-desktop@2x.webp 2x">
+                      <!-- 1х: 130px; 2x: 260px -->
+                      <source media="(max-width: 767px)" srcset="img/catalog-4-mobile@1x.jpg 1x, img/catalog-4-mobile@2x.jpg 2x">
+                      <!-- 1х: 324px; 2x: 648px -->
+                      <source media="(max-width: 1023px)" srcset="img/catalog-4-tablet@1x.jpg 1x, img/catalog-4-tablet@2x.jpg 2x">
+                      <!-- 1х: 270px; 2x: 540px -->
+                      <img src="img/catalog-4-desktop@1x.jpg" srcset="img/catalog-4-desktop@2x.jpg 2x" alt="Jewellery" width="270" height="272">
+                    </picture>
+                    <h3>Blue gemstone pendant</h3>
+                    <p>&#36; 105</p>
+                  </a>
+                </article>
+                <article class="catalog__card slider-item">
+                  <a class="catalog__link" href="card.html">
+                    <picture>
+                      <source type="image/webp" media="(max-width: 767px)" srcset="img/catalog-4-mobile@1x.webp 1x, img/catalog-4-mobile@2x.webp 2x">
+                      <source type="image/webp" media="(max-width: 1023px)" srcset="img/catalog-4-tablet@1x.webp 1x, img/catalog-4-tablet@2x.webp 2x">
+                      <source type="image/webp" srcset="img/catalog-4-desktop@1x.webp 1x, img/catalog-4-desktop@2x.webp 2x">
 
-                  <!-- 1х: 130px; 2x: 260px -->
-                  <source media="(max-width: 767px)" srcset="img/catalog-9-mobile@1x.jpg 1x, img/catalog-9-mobile@2x.jpg 2x">
-                  <!-- 1х: 324px; 2x: 648px -->
-                  <source media="(max-width: 1023px)" srcset="img/catalog-9-tablet@1x.jpg 1x, img/catalog-9-tablet@2x.jpg 2x">
-                  <!-- 1х: 270px; 2x: 540px -->
-                  <img src="img/catalog-9-desktop@1x.jpg" srcset="img/catalog-9-desktop@2x.jpg 2x" alt="Jewellery" width="270" height="272">
-                </picture>
-                <h3>Elephant earrings</h3>
-                <p>&#36; 95</p>
-              </a>
-            </article>
+                      <!-- 1х: 130px; 2x: 260px -->
+                      <source media="(max-width: 767px)" srcset="img/catalog-4-mobile@1x.jpg 1x, img/catalog-4-mobile@2x.jpg 2x">
+                      <!-- 1х: 324px; 2x: 648px -->
+                      <source media="(max-width: 1023px)" srcset="img/catalog-4-tablet@1x.jpg 1x, img/catalog-4-tablet@2x.jpg 2x">
+                      <!-- 1х: 270px; 2x: 540px -->
+                      <img src="img/catalog-4-desktop@1x.jpg" srcset="img/catalog-4-desktop@2x.jpg 2x" alt="Jewellery" width="270" height="272">
+                    </picture>
+                    <h3>Blue gemstone pendant</h3>
+                    <p>&#36; 105</p>
+                  </a>
+                </article>
+                <article class="catalog__card slider-item">
+                  <a class="catalog__link" href="card.html">
+                    <picture>
+                      <source type="image/webp" media="(max-width: 767px)" srcset="img/catalog-4-mobile@1x.webp 1x, img/catalog-4-mobile@2x.webp 2x">
+                      <source type="image/webp" media="(max-width: 1023px)" srcset="img/catalog-4-tablet@1x.webp 1x, img/catalog-4-tablet@2x.webp 2x">
+                      <source type="image/webp" srcset="img/catalog-4-desktop@1x.webp 1x, img/catalog-4-desktop@2x.webp 2x">
 
-            <article class="catalog__card">
-              <a class="catalog__link" href="#">
-                <picture>
-                  <source type="image/webp" media="(max-width: 767px)" srcset="img/catalog-10-mobile@1x.webp 1x, img/catalog-10-mobile@2x.webp 2x">
-                  <source type="image/webp" media="(max-width: 1023px)" srcset="img/catalog-10-tablet@1x.webp 1x, img/catalog-10-tablet@2x.webp 2x">
-                  <source type="image/webp" srcset="img/catalog-10-desktop@1x.webp 1x, img/catalog-10-desktop@2x.webp 2x">
+                      <!-- 1х: 130px; 2x: 260px -->
+                      <source media="(max-width: 767px)" srcset="img/catalog-4-mobile@1x.jpg 1x, img/catalog-4-mobile@2x.jpg 2x">
+                      <!-- 1х: 324px; 2x: 648px -->
+                      <source media="(max-width: 1023px)" srcset="img/catalog-4-tablet@1x.jpg 1x, img/catalog-4-tablet@2x.jpg 2x">
+                      <!-- 1х: 270px; 2x: 540px -->
+                      <img src="img/catalog-4-desktop@1x.jpg" srcset="img/catalog-4-desktop@2x.jpg 2x" alt="Jewellery" width="270" height="272">
+                    </picture>
+                    <h3>Blue gemstone pendant</h3>
+                    <p>&#36; 105</p>
+                  </a>
+                </article>
+                <article class="catalog__card slider-item">
+                  <a class="catalog__link" href="card.html">
+                    <picture>
+                      <source type="image/webp" media="(max-width: 767px)" srcset="img/catalog-4-mobile@1x.webp 1x, img/catalog-4-mobile@2x.webp 2x">
+                      <source type="image/webp" media="(max-width: 1023px)" srcset="img/catalog-4-tablet@1x.webp 1x, img/catalog-4-tablet@2x.webp 2x">
+                      <source type="image/webp" srcset="img/catalog-4-desktop@1x.webp 1x, img/catalog-4-desktop@2x.webp 2x">
 
-                  <!-- 1х: 130px; 2x: 260px -->
-                  <source media="(max-width: 767px)" srcset="img/catalog-10-mobile@1x.jpg 1x, img/catalog-10-mobile@2x.jpg 2x">
-                  <!-- 1х: 324px; 2x: 648px -->
-                  <source media="(max-width: 1023px)" srcset="img/catalog-10-tablet@1x.jpg 1x, img/catalog-10-tablet@2x.jpg 2x">
-                  <!-- 1х: 270px; 2x: 540px -->
-                  <img src="img/catalog-10-desktop@1x.jpg" srcset="img/catalog-10-desktop@2x.jpg 2x" alt="Jewellery" width="270" height="272">
-                </picture>
-                <h3>Threader necklace</h3>
-                <p>&#36; 115</p>
-              </a>
-            </article>
+                      <!-- 1х: 130px; 2x: 260px -->
+                      <source media="(max-width: 767px)" srcset="img/catalog-4-mobile@1x.jpg 1x, img/catalog-4-mobile@2x.jpg 2x">
+                      <!-- 1х: 324px; 2x: 648px -->
+                      <source media="(max-width: 1023px)" srcset="img/catalog-4-tablet@1x.jpg 1x, img/catalog-4-tablet@2x.jpg 2x">
+                      <!-- 1х: 270px; 2x: 540px -->
+                      <img src="img/catalog-4-desktop@1x.jpg" srcset="img/catalog-4-desktop@2x.jpg 2x" alt="Jewellery" width="270" height="272">
+                    </picture>
+                    <h3>Blue gemstone pendant</h3>
+                    <p>&#36; 105</p>
+                  </a>
+                </article>
+                <article class="catalog__card slider-item">
+                  <a class="catalog__link" href="card.html">
+                    <picture>
+                      <source type="image/webp" media="(max-width: 767px)" srcset="img/catalog-4-mobile@1x.webp 1x, img/catalog-4-mobile@2x.webp 2x">
+                      <source type="image/webp" media="(max-width: 1023px)" srcset="img/catalog-4-tablet@1x.webp 1x, img/catalog-4-tablet@2x.webp 2x">
+                      <source type="image/webp" srcset="img/catalog-4-desktop@1x.webp 1x, img/catalog-4-desktop@2x.webp 2x">
 
-            <article class="catalog__card">
-              <a class="catalog__link" href="#">
-                <picture>
-                  <source type="image/webp" media="(max-width: 767px)" srcset="img/catalog-11-mobile@1x.webp 1x, img/catalog-11-mobile@2x.webp 2x">
-                  <source type="image/webp" media="(max-width: 1023px)" srcset="img/catalog-11-tablet@1x.webp 1x, img/catalog-11-tablet@2x.webp 2x">
-                  <source type="image/webp" srcset="img/catalog-11-desktop@1x.webp 1x, img/catalog-11-desktop@2x.webp 2x">
+                      <!-- 1х: 130px; 2x: 260px -->
+                      <source media="(max-width: 767px)" srcset="img/catalog-4-mobile@1x.jpg 1x, img/catalog-4-mobile@2x.jpg 2x">
+                      <!-- 1х: 324px; 2x: 648px -->
+                      <source media="(max-width: 1023px)" srcset="img/catalog-4-tablet@1x.jpg 1x, img/catalog-4-tablet@2x.jpg 2x">
+                      <!-- 1х: 270px; 2x: 540px -->
+                      <img src="img/catalog-4-desktop@1x.jpg" srcset="img/catalog-4-desktop@2x.jpg 2x" alt="Jewellery" width="270" height="272">
+                    </picture>
+                    <h3>Blue gemstone pendant</h3>
+                    <p>&#36; 105</p>
+                  </a>
+                </article>
+                <article class="catalog__card slider-item">
+                  <a class="catalog__link" href="card.html">
+                    <picture>
+                      <source type="image/webp" media="(max-width: 767px)" srcset="img/catalog-4-mobile@1x.webp 1x, img/catalog-4-mobile@2x.webp 2x">
+                      <source type="image/webp" media="(max-width: 1023px)" srcset="img/catalog-4-tablet@1x.webp 1x, img/catalog-4-tablet@2x.webp 2x">
+                      <source type="image/webp" srcset="img/catalog-4-desktop@1x.webp 1x, img/catalog-4-desktop@2x.webp 2x">
 
-                  <!-- 1х: 130px; 2x: 260px -->
-                  <source media="(max-width: 767px)" srcset="img/catalog-11-mobile@1x.jpg 1x, img/catalog-11-mobile@2x.jpg 2x">
-                  <!-- 1х: 324px; 2x: 648px -->
-                  <source media="(max-width: 1023px)" srcset="img/catalog-11-tablet@1x.jpg 1x, img/catalog-11-tablet@2x.jpg 2x">
-                  <!-- 1х: 270px; 2x: 540px -->
-                  <img src="img/catalog-11-desktop@1x.jpg" srcset="img/catalog-11-desktop@2x.jpg 2x" alt="Jewellery" width="270" height="272">
-                </picture>
-                <h3>Origami crane necklace</h3>
-                <p>&#36; 105</p>
-              </a>
-            </article>
+                      <!-- 1х: 130px; 2x: 260px -->
+                      <source media="(max-width: 767px)" srcset="img/catalog-4-mobile@1x.jpg 1x, img/catalog-4-mobile@2x.jpg 2x">
+                      <!-- 1х: 324px; 2x: 648px -->
+                      <source media="(max-width: 1023px)" srcset="img/catalog-4-tablet@1x.jpg 1x, img/catalog-4-tablet@2x.jpg 2x">
+                      <!-- 1х: 270px; 2x: 540px -->
+                      <img src="img/catalog-4-desktop@1x.jpg" srcset="img/catalog-4-desktop@2x.jpg 2x" alt="Jewellery" width="270" height="272">
+                    </picture>
+                    <h3>Blue gemstone pendant</h3>
+                    <p>&#36; 105</p>
+                  </a>
+                </article>
+                <article class="catalog__card slider-item">
+                  <a class="catalog__link" href="card.html">
+                    <picture>
+                      <source type="image/webp" media="(max-width: 767px)" srcset="img/catalog-4-mobile@1x.webp 1x, img/catalog-4-mobile@2x.webp 2x">
+                      <source type="image/webp" media="(max-width: 1023px)" srcset="img/catalog-4-tablet@1x.webp 1x, img/catalog-4-tablet@2x.webp 2x">
+                      <source type="image/webp" srcset="img/catalog-4-desktop@1x.webp 1x, img/catalog-4-desktop@2x.webp 2x">
 
-            <article class="catalog__card">
-              <a class="catalog__link" href="#">
-                <picture>
-                  <source type="image/webp" media="(max-width: 767px)" srcset="img/catalog-12-mobile@1x.webp 1x, img/catalog-12-mobile@2x.webp 2x">
-                  <source type="image/webp" media="(max-width: 1023px)" srcset="img/catalog-12-tablet@1x.webp 1x, img/catalog-12-tablet@2x.webp 2x">
-                  <source type="image/webp" srcset="img/catalog-12-desktop@1x.webp 1x, img/catalog-12-desktop@2x.webp 2x">
+                      <!-- 1х: 130px; 2x: 260px -->
+                      <source media="(max-width: 767px)" srcset="img/catalog-4-mobile@1x.jpg 1x, img/catalog-4-mobile@2x.jpg 2x">
+                      <!-- 1х: 324px; 2x: 648px -->
+                      <source media="(max-width: 1023px)" srcset="img/catalog-4-tablet@1x.jpg 1x, img/catalog-4-tablet@2x.jpg 2x">
+                      <!-- 1х: 270px; 2x: 540px -->
+                      <img src="img/catalog-4-desktop@1x.jpg" srcset="img/catalog-4-desktop@2x.jpg 2x" alt="Jewellery" width="270" height="272">
+                    </picture>
+                    <h3>Blue gemstone pendant</h3>
+                    <p>&#36; 105</p>
+                  </a>
+                </article>
+                <article class="catalog__card slider-item">
+                  <a class="catalog__link" href="card.html">
+                    <picture>
+                      <source type="image/webp" media="(max-width: 767px)" srcset="img/catalog-4-mobile@1x.webp 1x, img/catalog-4-mobile@2x.webp 2x">
+                      <source type="image/webp" media="(max-width: 1023px)" srcset="img/catalog-4-tablet@1x.webp 1x, img/catalog-4-tablet@2x.webp 2x">
+                      <source type="image/webp" srcset="img/catalog-4-desktop@1x.webp 1x, img/catalog-4-desktop@2x.webp 2x">
 
-                  <!-- 1х: 130px; 2x: 260px -->
-                  <source media="(max-width: 767px)" srcset="img/catalog-12-mobile@1x.jpg 1x, img/catalog-12-mobile@2x.jpg 2x">
-                  <!-- 1х: 324px; 2x: 648px -->
-                  <source media="(max-width: 1023px)" srcset="img/catalog-12-tablet@1x.jpg 1x, img/catalog-12-tablet@2x.jpg 2x">
-                  <!-- 1х: 270px; 2x: 540px -->
-                  <img src="img/catalog-12-desktop@1x.jpg" srcset="img/catalog-12-desktop@2x.jpg 2x" alt="Jewellery" width="270" height="272">
-                </picture>
-                <h3>Marble earrings</h3>
-                <p>&#36; 95</p>
-              </a>
-            </article>
+                      <!-- 1х: 130px; 2x: 260px -->
+                      <source media="(max-width: 767px)" srcset="img/catalog-4-mobile@1x.jpg 1x, img/catalog-4-mobile@2x.jpg 2x">
+                      <!-- 1х: 324px; 2x: 648px -->
+                      <source media="(max-width: 1023px)" srcset="img/catalog-4-tablet@1x.jpg 1x, img/catalog-4-tablet@2x.jpg 2x">
+                      <!-- 1х: 270px; 2x: 540px -->
+                      <img src="img/catalog-4-desktop@1x.jpg" srcset="img/catalog-4-desktop@2x.jpg 2x" alt="Jewellery" width="270" height="272">
+                    </picture>
+                    <h3>Blue gemstone pendant</h3>
+                    <p>&#36; 105</p>
+                  </a>
+                </article>
+                <article class="catalog__card slider-item">
+                  <a class="catalog__link" href="card.html">
+                    <picture>
+                      <source type="image/webp" media="(max-width: 767px)" srcset="img/catalog-4-mobile@1x.webp 1x, img/catalog-4-mobile@2x.webp 2x">
+                      <source type="image/webp" media="(max-width: 1023px)" srcset="img/catalog-4-tablet@1x.webp 1x, img/catalog-4-tablet@2x.webp 2x">
+                      <source type="image/webp" srcset="img/catalog-4-desktop@1x.webp 1x, img/catalog-4-desktop@2x.webp 2x">
+
+                      <!-- 1х: 130px; 2x: 260px -->
+                      <source media="(max-width: 767px)" srcset="img/catalog-4-mobile@1x.jpg 1x, img/catalog-4-mobile@2x.jpg 2x">
+                      <!-- 1х: 324px; 2x: 648px -->
+                      <source media="(max-width: 1023px)" srcset="img/catalog-4-tablet@1x.jpg 1x, img/catalog-4-tablet@2x.jpg 2x">
+                      <!-- 1х: 270px; 2x: 540px -->
+                      <img src="img/catalog-4-desktop@1x.jpg" srcset="img/catalog-4-desktop@2x.jpg 2x" alt="Jewellery" width="270" height="272">
+                    </picture>
+                    <h3>Blue gemstone pendant</h3>
+                    <p>&#36; 105</p>
+                  </a>
+                </article>
+                <article class="catalog__card slider-item">
+                  <a class="catalog__link" href="card.html">
+                    <picture>
+                      <source type="image/webp" media="(max-width: 767px)" srcset="img/catalog-4-mobile@1x.webp 1x, img/catalog-4-mobile@2x.webp 2x">
+                      <source type="image/webp" media="(max-width: 1023px)" srcset="img/catalog-4-tablet@1x.webp 1x, img/catalog-4-tablet@2x.webp 2x">
+                      <source type="image/webp" srcset="img/catalog-4-desktop@1x.webp 1x, img/catalog-4-desktop@2x.webp 2x">
+
+                      <!-- 1х: 130px; 2x: 260px -->
+                      <source media="(max-width: 767px)" srcset="img/catalog-4-mobile@1x.jpg 1x, img/catalog-4-mobile@2x.jpg 2x">
+                      <!-- 1х: 324px; 2x: 648px -->
+                      <source media="(max-width: 1023px)" srcset="img/catalog-4-tablet@1x.jpg 1x, img/catalog-4-tablet@2x.jpg 2x">
+                      <!-- 1х: 270px; 2x: 540px -->
+                      <img src="img/catalog-4-desktop@1x.jpg" srcset="img/catalog-4-desktop@2x.jpg 2x" alt="Jewellery" width="270" height="272">
+                    </picture>
+                    <h3>Blue gemstone pendant</h3>
+                    <p>&#36; 105</p>
+                  </a>
+                </article>
+              </div>
+            </div>
           </div>
         </section>
       </div>
 
       <div class="pagination pagination--catalog">
         <div class="pagination__inner">
-          <a href="#">Previous</a>
+          <a class="pagination__btn slider-btn-prev" href="#">Previous</a>
           <ul class="pagination__list pagination__list--catalog">
             <li class="pagination__item pagination__item--active"><a class="pagination__link pagination__link--active" href="#">1</a></li>
             <li class="pagination__item"><a class="pagination__link" href="#">2</a></li>
@@ -690,7 +911,7 @@
             <li class="pagination__item"><a class="pagination__link" href="#">4</a></li>
             <li class="pagination__item"><a class="pagination__link" href="#">5</a></li>
           </ul>
-          <a href="#">Next</a>
+          <a class="pagination__btn slider-btn-next" href="#">Next</a>
         </div>
       </div>
     </section>
@@ -786,23 +1007,22 @@
     </div>
   </footer>
 
-  <div class="authorization">
-    <div class="authorization__wrap">
+  <section class="authorization authorization--modal">
+    <div class="authorization__wrap authorization__wrap--modal">
       <h2>Log In</h2>
       <form class="authorization__form" action="https://echo.htmlacademy.ru" method="post">
         <div class="authorization__item">
-          <label for="user-mail">Your E-mail</label>
+          <p class="hide" id="message-mail">Please enter the valid value</p>
+          <label class="visually-hidden" for="user-mail"></label>
           <input id="user-mail" type="email" name="email" autocomplete="off" placeholder="Your E-mail">
-          <p id="message-mail"></p>
         </div>
 
         <div class="authorization__item">
-          <label for="user-password">Password</label>
+          <p class="hide" id="message-password">Please enter the valid value</p>
+          <label class="visually-hidden" for="user-password"></label>
           <input id="user-password" type="password" name="password" autocomplete="off" maxlength="8" minlength="6" placeholder="Password">
-          <p id="message-password"></p>
-          <a class="authorization__reminder" href="#">Forgot your password?</a>
         </div>
-
+        <a class="authorization__reminder" href="#">Forgot your password?</a>
         <button class="authorization__entry" type="submit">Log In</button>
         <div class="authorization__box">
           <p>Don’t have an account?</p>
@@ -810,48 +1030,6 @@
         </div>
         <button class="authorization__close" type="button" aria-label="Close form"></button>
       </form>
-    </div>
-  </div>
-
-  <section class="added">
-    <div class="added__wrap">
-      <h2>The item was added to your cart</h2>
-
-      <div class="added__inner">
-        <article class="added__product">
-          <picture>
-            <source type="image/webp" media="(max-width: 767px)" srcset="img/cart-card1-mobile@1x.webp 1x, img/cart-card1-mobile@2x.webp 2x">
-            <source type="image/webp" media="(max-width: 1023px)" srcset="img/cart-card1-tablet@1x.webp 1x, img/cart-card1-tablet@2x.webp 2x">
-            <source type="image/webp" srcset="img/cart-card1-desktop@1x.webp 1x, img/cart-card1-desktop@2x.webp 2x">
-
-            <!-- 1х: 70px; 2x: 140px -->
-            <source media="(max-width: 767px)" srcset="img/cart-card1-mobile@1x.jpg 1x, img/cart-card1-mobile@2x.jpg 2x">
-            <!-- 1х: 88px; 2x: 196px -->
-            <source media="(max-width: 1023px)" srcset="img/cart-card1-tablet@1x.jpg 1x, img/cart-card1-tablet@2x.jpg 2x">
-            <!-- 1х: 84px; 2x: 168px -->
-            <img src="img/cart-card1-desktop@1x.jpg" srcset="img/cart-card1-desktop@2x.jpg 2x" alt="Jewellery" width="84" height="79">
-          </picture>
-          <div class="added__box">
-            <h3>Gold Necklace</h3>
-            <p>&#36; 115</p>
-          </div>
-
-          <div class="added__counter">
-            <button class="added__btn added__btn--minus" type="button" aria-label="plus one"></button>
-            <div class="added__result">1</div>
-            <button class="added__btn added__btn--plus" type="button" aria-label="minus one"></button>
-          </div>
-        </article>
-      </div>
-
-      <div class="added__information">
-        <p>You have <span class="added__number-js">1</span> item in the cart</p>
-        <p>Cart subtotal: <span class="added__cost-js">$ 115</span></p>
-      </div>
-
-      <a class="added__link added__link--shopping" href="catalog.html">Continue shopping</a>
-      <a class="added__link added__link--basket" href="basket.html">Checkout</a>
-      <button class="added__close" type="button" aria-label="Close form"></button>
     </div>
   </section>
 
