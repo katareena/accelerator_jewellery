@@ -602,6 +602,12 @@ svg {
   padding-top: 30px;
   padding-bottom: 50px; }
 
+.main__wrap--stopper {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
 .introduction {
   width: inherit;
   display: -webkit-box;
@@ -3341,9 +3347,12 @@ label {
     background: #a87b62;
     opacity: 1; }
 
-.basket {
+.stopper {
   width: inherit;
-  height: 47.8vh;
+  height: calc(100vh - 177px - 357px);
+  -webkit-box-flex: 2;
+      -ms-flex-positive: 2;
+          flex-grow: 2;
   padding-top: 100px;
   font-size: 30px; }
 
