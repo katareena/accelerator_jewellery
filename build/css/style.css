@@ -602,12 +602,6 @@ svg {
   padding-top: 30px;
   padding-bottom: 50px; }
 
-.main__wrap--stopper {
-  height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex; }
-
 .introduction {
   width: inherit;
   display: -webkit-box;
