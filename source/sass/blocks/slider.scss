@@ -1,6 +1,4 @@
 .slider {
-  height: 387px;
-  overflow: hidden;
 
   margin-left: -15px;
   margin-right: -15px;
@@ -9,13 +7,17 @@
 
   @media (max-width: $tablet-width) {
     height: 450px;
-    flex-wrap: nowrap;
     margin-bottom: 8px;
   }
 
   @media (max-width: $mobile-width) {
     height: 255px;
   }
+}
+
+.slider--overflow-hidden {
+  overflow: hidden;
+  height: 387px;
 }
 
 .slider--card {
@@ -28,10 +30,15 @@
 
 .slider__inner {
   display: flex;
+  flex-wrap: wrap;
   height: 100%;
   position: relative;
   left: 0;
   transition: all ease 1s;
+}
+
+.slider__inner--nowrap {
+  flex-wrap: nowrap;
 }
 
 .slider__item {

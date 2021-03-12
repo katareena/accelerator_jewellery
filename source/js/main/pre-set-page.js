@@ -12,6 +12,8 @@
   const dropdown = document.querySelector('.header__dropdown');
   const answers = document.querySelectorAll('.questions__elem-js');
   const filter = document.querySelector('.catalog__filter');
+  const slider = document.querySelector('.slider');
+  const sliderInner = document.querySelector('.slider__inner');
 
   // доп способ проверки названия текущей страницы
   // window.location.toString().indexOf('catalog.htm') > 0
@@ -25,6 +27,11 @@
       answers.forEach(elem => {
         elem.classList.add('hide');
       });
+    }
+
+    if (window.location.pathname === PAGES.index || window.location.pathname === PAGES.start || window.location.pathname === PAGES.card) {
+      slider.classList.add('slider--overflow-hidden');
+      sliderInner.classList.add('slider__inner--nowrap');
     }
 
     if (window.location.pathname === PAGES.catalog) {
