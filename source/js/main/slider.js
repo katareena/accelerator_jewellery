@@ -12,11 +12,13 @@
 
   if (window.location.pathname === PAGES.start || window.location.pathname === PAGES.index || window.location.pathname === PAGES.card) {
     const MIN_WIDTH_DESKTOP = 1024;
+    const slider = document.querySelector('.slider');
     const slides = document.querySelectorAll('.slider__item');
     const innerSlider = document.querySelector('.slider__inner');
     const sliderWidth = document.querySelector('.slider').offsetWidth;
     const nextBtn = document.querySelector('.advertisement__btn--next');
     const prevBtn = document.querySelector('.advertisement__btn--previous');
+    const dots = document.querySelector('.pagination__list').childNodes;
 
     const widthArray = [];
     let innerSliderWidth = 0;
@@ -36,14 +38,21 @@
 
     function movePrev(n) {
       remains = innerSliderWidth - sliderWidth - (offset + widthArray[step]*n);
+      for (let i = 0; i < dots.length; i++) {
+        dots[i].classList.remove('pagination__item--active');
+      }
+
       if (offset > 0) {
         offset = offset - widthArray[step]*n;
         innerSlider.style.left = -offset + 'px';
+        dots[(dots.length - 1) - (step + 1)].classList.add('pagination__item--active');
+
       } else {
         innerSlider.style.left = -(innerSliderWidth - sliderWidth) + 'px';
         offset = (innerSliderWidth - sliderWidth);
         remains = 0;
         step = -1;
+        dots[dots.length - 1].classList.add('pagination__item--active');
       }
 
       if (step + 1 == slides.length) {
@@ -56,13 +65,20 @@
 
     function moveNext(n) {
       remains = innerSliderWidth - sliderWidth - (offset + widthArray[step]*n);
+      for (let i = 0; i < dots.length; i++) {
+        dots[i].classList.remove('pagination__item--active');
+      }
+
       if (remains >= 0) {
         offset = offset + widthArray[step]*n;
         innerSlider.style.left = -offset + 'px';
+        dots[step + 1].classList.add('pagination__item--active');
+
       } else {
         innerSlider.style.left = 0 + 'px';
         offset = 0;
         step = -1;
+        dots[step + 1].classList.add('pagination__item--active');
       }
 
       if (step + 1 == slides.length) {
@@ -104,7 +120,7 @@
 
     function handleTouchMove(evt) {
       if(window.innerWidth < MIN_WIDTH_TABLET) {
-        if (! xDown) {
+        if (!xDown) {
           return;
         }
 
@@ -125,7 +141,7 @@
       }
     };
 
-    document.addEventListener('touchstart', handleTouchStart, false);
-    document.addEventListener('touchmove', handleTouchMove, false);
+    slider.addEventListener('touchstart', handleTouchStart, false);
+    slider.addEventListener('touchmove', handleTouchMove, false);
   }
 })();

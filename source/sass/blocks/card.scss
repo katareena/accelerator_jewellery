@@ -43,6 +43,7 @@
     width: 290px;
     height: 260px;
     margin-bottom: 30px;
+    overflow: hidden;
 
     position: relative;
   }
@@ -95,6 +96,7 @@
     flex: auto;
     max-width: none;
     padding-left: 0;
+    min-height: 435px;
   }
 }
 

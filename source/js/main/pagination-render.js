@@ -8,29 +8,31 @@
 
   if (window.location.pathname === PAGES.start || window.location.pathname === PAGES.index || window.location.pathname === PAGES.card) {
     const MIN_WIDTH_DESKTOP = 1024;
-    const pinTemplate = document.querySelector('#pin').content.querySelector('.pagination__item');
+    const dotTemplate = document.querySelector('#dot').content.querySelector('.pagination__item');
     const pagination = document.querySelector('.pagination__list');
     const slides = document.querySelectorAll('.slider__item');
 
-    function createPin(n) {
-      const fragmentPins = document.createDocumentFragment();
+    function createDots(n) {
+      const fragmentDots = document.createDocumentFragment();
       for (let i = 1; i < ((slides.length + 1)/n); i++) {
-        const pinElement = pinTemplate.cloneNode(true);
-        pinElement.querySelector('.pagination__link').textContent = `${i}`;
-        fragmentPins.appendChild(pinElement);
+        const dotElement = dotTemplate.cloneNode(true);
+        if (i == 1) {
+          dotElement.classList.add('pagination__item--active');
+        }
+        dotElement.querySelector('.pagination__link').textContent = `${i}`;
+        fragmentDots.appendChild(dotElement);
       }
-
-      pagination.appendChild(fragmentPins);
+      pagination.appendChild(fragmentDots);
     };
 
-    function renderPaginationHandler() {
+      function renderPaginationHandler() {
       while (pagination.firstChild) {
         pagination.removeChild(pagination.firstChild);
       }
       if (document.documentElement.clientWidth < MIN_WIDTH_DESKTOP) {
-        createPin(2);
+        createDots(2);
       } else {
-        createPin(4);
+        createDots(4);
       }
     };
 

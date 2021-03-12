@@ -17,6 +17,13 @@
   text-align: center;
   margin: 2px;
 
+  &:hover,
+  &:focus,
+  &:active {
+    color: inherit;
+    cursor: unset;
+  }
+
   @media (max-width: $mobile-width) {
     width: 26px;
     margin: 3px;
@@ -25,6 +32,10 @@
 
 .pagination__item--active {
   color: inherit;
+}
+
+.active {
+  color: red;
 }
 
 .pagination__link--hide {
