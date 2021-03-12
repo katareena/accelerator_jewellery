@@ -1,4 +1,10 @@
 // ------ for index & catalog-page ------
+.pagination {
+  @media (max-width: $mobile-width) {
+    display: none;
+  }
+}
+
 .pagination__list {
   @include list-reset;
   display: flex;

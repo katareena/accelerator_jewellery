@@ -1,0 +1,17 @@
+.pagination-counter {
+  display: none;
+
+  @media (max-width: $mobile-width) {
+    display: block;
+    color: $text;
+    text-align: center;
+  }
+}
+
+.pagination-counter--card {
+  @media (max-width: $mobile-width) {
+    position: absolute;
+    bottom: 4px;
+    left: calc(50vw - 35px);
+  }
+}

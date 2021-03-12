@@ -12,6 +12,7 @@
 
   if (window.location.pathname === PAGES.start || window.location.pathname === PAGES.index || window.location.pathname === PAGES.card) {
     const MIN_WIDTH_DESKTOP = 1024;
+    const MIN_WIDTH_TABLET = 768;
     const slider = document.querySelector('.slider');
     const slides = document.querySelectorAll('.slider__item');
     const innerSlider = document.querySelector('.slider__inner');
@@ -106,7 +107,7 @@
     });
 
   // ----------- touch slider ------------
-    const MIN_WIDTH_TABLET = 768;
+    // const MIN_WIDTH_TABLET = 768;
     let xDown = null;
 
     function getTouches(evt) {

@@ -860,6 +860,10 @@ svg {
   line-height: calc(28 / 14);
   margin: 0; }
 
+@media (max-width: 767px) {
+  .pagination {
+    display: none; } }
+
 .pagination__list {
   margin: 0;
   padding: 0;
@@ -958,6 +962,20 @@ svg {
     .pagination__item--card {
       -webkit-filter: none;
               filter: none; } }
+
+.pagination-counter {
+  display: none; }
+  @media (max-width: 767px) {
+    .pagination-counter {
+      display: block;
+      color: #1d1613;
+      text-align: center; } }
+
+@media (max-width: 767px) {
+  .pagination-counter--card {
+    position: absolute;
+    bottom: 4px;
+    left: calc(50vw - 35px); } }
 
 .blog {
   width: inherit;
