@@ -21,6 +21,9 @@
     const prevBtn = document.querySelector('.advertisement__btn--previous');
     const dots = document.querySelector('.pagination__list').childNodes;
 
+    const numberValue = document.querySelector('.pagination-counter__number');
+    const totalValue = document.querySelector('.pagination-counter__total');
+
     const widthArray = [];
     let innerSliderWidth = 0;
     let offset = 0; //сдвиг слева
@@ -107,7 +110,6 @@
     });
 
   // ----------- touch slider ------------
-    // const MIN_WIDTH_TABLET = 768;
     let xDown = null;
 
     function getTouches(evt) {

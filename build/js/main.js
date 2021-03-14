@@ -379,35 +379,54 @@
     'added': '/added.html'
   };
   const MIN_WIDTH_DESKTOP = 1024;
+  const MIN_WIDTH_TABLET = 768;
   const dropdown = document.querySelector('.header__dropdown');
   const answers = document.querySelectorAll('.questions__elem-js');
   const filter = document.querySelector('.catalog__filter');
   const slider = document.querySelector('.slider');
   const sliderInner = document.querySelector('.slider__inner');
 
+  const card = document.querySelector('.card');
+  const cardInner = document.querySelector('.card__picture');
+
+  const sliderCard = document.querySelector('.card');
+  const sliderCardInner = document.querySelector('.card__picture');
+
   // доп способ проверки названия текущей страницы
   // window.location.toString().indexOf('catalog.htm') > 0
 
   function preSetPage () {
+    // ------ header nav (tablet, mobile) -------
     if (document.documentElement.clientWidth < MIN_WIDTH_DESKTOP) {
       dropdown.classList.remove('header__dropdown--open');
     }
 
+    // ------ accordion questions -------
     if (window.location.pathname === PAGES.index || window.location.pathname === PAGES.start) {
       answers.forEach(elem => {
         elem.classList.add('hide');
       });
     }
 
+    // ------ slider advertisement -------
     if (window.location.pathname === PAGES.index || window.location.pathname === PAGES.start || window.location.pathname === PAGES.card) {
       slider.classList.add('slider--overflow-hidden');
       sliderInner.classList.add('slider__inner--nowrap');
     }
 
+    // ------ slider mobile card pic -------
+    if (window.location.pathname === PAGES.card || document.documentElement.clientWidth < MIN_WIDTH_TABLET) {
+      card.classList.add('card-slider-overflow-hidden');
+      cardInner.classList.add('card-slider-nowrap');
+    }
+
+    // ------ catalog filter -------
     if (window.location.pathname === PAGES.catalog) {
       if (document.documentElement.clientWidth < MIN_WIDTH_DESKTOP) {
         filter.classList.remove('catalog__filter--open');
       }
+
+      // добвить настройку слайдера каталога
     }
   }
 
@@ -440,6 +459,97 @@
     preventScroll: preventScroll,
     getScroll: getScroll
   };
+})();
+
+'use strict';
+(function () {
+  // ----------- slider CATALOG ------------
+  const PAGES = {
+    'start': '/',
+    'index': '/index.html',
+    'catalog': '/catalog.html',
+    'card': '/card.html',
+    'authorization': '/authorization.html',
+    'added': '/added.html'
+  };
+
+  if (window.location.pathname === PAGES.card) {
+    let slideIndex = 1;
+
+    function showSlide(n) {
+      let i;
+      const slides = document.getElementsByClassName('card__picture-item');
+      const numberValue = document.querySelector('.pagination-counter__number');
+      const totalValue = document.querySelector('.pagination-counter__total');
+
+      if (n > slides.length) {
+        slideIndex = 1;
+        numberValue.textContent = 1;
+        totalValue.textContent = slides.length;
+      }
+      if (n < 1) {
+        slideIndex = slides.length;
+      }
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = 'none';
+      }
+      slides[slideIndex - 1].style.display = 'block';
+      numberValue.textContent = slideIndex;
+      totalValue.textContent = slides.length;
+    }
+
+    showSlide(slideIndex);
+
+    function plusSlide(evt) {
+      evt.preventDefault();
+      showSlide(slideIndex += 1);
+    }
+
+    function minusSlide(evt) {
+      evt.preventDefault();
+      showSlide(slideIndex -= 1);
+    }
+
+    // ----------- touch slider CATALOG ------------
+    const MIN_WIDTH_TABLET = 768;
+    let xDown = null;
+
+    function getTouches(evt) {
+      return evt.touches || evt.originalEvent.touches;
+    };
+
+    function handleTouchStart(evt) {
+      const firstTouch = getTouches(evt)[0];
+      xDown = firstTouch.clientX;
+    };
+
+    function handleTouchMove(evt) {
+      if(window.innerWidth < MIN_WIDTH_TABLET) {
+        if (!xDown) {
+          return;
+        }
+
+        const xUp = evt.touches[0].clientX;
+        const xDiff = xDown - xUp;
+
+        if (xDiff> 0) {
+          /* left swipe */
+          console.log('left');
+          plusSlide(evt);
+        } else {
+          /* right swipe */
+          console.log('right');
+          minusSlide(evt);
+        }
+        /* reset values */
+        xDown = null;
+      }
+    };
+
+    document.addEventListener('touchstart', handleTouchStart, false);
+    document.addEventListener('touchmove', handleTouchMove, false);
+  }
+
 })();
 
 'use strict';
@@ -560,6 +670,9 @@
     const prevBtn = document.querySelector('.advertisement__btn--previous');
     const dots = document.querySelector('.pagination__list').childNodes;
 
+    const numberValue = document.querySelector('.pagination-counter__number');
+    const totalValue = document.querySelector('.pagination-counter__total');
+
     const widthArray = [];
     let innerSliderWidth = 0;
     let offset = 0; //сдвиг слева
@@ -646,7 +759,6 @@
     });
 
   // ----------- touch slider ------------
-    // const MIN_WIDTH_TABLET = 768;
     let xDown = null;
 
     function getTouches(evt) {

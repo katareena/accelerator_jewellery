@@ -126,6 +126,30 @@ a {
 svg {
   fill: currentColor; }
 
+@-webkit-keyframes opacity {
+  0% {
+    opacity: 0.4; }
+  25% {
+    opacity: 0.4; }
+  50% {
+    opacity: 0.6; }
+  70% {
+    opacity: 0.8; }
+  100% {
+    opacity: 1; } }
+
+@keyframes opacity {
+  0% {
+    opacity: 0.4; }
+  25% {
+    opacity: 0.4; }
+  50% {
+    opacity: 0.6; }
+  70% {
+    opacity: 0.8; }
+  100% {
+    opacity: 1; } }
+
 .header {
   width: 100%;
   position: relative; }
@@ -2078,30 +2102,6 @@ svg {
       -webkit-animation-duration: 0.3s;
               animation-duration: 0.3s; } }
 
-@-webkit-keyframes opacity {
-  0% {
-    opacity: 0.4; }
-  25% {
-    opacity: 0.4; }
-  50% {
-    opacity: 0.6; }
-  70% {
-    opacity: 0.8; }
-  100% {
-    opacity: 1; } }
-
-@keyframes opacity {
-  0% {
-    opacity: 0.4; }
-  25% {
-    opacity: 0.4; }
-  50% {
-    opacity: 0.6; }
-  70% {
-    opacity: 0.8; }
-  100% {
-    opacity: 1; } }
-
 .catalog__card {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 33.3%;
@@ -2551,13 +2551,22 @@ label {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
-      -ms-flex-wrap: nowrap;
-          flex-wrap: nowrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
       width: 290px;
-      height: 260px;
+      min-height: 260px;
       margin-bottom: 30px;
-      overflow: hidden;
       position: relative; } }
+
+@media (max-width: 767px) {
+  .card-slider-overflow-hidden {
+    height: 260px;
+    overflow: hidden; } }
+
+@media (max-width: 767px) {
+  .card-slider-nowrap {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap; } }
 
 .card__picture-item:nth-child(1) {
   grid-column: 1 / 2;
@@ -2572,7 +2581,27 @@ label {
     width: 290px;
     height: 260px;
     -ms-flex-negative: 0;
-        flex-shrink: 0; } }
+        flex-shrink: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    display: flex;
+    -webkit-animation-name: opacity;
+            animation-name: opacity;
+    -webkit-animation-duration: 0.6s;
+            animation-duration: 0.6s; } }
+
+@media (max-width: 767px) {
+  .slide-active {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-animation-name: opacity;
+            animation-name: opacity;
+    -webkit-animation-duration: 0.6s;
+            animation-duration: 0.6s;
+    -webkit-animation-duration: 0.3s;
+            animation-duration: 0.3s; } }
 
 @media (max-width: 1023px) {
   .card__picture-item img {

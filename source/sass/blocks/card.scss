@@ -39,13 +39,24 @@
     flex: auto;
     max-width: none;
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     width: 290px;
-    height: 260px;
+    min-height: 260px;
     margin-bottom: 30px;
-    overflow: hidden;
-
     position: relative;
+  }
+}
+
+.card-slider-overflow-hidden {
+  @media (max-width: $mobile-width) {
+    height: 260px;
+    overflow: hidden;
+  }
+}
+
+.card-slider-nowrap {
+  @media (max-width: $mobile-width) {
+    flex-wrap: nowrap;
   }
 }
 
@@ -64,6 +75,22 @@
     width: 290px;
     height: 260px;
     flex-shrink: 0;
+    display: flex;
+    @include slide-active;
+  }
+}
+
+// .card__picture-item--active {
+//   @media (max-width: $mobile-width) {
+
+//     display: flex;
+//   }
+// }
+
+.slide-active {
+  @media (max-width: $mobile-width) {
+    @include slide-active;
+    animation-duration: 0.3s;
   }
 }
 

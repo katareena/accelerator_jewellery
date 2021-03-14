@@ -189,34 +189,10 @@
 }
 
 .catalog__list-box--active {
-  display: flex;
-  animation-name: opacity;
-  animation-duration: 0.6s;
+  @include slide-active;
 
   @media (max-width: $mobile-width) {
     animation-duration: 0.3s;
-  }
-}
-
-@keyframes opacity {
-  0% {
-    opacity: 0.4;
-  }
-
-  25% {
-    opacity: 0.4;
-  }
-
-  50% {
-    opacity: 0.6;
-  }
-
-  70% {
-    opacity: 0.8;
-  }
-
-  100% {
-    opacity: 1;
   }
 }
 
