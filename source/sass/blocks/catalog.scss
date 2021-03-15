@@ -159,23 +159,28 @@
 
 .catalog__list {
   max-width: 900px;
-  max-height: 1495px;
-  overflow: hidden;
   margin-top: -15px;
   margin-right: -15px;
   margin-left: -15px;
 
+  @media (max-width: $mobile-width) {
+    max-height: none;
+    min-height: 1457px;
+  }
+}
+
+.catalog-overflow-hidden {
+  max-height: 1495px;
+  overflow: hidden;
+
   @media (max-width: $tablet-width) {
     max-height: 1239px;
-  }
-
-  @media (max-width: $mobile-width) {
-    max-height: 1457px;
   }
 }
 
 .catalog__list-inner {
   display: flex;
+  flex-direction: column; // changes when the js loads to: flex-direction: row;
   height: 100%;
   position: relative;
   left: 0;
@@ -183,9 +188,13 @@
 }
 
 .catalog__list-box {
-  display: none;
+  display: flex;
   flex-wrap: wrap;
   flex: 0 0 100%;
+}
+
+.display-none {
+  display: none;
 }
 
 .catalog__list-box--active {

@@ -9,6 +9,7 @@
     "eslint": "7.21.0",
     "gh-pages": "^2.2.0",
     "gulp": "4.0.x",
+    "del": "^4.1.1",
     "gulp-concat": "^2.6.1",
     "gulp-csso": "^4.0.1",
     "gulp-imagemin": "^5.0.3",
@@ -51,10 +52,6 @@
     "node": "8.15"
   },
   "dependencies": {
-    "del": "^4.1.1",
-    "imagemin-jpeg-recompress": "^7.0.0",
-    "normalize-scss": "^7.0.1",
-    "picturefill": "^3.0.3",
-    "svg4everybody": "^2.1.9"
+    "normalize-scss": "^7.0.1"
   }
 }

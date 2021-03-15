@@ -9,15 +9,17 @@
     'authorization': '/authorization.html',
     'added': '/added.html'
   };
+  const MIN_WIDTH_TABLET = 768;
+  const card = document.querySelector('.card');
 
-  if (window.location.pathname === PAGES.card) {
+  if (window.location.pathname === PAGES.card && document.documentElement.clientWidth < MIN_WIDTH_TABLET) {
     let slideIndex = 1;
 
     function showSlide(n) {
       let i;
       const slides = document.getElementsByClassName('card__picture-item');
-      const numberValue = document.querySelector('.pagination-counter__number');
-      const totalValue = document.querySelector('.pagination-counter__total');
+      const numberValue = document.querySelector('.card__counter-item--number');
+      const totalValue = document.querySelector('.card__counter-item--total');
 
       if (n > slides.length) {
         slideIndex = 1;
@@ -83,8 +85,8 @@
       }
     };
 
-    document.addEventListener('touchstart', handleTouchStart, false);
-    document.addEventListener('touchmove', handleTouchMove, false);
+    card.addEventListener('touchstart', handleTouchStart, false);
+    card.addEventListener('touchmove', handleTouchMove, false);
   }
 
 })();

@@ -40,10 +40,6 @@
   color: inherit;
 }
 
-.active {
-  color: red;
-}
-
 .pagination__link--hide {
   display: none;
 }
@@ -64,7 +60,9 @@
   padding-top: 35px;
 
   @media (max-width: $mobile-width) {
-    min-height: 125px;
+    min-height: 117px;
+    padding-top: 28px;
+    display: block;
   }
 }
 
@@ -91,7 +89,7 @@
 }
 
 .pagination__item--card {
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  filter: drop-shadow(0px 4px 4px rgba($black, 0.25));
 
   @media (max-width: $tablet-width) {
     filter: none;

@@ -8,7 +8,6 @@
 
   if (window.location.pathname === PAGES.start || window.location.pathname === PAGES.index || window.location.pathname === PAGES.card) {
     const MIN_WIDTH_DESKTOP = 1024;
-    const MIN_WIDTH_TABLET = 768;
     const dotTemplate = document.querySelector('#dot').content.querySelector('.pagination__item');
     const pagination = document.querySelector('.pagination__list');
     const slides = document.querySelectorAll('.slider__item');
@@ -31,15 +30,11 @@
         pagination.removeChild(pagination.firstChild);
       }
 
-      // if (document.documentElement.clientWidth >= MIN_WIDTH_TABLET) {
-        if (document.documentElement.clientWidth < MIN_WIDTH_DESKTOP) {
-          createDots(2);
-        } else {
-          createDots(4);
-        }
-      // } else {
-      //   return;
-      // }
+      if (document.documentElement.clientWidth < MIN_WIDTH_DESKTOP) {
+        createDots(2);
+      } else {
+        createDots(4);
+      }
     };
 
     document.addEventListener('DOMContentLoaded', renderPaginationHandler);

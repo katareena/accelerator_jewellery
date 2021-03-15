@@ -13,14 +13,14 @@
   const dropdown = document.querySelector('.header__dropdown');
   const answers = document.querySelectorAll('.questions__elem-js');
   const filter = document.querySelector('.catalog__filter');
+  const catalogList = document.querySelector('.catalog__list');
+  const catalogListInner = document.querySelector('.catalog__list-inner');
+  const catalogBox = document.querySelectorAll('.catalog__list-box');
   const slider = document.querySelector('.slider');
   const sliderInner = document.querySelector('.slider__inner');
 
-  const card = document.querySelector('.card');
-  const cardInner = document.querySelector('.card__picture');
-
-  const sliderCard = document.querySelector('.card');
-  const sliderCardInner = document.querySelector('.card__picture');
+  const card = document.querySelector('.card__picture');
+  const cardInner = document.querySelector('.card__picture-inner');
 
   // доп способ проверки названия текущей страницы
   // window.location.toString().indexOf('catalog.htm') > 0
@@ -45,18 +45,23 @@
     }
 
     // ------ slider mobile card pic -------
-    if (window.location.pathname === PAGES.card || document.documentElement.clientWidth < MIN_WIDTH_TABLET) {
+    if (window.location.pathname === PAGES.card && document.documentElement.clientWidth < MIN_WIDTH_TABLET) {
       card.classList.add('card-slider-overflow-hidden');
       cardInner.classList.add('card-slider-nowrap');
     }
 
     // ------ catalog filter -------
     if (window.location.pathname === PAGES.catalog) {
+        // добвить настройку слайдера каталога
+        catalogList.classList.add('catalog-overflow-hidden');
+        catalogListInner.style.flexDirection = 'row';
+        catalogBox.forEach(elem => {
+          elem.classList.add('display-none');
+        });
+
       if (document.documentElement.clientWidth < MIN_WIDTH_DESKTOP) {
         filter.classList.remove('catalog__filter--open');
       }
-
-      // добвить настройку слайдера каталога
     }
   }
 

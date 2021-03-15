@@ -49,14 +49,28 @@
       if (offset > 0) {
         offset = offset - widthArray[step]*n;
         innerSlider.style.left = -offset + 'px';
-        dots[(dots.length - 1) - (step + 1)].classList.add('pagination__item--active');
+
+        if (document.documentElement.clientWidth >= MIN_WIDTH_TABLET) {
+          dots[(dots.length - 1) - (step + 1)].classList.add('pagination__item--active');
+        } else {
+          console.log(1);
+          numberValue.textContent = `${((slides.length/n) - 1) - (step)}`;
+          totalValue.textContent = slides.length/n;
+        }
 
       } else {
         innerSlider.style.left = -(innerSliderWidth - sliderWidth) + 'px';
         offset = (innerSliderWidth - sliderWidth);
         remains = 0;
         step = -1;
-        dots[dots.length - 1].classList.add('pagination__item--active');
+
+        if (document.documentElement.clientWidth >= MIN_WIDTH_TABLET) {
+          dots[(dots.length - 1) - (step + 1)].classList.add('pagination__item--active');
+        } else {
+          console.log(1);
+          numberValue.textContent = `${((slides.length/n) - 1) - (step)}`;
+          totalValue.textContent = slides.length/n;
+        }
       }
 
       if (step + 1 == slides.length) {
@@ -76,13 +90,25 @@
       if (remains >= 0) {
         offset = offset + widthArray[step]*n;
         innerSlider.style.left = -offset + 'px';
-        dots[step + 1].classList.add('pagination__item--active');
+
+        if (document.documentElement.clientWidth >= MIN_WIDTH_TABLET) {
+          dots[step + 1].classList.add('pagination__item--active');
+        } else {
+           numberValue.textContent = `${step + n}`;
+          totalValue.textContent = slides.length/n;
+        }
 
       } else {
         innerSlider.style.left = 0 + 'px';
         offset = 0;
         step = -1;
-        dots[step + 1].classList.add('pagination__item--active');
+
+        if (document.documentElement.clientWidth >= MIN_WIDTH_TABLET) {
+          dots[step + 1].classList.add('pagination__item--active');
+        } else {
+          numberValue.textContent = `${step + n}`;
+          totalValue.textContent = slides.length/n;
+        }
       }
 
       if (step + 1 == slides.length) {
@@ -144,7 +170,7 @@
       }
     };
 
-    slider.addEventListener('touchstart', handleTouchStart, false);
-    slider.addEventListener('touchmove', handleTouchMove, false);
+    slider.addEventListener('touchstart', handleTouchStart, {passive: true});
+    slider.addEventListener('touchmove', handleTouchMove, {passive: true});
   }
 })();

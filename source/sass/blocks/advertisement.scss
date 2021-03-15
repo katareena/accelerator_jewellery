@@ -8,12 +8,16 @@
   }
 
   @media (max-width: $mobile-width) {
-    margin-bottom: 50px;
+    margin-bottom: 52px;
   }
 }
 
 .advertisement--card {
   margin-bottom: 120px;
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 67px;
+  }
 
   @media (max-width: $mobile-width) {
     margin-bottom: 60px;
@@ -59,11 +63,19 @@
 }
 
 .advertisement__shop-link--card {
+  margin-bottom: 50px;
+
   &::before {
     bottom: -8px;
   }
 
+  @media (max-width: $tablet-width) {
+    margin-bottom: 40px;
+  }
+
   @media (max-width: $mobile-width) {
+    margin-bottom: 30px;
+
     &::before {
       bottom: -5px;
     }

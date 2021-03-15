@@ -39,12 +39,10 @@
     showSlide(slideIndex);
 
     function plusSlide(evt) {
-      evt.preventDefault();
       showSlide(slideIndex += 1);
     }
 
     function minusSlide(evt) {
-      evt.preventDefault();
       showSlide(slideIndex -= 1);
     }
 

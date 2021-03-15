@@ -98,15 +98,15 @@ gulp.task("cssmin", function () {
     .pipe(server.stream());
 });
 
-gulp.task("jsvendor", function () {
-  return gulp
-    .src([
-      "./node_modules/picturefill/dist/picturefill.js",
-      "source/js/vendors/*.js",
-    ])
-    .pipe(concat("vendor.js"))
-    .pipe(gulp.dest("build/js"));
-});
+// gulp.task("jsvendor", function () {
+//   return gulp
+//     .src([
+//       "./node_modules/picturefill/dist/picturefill.js",
+//       "source/js/vendors/*.js",
+//     ])
+//     .pipe(concat("vendor.js"))
+//     .pipe(gulp.dest("build/js"));
+// });
 
 gulp.task("jsmain", function () {
   return gulp
@@ -137,7 +137,7 @@ gulp.task("watch", function () {
   gulp.watch("source/img/**/*.{jpg,svg,png}", gulp.series("images"));
   gulp.watch("source/img/icon-*.svg", gulp.series("sprite", "html", "refresh"));
   gulp.watch("source/js/main/*.js", gulp.series("jsmain", "refresh"));
-  gulp.watch("source/js/vendors/*.js", gulp.series("jsvendor", "refresh"));
+  // gulp.watch("source/js/vendors/*.js", gulp.series("jsvendor", "refresh"));
 });
 
 var buildTasks = [
@@ -146,7 +146,7 @@ var buildTasks = [
     "html",
     "csscopy",
     "cssmin",
-    "jsvendor",
+    // "jsvendor",
     "jsmain",
     "copy",
     "sprite",

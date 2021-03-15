@@ -17,28 +17,28 @@
 }
 
 .filter__item {
-  padding-top: 22px;
+  padding-top: 18px;
   padding-left: 25px;
   padding-right: 25px;
-  padding-bottom: 22px;
+  padding-bottom: 19px;
   border-left: 1px solid $decor-1;
   border-right: 1px solid $decor-1;
   border-top: 1px solid $decor-1;
   position: relative;
 
   @media (max-width: $tablet-width) {
-    padding-top: 33px;
+    padding-top: 30px;
     padding-left: 40px;
     padding-right: 50px;
-    padding-bottom: 33px;
+    padding-bottom: 29px;
     border-left: none;
     border-right: none;
   }
 
   @media (max-width: $mobile-width) {
-    padding-top: 25px;
-    padding-left: 25px;
-    padding-bottom: 22px;
+    padding-top: 20px;
+    padding-left: 22px;
+    padding-bottom: 18px;
     border-left: none;
     border-right: none;
   }
@@ -55,7 +55,7 @@
   margin-bottom: 35px;
 
   @media (max-width: $tablet-width) {
-    margin-bottom: 42px;
+    margin-bottom: 40px;
   }
 
   @media (max-width: $mobile-width) {
@@ -96,8 +96,13 @@
 
 .filter__settings {
   @include list-reset;
-  padding-top: 15px;
+  padding-top: 13px;
   padding-left: 10px;
+
+  @media (max-width: $tablet-width) {
+    padding-top: 10px;
+    padding-left: 13px;
+  }
 }
 
 label {
@@ -127,7 +132,7 @@ label {
   vertical-align: center;
   position: relative;
   padding-left: 25px;
-  line-height: 31px;
+  line-height: 30px;
   cursor: pointer;
 
   @media (max-width: $tablet-width) {
@@ -218,12 +223,17 @@ label {
 .filter__range-inner {
   position: relative;
   width: inherit;
-  height: 57px;
-  padding-top: 28px;
+  height: 52px;
+  padding-top: 20px;
 
   @media (max-width: $tablet-width) {
-    height: 72px;
-    padding-top: 35px;
+    height: 68px;
+    padding-top: 25px;
+  }
+
+  @media (max-width: $mobile-width) {
+    height: 71px;
+    padding-top: 28px;
   }
 }
 
@@ -258,7 +268,7 @@ label {
 
 .filter__control {
   position: absolute;
-  top: 21px;
+  top: 13px;
   left: 0;
 
   display: flex;
@@ -266,16 +276,19 @@ label {
   align-items: center;
 
   @media (max-width: $tablet-width) {
-    top: 27px;
+    top: 18px;
   }
 
+  @media (max-width: $mobile-width) {
+    top: 21px;
+  }
 }
 
 .filter__control--min {
   left: 19%;
 
   @media (max-width: $tablet-width) {
-    left: 12.7%;
+    left: 13.5%;
   }
 
   @media (max-width: $mobile-width) {
@@ -287,11 +300,11 @@ label {
   left: 70%;
 
   @media (max-width: $tablet-width) {
-    left: 62%;
+    left: 62.8%;
   }
 
   @media (max-width: $mobile-width) {
-    left: 80%;
+    left: 79%;
   }
 }
 
@@ -335,6 +348,15 @@ label {
 .filter__form-btn {
   @include button;
   border: 1px solid $decor-1;
+
+  @media (max-width: $tablet-width) {
+    width: 362px;
+    margin: 0 auto;
+  }
+
+  @media (max-width: $mobile-width) {
+    width: 230px;
+  }
 }
 
 .filter__form-btn:not(:last-of-type) {
@@ -362,8 +384,8 @@ label {
   @media (max-width: $tablet-width) {
     display: block;
     position: absolute;
-    top: -13px;
-    right: -13px;
+    top: -14px;
+    right: -16px;
     width: 30px;
     height: 30px;
     border: none;

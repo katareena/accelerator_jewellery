@@ -329,7 +329,6 @@
 
   if (window.location.pathname === PAGES.start || window.location.pathname === PAGES.index || window.location.pathname === PAGES.card) {
     const MIN_WIDTH_DESKTOP = 1024;
-    const MIN_WIDTH_TABLET = 768;
     const dotTemplate = document.querySelector('#dot').content.querySelector('.pagination__item');
     const pagination = document.querySelector('.pagination__list');
     const slides = document.querySelectorAll('.slider__item');
@@ -352,15 +351,11 @@
         pagination.removeChild(pagination.firstChild);
       }
 
-      // if (document.documentElement.clientWidth >= MIN_WIDTH_TABLET) {
-        if (document.documentElement.clientWidth < MIN_WIDTH_DESKTOP) {
-          createDots(2);
-        } else {
-          createDots(4);
-        }
-      // } else {
-      //   return;
-      // }
+      if (document.documentElement.clientWidth < MIN_WIDTH_DESKTOP) {
+        createDots(2);
+      } else {
+        createDots(4);
+      }
     };
 
     document.addEventListener('DOMContentLoaded', renderPaginationHandler);
@@ -383,14 +378,14 @@
   const dropdown = document.querySelector('.header__dropdown');
   const answers = document.querySelectorAll('.questions__elem-js');
   const filter = document.querySelector('.catalog__filter');
+  const catalogList = document.querySelector('.catalog__list');
+  const catalogListInner = document.querySelector('.catalog__list-inner');
+  const catalogBox = document.querySelectorAll('.catalog__list-box');
   const slider = document.querySelector('.slider');
   const sliderInner = document.querySelector('.slider__inner');
 
-  const card = document.querySelector('.card');
-  const cardInner = document.querySelector('.card__picture');
-
-  const sliderCard = document.querySelector('.card');
-  const sliderCardInner = document.querySelector('.card__picture');
+  const card = document.querySelector('.card__picture');
+  const cardInner = document.querySelector('.card__picture-inner');
 
   // доп способ проверки названия текущей страницы
   // window.location.toString().indexOf('catalog.htm') > 0
@@ -415,18 +410,23 @@
     }
 
     // ------ slider mobile card pic -------
-    if (window.location.pathname === PAGES.card || document.documentElement.clientWidth < MIN_WIDTH_TABLET) {
+    if (window.location.pathname === PAGES.card && document.documentElement.clientWidth < MIN_WIDTH_TABLET) {
       card.classList.add('card-slider-overflow-hidden');
       cardInner.classList.add('card-slider-nowrap');
     }
 
     // ------ catalog filter -------
     if (window.location.pathname === PAGES.catalog) {
+        // добвить настройку слайдера каталога
+        catalogList.classList.add('catalog-overflow-hidden');
+        catalogListInner.style.flexDirection = 'row';
+        catalogBox.forEach(elem => {
+          elem.classList.add('display-none');
+        });
+
       if (document.documentElement.clientWidth < MIN_WIDTH_DESKTOP) {
         filter.classList.remove('catalog__filter--open');
       }
-
-      // добвить настройку слайдера каталога
     }
   }
 
@@ -472,15 +472,17 @@
     'authorization': '/authorization.html',
     'added': '/added.html'
   };
+  const MIN_WIDTH_TABLET = 768;
+  const card = document.querySelector('.card');
 
-  if (window.location.pathname === PAGES.card) {
+  if (window.location.pathname === PAGES.card && document.documentElement.clientWidth < MIN_WIDTH_TABLET) {
     let slideIndex = 1;
 
     function showSlide(n) {
       let i;
       const slides = document.getElementsByClassName('card__picture-item');
-      const numberValue = document.querySelector('.pagination-counter__number');
-      const totalValue = document.querySelector('.pagination-counter__total');
+      const numberValue = document.querySelector('.card__counter-item--number');
+      const totalValue = document.querySelector('.card__counter-item--total');
 
       if (n > slides.length) {
         slideIndex = 1;
@@ -546,8 +548,8 @@
       }
     };
 
-    document.addEventListener('touchstart', handleTouchStart, false);
-    document.addEventListener('touchmove', handleTouchMove, false);
+    card.addEventListener('touchstart', handleTouchStart, false);
+    card.addEventListener('touchmove', handleTouchMove, false);
   }
 
 })();
@@ -593,12 +595,10 @@
     showSlide(slideIndex);
 
     function plusSlide(evt) {
-      evt.preventDefault();
       showSlide(slideIndex += 1);
     }
 
     function minusSlide(evt) {
-      evt.preventDefault();
       showSlide(slideIndex -= 1);
     }
 
@@ -698,14 +698,28 @@
       if (offset > 0) {
         offset = offset - widthArray[step]*n;
         innerSlider.style.left = -offset + 'px';
-        dots[(dots.length - 1) - (step + 1)].classList.add('pagination__item--active');
+
+        if (document.documentElement.clientWidth >= MIN_WIDTH_TABLET) {
+          dots[(dots.length - 1) - (step + 1)].classList.add('pagination__item--active');
+        } else {
+          console.log(1);
+          numberValue.textContent = `${((slides.length/n) - 1) - (step)}`;
+          totalValue.textContent = slides.length/n;
+        }
 
       } else {
         innerSlider.style.left = -(innerSliderWidth - sliderWidth) + 'px';
         offset = (innerSliderWidth - sliderWidth);
         remains = 0;
         step = -1;
-        dots[dots.length - 1].classList.add('pagination__item--active');
+
+        if (document.documentElement.clientWidth >= MIN_WIDTH_TABLET) {
+          dots[(dots.length - 1) - (step + 1)].classList.add('pagination__item--active');
+        } else {
+          console.log(1);
+          numberValue.textContent = `${((slides.length/n) - 1) - (step)}`;
+          totalValue.textContent = slides.length/n;
+        }
       }
 
       if (step + 1 == slides.length) {
@@ -725,13 +739,25 @@
       if (remains >= 0) {
         offset = offset + widthArray[step]*n;
         innerSlider.style.left = -offset + 'px';
-        dots[step + 1].classList.add('pagination__item--active');
+
+        if (document.documentElement.clientWidth >= MIN_WIDTH_TABLET) {
+          dots[step + 1].classList.add('pagination__item--active');
+        } else {
+           numberValue.textContent = `${step + n}`;
+          totalValue.textContent = slides.length/n;
+        }
 
       } else {
         innerSlider.style.left = 0 + 'px';
         offset = 0;
         step = -1;
-        dots[step + 1].classList.add('pagination__item--active');
+
+        if (document.documentElement.clientWidth >= MIN_WIDTH_TABLET) {
+          dots[step + 1].classList.add('pagination__item--active');
+        } else {
+          numberValue.textContent = `${step + n}`;
+          totalValue.textContent = slides.length/n;
+        }
       }
 
       if (step + 1 == slides.length) {
@@ -793,7 +819,7 @@
       }
     };
 
-    slider.addEventListener('touchstart', handleTouchStart, false);
-    slider.addEventListener('touchmove', handleTouchMove, false);
+    slider.addEventListener('touchstart', handleTouchStart, {passive: true});
+    slider.addEventListener('touchmove', handleTouchMove, {passive: true});
   }
 })();

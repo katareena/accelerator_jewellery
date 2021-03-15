@@ -17,10 +17,22 @@
 .slider--overflow-hidden {
   overflow: hidden;
   height: 387px;
+
+  @media (max-width: $tablet-width) {
+    height: 450px;
+  }
+
+  @media (max-width: $mobile-width) {
+    height: 260px;
+  }
 }
 
 .slider--card {
-  margin-bottom: 35px;
+  margin-bottom: 29px;
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 15px;
+  }
 
   @media (max-width: $mobile-width) {
     margin-bottom: 8px;
@@ -41,7 +53,7 @@
 }
 
 .slider__item {
-  height: 100%;
+  height: inherit;
   display: block;
   flex: 0 0 25%;
   max-width: 25%;

@@ -1,17 +1,15 @@
 .pagination-counter {
-  display: none;
+  @include pagination-counter;
+}
 
+.pagination-counter__number {
   @media (max-width: $mobile-width) {
-    display: block;
-    color: $text;
-    text-align: center;
+    margin-right: 7px;
   }
 }
 
-.pagination-counter--card {
+.pagination-counter span:nth-child(2) {
   @media (max-width: $mobile-width) {
-    position: absolute;
-    bottom: 4px;
-    left: calc(50vw - 35px);
+    margin-right: 7px;
   }
 }

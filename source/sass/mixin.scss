@@ -219,3 +219,13 @@
     opacity: 1;
   }
 }
+
+@mixin pagination-counter {
+  display: none;
+
+  @media (max-width: $mobile-width) {
+    display: block;
+    color: $text;
+    text-align: center;
+  }
+}

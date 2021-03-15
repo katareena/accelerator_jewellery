@@ -70,12 +70,12 @@
   border-bottom: 1px solid $decor-1;
 }
 
-
 .questions__item h3 {
   margin: 0;
   font-weight: 500;
   font-size: 18px;
   line-height: calc(23 / 18);
+  cursor: pointer;
 
   @media (max-width: $mobile-width) {
     font-size: 15px;

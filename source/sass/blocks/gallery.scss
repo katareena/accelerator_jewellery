@@ -59,7 +59,7 @@
   grid-template-columns: minmax(190px, 240px) minmax(360px, 410px);
   grid-template-rows: 230px 154px;
   gap: 28px;
-  margin-right: 28px;
+  margin-right: 20px;
 
   @media (max-width: $tablet-width) {
     grid-template-columns: 133px 230px;
@@ -79,7 +79,6 @@
 
 .gallery__box-1 img,
 .gallery__box-2 img {
-
   @media (max-width: $tablet-width) {
     height: inherit;
   }
@@ -92,6 +91,12 @@
 }
 
 .gallery__item1--position-2 {
+  margin-left: -5px;
+
+  @media (max-width: $tablet-width) {
+    margin-left: 0;
+  }
+
   @media (max-width: $mobile-width) {
     width: 100%;
   }

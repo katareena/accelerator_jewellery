@@ -148,10 +148,20 @@
   text-align: end;
   margin-top: -20px;
   margin-bottom: 47px;
+  cursor: pointer;
 
   @media (max-width: $mobile-width) {
     margin-top: -15px;
     margin-bottom: 39px;
+    cursor: auto;
+  }
+}
+
+.authorization__registration {
+  cursor: pointer;
+
+  @media (max-width: $mobile-width) {
+    cursor: auto;
   }
 }
 

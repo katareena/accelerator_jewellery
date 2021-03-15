@@ -296,10 +296,21 @@
   background-color: $white;
   color: $black;
   border: solid 1px $decor-1;
+
+  @media (max-width: $mobile-width) {
+    float: none;
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
 }
 
 .added__link--basket {
   float: right;
+
+  @media (max-width: $mobile-width) {
+    float: none;
+    margin: 0 auto;
+  }
 }
 
 .added__close {
