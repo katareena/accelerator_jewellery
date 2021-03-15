@@ -94,7 +94,7 @@
         if (document.documentElement.clientWidth >= MIN_WIDTH_TABLET) {
           dots[step + 1].classList.add('pagination__item--active');
         } else {
-           numberValue.textContent = `${step + n}`;
+          numberValue.textContent = `${step + n}`;
           totalValue.textContent = slides.length/n;
         }
 
