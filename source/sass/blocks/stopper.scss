@@ -6,10 +6,12 @@
   font-size: 30px;
 
   @media (max-width: $tablet-width) {
+    padding-top: 30px;
     height: calc(100vh - 130px - 457px);
   }
 
   @media (max-width: $mobile-width) {
+    padding-top: 10px;
     height: calc(100vh - 100px - 767px);
   }
 }
