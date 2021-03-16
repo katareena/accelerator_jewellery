@@ -1,5 +1,6 @@
 'use strict';
 (function () {
+// --------------- scroll ---------------
   function preventScroll() {
     const body = document.body;
     body.style.height = '100vh';

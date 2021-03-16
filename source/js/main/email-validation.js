@@ -1,5 +1,6 @@
 'use strict';
 (function () {
+  // --------------- email validation ---------------
   const COLOR_ERROR = '#b63616';
   const input = document.querySelector('#subscription-field');
   const submitBtn = document.querySelector('.subscription__btn');

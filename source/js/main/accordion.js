@@ -1,5 +1,6 @@
 'use strict';
 (function () {
+  // --------------- accordion ---------------
   const items = document.querySelectorAll('.accordion-item');
 
   function moveAccordion (trgt) {

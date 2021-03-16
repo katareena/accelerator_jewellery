@@ -1,5 +1,6 @@
 'use strict';
 (function () {
+// --------------- modal login ---------------
   const ESCAPE = 'Escape';
   const modal = document.querySelector('.authorization');
   const openBtn = document.querySelector('#login');

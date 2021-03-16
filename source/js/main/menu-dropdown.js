@@ -1,5 +1,6 @@
 'use strict';
 (function () {
+// --------------- dropdown site menu(tablet, mobile) ---------------
   const ESCAPE = 27;
   const headerMenu = document.querySelector('.header__menu');
   const burgerBtn = headerMenu.querySelector('.header__menu-btn--burger-js');

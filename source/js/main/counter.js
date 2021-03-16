@@ -1,5 +1,6 @@
 'use strict';
 (function () {
+  // --------------- counter ---------------
   const buttons = document.querySelectorAll('.added__btn');
   const resultBox = document.querySelector('.added__result');
 
