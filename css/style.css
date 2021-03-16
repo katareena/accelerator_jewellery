@@ -164,8 +164,10 @@ svg {
       height: calc(100vh - 130px - 457px); } }
   @media (max-width: 767px) {
     .stopper {
+      font-size: 20px;
       padding-top: 10px;
-      height: calc(100vh - 100px - 767px); } }
+      height: calc(100vh - 100px - 767px);
+      min-height: 83px; } }
 
 .header {
   width: 100%;
