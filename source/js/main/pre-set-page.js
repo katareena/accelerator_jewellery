@@ -23,6 +23,7 @@
   function preSetSliderCard() {
     let card;
     if (card = document.querySelector('.card__picture') && document.documentElement.clientWidth < MIN_WIDTH_TABLET) {
+      card = document.querySelector('.card__picture');
       const cardInner = card.querySelector('.card__picture-inner');
       card.classList.add('card-slider-overflow-hidden');
       cardInner.classList.add('card-slider-nowrap');
