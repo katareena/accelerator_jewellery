@@ -108,13 +108,19 @@
   @media (max-width: $tablet-width) {
     min-width: none;
     max-width: none;
-    margin-right: 0;
-    display: none;
+    margin: 0 auto;
     margin-bottom: 60px;
+    transition: left 1s 1s;
+  }
+}
+
+.catalog__filter--active {
+  @media (max-width: $tablet-width) {
+    display: none;
+    margin-right: 0;
     position: absolute;
     top: 80px;
     left: -460px;
-    transition: left 1s 1s;
   }
 }
 

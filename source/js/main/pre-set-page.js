@@ -47,6 +47,7 @@
       const catalogListInner = catalog.querySelector('.catalog__list-inner');
       const catalogBox = catalog.querySelectorAll('.catalog__list-box');
 
+      filter.classList.add('catalog__filter--active');
       catalogList.classList.add('catalog-overflow-hidden');
       catalogListInner.style.flexDirection = 'row';
       catalogBox.forEach(elem => {

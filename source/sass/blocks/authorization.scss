@@ -1,5 +1,6 @@
 .authorization {
-  @include in-flow
+  @include in-flow;
+  min-height: 590px
 }
 
 .authorization--modal {

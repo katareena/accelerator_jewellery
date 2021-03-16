@@ -170,10 +170,19 @@
 
 @mixin in-flow {
   width: 100%;
+  height: calc(100vh - 178px - 439px);
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: $white;
+
+  @media (max-width: $tablet-width) {
+    height: calc(100vh - 178px - 80px - 410px);
+  }
+
+  @media (max-width: $mobile-width) {
+    height: calc(100vh - 178px - 357px);
+  }
 }
 
 @mixin modal {
