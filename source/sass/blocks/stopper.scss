@@ -11,7 +11,9 @@
   }
 
   @media (max-width: $mobile-width) {
+    font-size: 20px;
     padding-top: 10px;
     height: calc(100vh - 100px - 767px);
+    min-height: 83px;
   }
 }
