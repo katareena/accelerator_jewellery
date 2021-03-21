@@ -1,4 +1,5 @@
 'use strict';
+
 (function () {
   // --------------- accordion ---------------
   const items = document.querySelectorAll('.accordion-item');
@@ -26,7 +27,6 @@
 
 })();
 
-'use strict';
 (function () {
 // --------------- modal Added ---------------
   function modalAddedHandler() {
@@ -81,7 +81,6 @@
   };
 })();
 
-'use strict';
 (function () {
   // --------------- counter ---------------
   const buttons = document.querySelectorAll('.added__btn');
@@ -110,7 +109,6 @@
 
 })();
 
-'use strict';
 (function () {
   // --------------- email validation ---------------
   const COLOR_ERROR = '#b63616';
@@ -136,7 +134,6 @@
   input.addEventListener('input', validateInputHandler);
 })();
 
-'use strict';
 (function () {
   // --------------- filter move ---------------
   function moveFilter() {
@@ -164,7 +161,6 @@
   };
 })();
 
-'use strict';
 (function () {
 // --------------- all listeners on document ---------------
   document.addEventListener('DOMContentLoaded', () => {
@@ -184,7 +180,6 @@
 
 })();
 
-'use strict';
 (function () {
 // --------------- modal login ---------------
   const ESCAPE = 'Escape';
@@ -312,7 +307,6 @@
   };
 })();
 
-'use strict';
 (function () {
 // --------------- dropdown site menu(tablet, mobile) ---------------
   const ESCAPE = 27;
@@ -344,7 +338,6 @@
 
 })();
 
-'use strict';
 (function () {
 // --------------- pagination render ---------------
   function paginationRenderHandler() {
@@ -388,7 +381,6 @@
   };
 })();
 
-'use strict';
 (function () {
 // --------------- preSet all elements, all pages ---------------
   const MIN_WIDTH_DESKTOP = 1024;
@@ -468,7 +460,6 @@
   };
 })();
 
-'use strict';
 (function () {
 // --------------- scroll ---------------
   function preventScroll() {
@@ -492,35 +483,36 @@
   };
 })();
 
-'use strict';
 (function () {
   // ----------- slider CARD ------------
   function moveSliderCardHandler() {
     let card;
+    const MIN_WIDTH_TABLET = 768;
     if (card = document.querySelector('.card')) {
-      const MIN_WIDTH_TABLET = 768;
       let slideIndex = 1;
 
       function showSlide(n) {
-        let i;
-        const slides = document.getElementsByClassName('card__picture-item');
-        const numberValue = document.querySelector('.card__counter-item--number');
-        const totalValue = document.querySelector('.card__counter-item--total');
+        if (document.documentElement.clientWidth < MIN_WIDTH_TABLET) {
+          let i;
+          const slides = document.getElementsByClassName('card__picture-item');
+          const numberValue = document.querySelector('.card__counter-item--number');
+          const totalValue = document.querySelector('.card__counter-item--total');
 
-        if (n > slides.length) {
-          slideIndex = 1;
-          numberValue.textContent = 1;
+          if (n > slides.length) {
+            slideIndex = 1;
+            numberValue.textContent = 1;
+            totalValue.textContent = slides.length;
+          }
+          if (n < 1) {
+            slideIndex = slides.length;
+          }
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = 'none';
+          }
+          slides[slideIndex - 1].style.display = 'block';
+          numberValue.textContent = slideIndex;
           totalValue.textContent = slides.length;
         }
-        if (n < 1) {
-          slideIndex = slides.length;
-        }
-        for (i = 0; i < slides.length; i++) {
-          slides[i].style.display = 'none';
-        }
-        slides[slideIndex - 1].style.display = 'block';
-        numberValue.textContent = slideIndex;
-        totalValue.textContent = slides.length;
       }
 
       showSlide(slideIndex);
@@ -580,7 +572,6 @@
   };
 })();
 
-'use strict';
 (function () {
   // ----------- slider CATALOG ------------
   function moveSliderCatalogHandler() {
@@ -670,7 +661,6 @@
   };
 })();
 
-'use strict';
 (function () {
   // ----------- slider promo (advertisement) ------------
   function moveSliderAdvertisementHandler() {
@@ -813,7 +803,7 @@
       };
 
       function handleTouchMove(evt) {
-        if(window.innerWidth < MIN_WIDTH_TABLET) {
+        if(window.innerWidth < MIN_WIDTH_DESKTOP) {
           if (!xDown) {
             return;
           }
