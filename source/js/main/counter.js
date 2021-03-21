@@ -1,4 +1,3 @@
-'use strict';
 (function () {
   // --------------- counter ---------------
   const buttons = document.querySelectorAll('.added__btn');

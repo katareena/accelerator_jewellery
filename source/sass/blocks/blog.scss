@@ -48,7 +48,7 @@
 .blog__box {
   flex: 0 0 50%;
   max-width: 50%;
-  height: 630px;
+  min-height: 630px;
   padding-left: 15px;
   padding-right: 15px;
   margin-bottom: 30px;
@@ -95,6 +95,10 @@
   }
 }
 
+.blog__box--sole img {
+  height: 100%;
+}
+
 .blog__item {
   display: flex;
 
@@ -123,6 +127,9 @@
 }
 
 .blog__item img {
+  width: 285px;
+  height: 100%;
+
   @media (max-width: $tablet-width) {
     width: 339px;
   }
@@ -147,7 +154,7 @@
 
 .blog__text {
   width: 285px;
-  height: 300px;
+  min-height: 300px;
   padding-top: 68px;
   background-color: $decor-3;
   display: flex;

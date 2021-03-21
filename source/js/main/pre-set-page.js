@@ -1,4 +1,3 @@
-'use strict';
 (function () {
 // --------------- preSet all elements, all pages ---------------
   const MIN_WIDTH_DESKTOP = 1024;

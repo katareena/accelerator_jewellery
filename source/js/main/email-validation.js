@@ -1,4 +1,3 @@
-'use strict';
 (function () {
   // --------------- email validation ---------------
   const COLOR_ERROR = '#b63616';

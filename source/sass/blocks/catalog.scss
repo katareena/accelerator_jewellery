@@ -106,7 +106,7 @@
   flex-shrink: 0;
 
   @media (max-width: $tablet-width) {
-    min-width: none;
+    min-width: 0;
     max-width: none;
     margin: 0 auto;
     margin-bottom: 60px;
@@ -233,6 +233,7 @@
 
 .catalog__link img {
   margin-bottom: 14px;
+  width: 270px;
 
   @media (max-width: $tablet-width) {
     margin-bottom: 15px;

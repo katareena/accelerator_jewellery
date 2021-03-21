@@ -1,4 +1,3 @@
-'use strict';
 (function () {
 // --------------- modal Added ---------------
   function modalAddedHandler() {

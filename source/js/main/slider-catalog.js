@@ -1,4 +1,3 @@
-'use strict';
 (function () {
   // ----------- slider CATALOG ------------
   function moveSliderCatalogHandler() {

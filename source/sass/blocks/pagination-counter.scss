@@ -8,7 +8,7 @@
   }
 }
 
-.pagination-counter span:nth-child(2) {
+.pagination-counter__split {
   @media (max-width: $mobile-width) {
     margin-right: 7px;
   }

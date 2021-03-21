@@ -1,4 +1,3 @@
-'use strict';
 (function () {
   // ----------- slider promo (advertisement) ------------
   function moveSliderAdvertisementHandler() {
@@ -141,7 +140,7 @@
       };
 
       function handleTouchMove(evt) {
-        if(window.innerWidth < MIN_WIDTH_TABLET) {
+        if(window.innerWidth < MIN_WIDTH_DESKTOP) {
           if (!xDown) {
             return;
           }

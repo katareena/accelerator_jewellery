@@ -1,4 +1,3 @@
-'use strict';
 (function () {
 // --------------- all listeners on document ---------------
   document.addEventListener('DOMContentLoaded', () => {

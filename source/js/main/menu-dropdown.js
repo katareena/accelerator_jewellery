@@ -1,4 +1,3 @@
-'use strict';
 (function () {
 // --------------- dropdown site menu(tablet, mobile) ---------------
   const ESCAPE = 27;

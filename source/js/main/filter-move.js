@@ -1,4 +1,3 @@
-'use strict';
 (function () {
   // --------------- filter move ---------------
   function moveFilter() {

@@ -1,4 +1,3 @@
-'use strict';
 (function () {
 // --------------- modal login ---------------
   const ESCAPE = 'Escape';

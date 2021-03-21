@@ -1,4 +1,3 @@
-'use strict';
 (function () {
 // --------------- pagination render ---------------
   function paginationRenderHandler() {

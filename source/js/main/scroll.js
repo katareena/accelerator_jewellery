@@ -1,4 +1,3 @@
-'use strict';
 (function () {
 // --------------- scroll ---------------
   function preventScroll() {

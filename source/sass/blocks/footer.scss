@@ -4,6 +4,8 @@
   padding-bottom: 100px;
   background-color: $black;
   color: $white;
+  flex: 0 0 auto;
+  // height: 356px;
 
   @media (max-width: $tablet-width) {
     padding-top: 33px;
