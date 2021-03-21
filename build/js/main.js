@@ -486,6 +486,7 @@
 (function () {
   // ----------- slider CARD ------------
   function moveSliderCardHandler() {
+    const picture = document.querySelector('.card__picture');
     let card;
     const MIN_WIDTH_TABLET = 768;
     if (card = document.querySelector('.card')) {
@@ -562,8 +563,8 @@
         }
       };
 
-      card.addEventListener('touchstart', handleTouchStart, false);
-      card.addEventListener('touchmove', handleTouchMove, false);
+      picture.addEventListener('touchstart', handleTouchStart, false);
+      picture.addEventListener('touchmove', handleTouchMove, false);
     }
   }
 
