@@ -75,29 +75,29 @@ body > div {
 input {
   -webkit-border-radius: 0; // removing the rounding on input (iOS)
   border-radius: 0;
-  -webkit-appearance: none;
+  // -webkit-appearance: none;
 }
 
-input[type="search"] {
-  -webkit-appearance: none;
-  -khtml-magin-start: 15px;
-  -webkit-margin-start: 15px;
-  -webkit-border-radius: 0;
-  border-radius: 0;
+// input[type="search"] {
+//   -webkit-appearance: textfield;
 
-  @media all and (-webkit-min-device-pixel-ratio:0) {
-    -webkit-appearance: none; // reset the default styles to apply the assigned styles (iOS)
-  }
+//   -webkit-border-radius: 0;
+//   border-radius: 0;
+// }
 
-  @supports (-webkit-touch-callout: none) {
-    -webkit-appearance: none; // reset the default styles to apply the assigned styles (iOS)
-  }
-}
+//   @media all and (-webkit-min-device-pixel-ratio:0) {
+//     -webkit-appearance: none; // reset the default styles to apply the assigned styles (iOS)
+//   }
 
-@media not all and (min-resolution:.001dpcm)
-{ @supports (-webkit-appearance:none) and (stroke-color:transparent) {
-    input[type="search"] {
-      -webkit-appearance: none; // reset the default styles to apply the assigned styles (iOS)
-    }
-  }
-}
+//   @supports (-webkit-touch-callout: none) {
+//     -webkit-appearance: none; // reset the default styles to apply the assigned styles (iOS)
+//   }
+// }
+
+// @media not all and (min-resolution:.001dpcm)
+// { @supports (-webkit-appearance:none) and (stroke-color:transparent) {
+//     input[type="search"] {
+//       -webkit-appearance: none; // reset the default styles to apply the assigned styles (iOS)
+//     }
+//   }
+// }
