@@ -44,6 +44,7 @@
 
   @media screen and (-webkit-min-device-pixel-ratio:0) {
     padding-left: 28px;
+    -webkit-padding-start: 172px;
   }
 
   @media (max-width: $tablet-width) {
