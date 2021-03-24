@@ -71,3 +71,8 @@ body > div {
   flex-direction: column;
   min-height: 100%;
 }
+
+input {
+  -webkit-border-radius: 0; // removing the rounding on input (iOS)
+  border-radius: 0;
+}

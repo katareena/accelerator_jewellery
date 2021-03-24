@@ -114,6 +114,8 @@
 }
 
 .blog__item:not(:last-child) {
+  margin-bottom: 30px;
+
   @media (max-width: $tablet-width) {
     margin-bottom: 50px;
   }
@@ -222,5 +224,12 @@
 
 .blog__text a {
   @include title-extension;
+  border-bottom: solid 1px $decor-1;
   width: 100px;
+  height: 27px;
+  margin-bottom: 10px;
+
+  &::before {
+    display: none;
+  }
 }

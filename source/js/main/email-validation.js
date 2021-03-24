@@ -5,20 +5,24 @@
   const submitBtn = document.querySelector('.subscription__btn');
   const message = document.querySelector('#subscription-message');
 
-  function validateInputHandler () {
+  function validateInputHandler(evt) {
     if (input.value == '') {
       message.style.color = 'transparent';
-      submitBtn.disabled = 'true';
     } else {
       if (!input.value.includes('@') || !input.value.includes('.')) {
+        evt.preventDefault();
         message.style.color = COLOR_ERROR;
-        submitBtn.disabled = 'true';
       } else {
         message.style.color = 'transparent';
-        submitBtn.disabled = '';
       }
     }
   }
 
   input.addEventListener('input', validateInputHandler);
+  submitBtn.addEventListener('click', (evt) => {
+    if (input.value == '') {
+      evt.preventDefault();
+      message.style.color = COLOR_ERROR;
+    }
+  });
 })();

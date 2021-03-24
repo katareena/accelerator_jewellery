@@ -121,7 +121,7 @@
       </div>
     </header>
 
-    <main class="main">
+    <main class="main item">
       <section class="introduction">
         <div class="introduction__text">
           <h2>perfection</h2>
@@ -336,11 +336,13 @@
             </div>
           </div>
 
+          <!-- pagination's element -->
+          <template id="dot">
+            <li class="pagination__item"><a class="pagination__link" href="#"></a></li>
+          </template>
+
           <div class="pagination">
             <ul class="pagination__list">
-              <template id="dot">
-                <li class="pagination__item"><a class="pagination__link" href="#"></a></li>
-              </template>
             </ul>
           </div>
           <div class="pagination-counter">
@@ -549,7 +551,7 @@
       </div>
     </main>
 
-    <footer class="footer">
+    <footer class="footer item">
       <div class="footer__wrap">
         <section class="subscription">
           <h2>The good stuff in your inbox</h2>
@@ -557,7 +559,7 @@
           <form class="subscription__form" action="https://echo.htmlacademy.ru" method="post">
             <label class="visually-hidden" for="subscription-field">Leave your contacts for subscription</label>
             <input id="subscription-field" type="email" name="subscription" autocomplete="off" placeholder="Your E-mail">
-            <button class="subscription__btn" type="submit" aria-label="subscribe to the news and updates from CH" disabled="">
+            <button class="subscription__btn" type="submit" aria-label="subscribe to the news and updates from CH">
               <span>Sign Up</span>
               <svg width="29" height="10" viewBox="0 0 29 10" aria-hidden="true">
                 <use xlink:href="img/sprite_auto.svg#icon-arrow"></use>

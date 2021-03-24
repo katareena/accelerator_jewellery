@@ -10,7 +10,7 @@
     window.slider.moveSliderAdvertisementHandler();
   });
 
-  document.addEventListener('resize', () => {
+  window.addEventListener('resize', () => {
     window.preSetPage.preSetPagesHandler();
     window.paginationRender.paginationRenderHandler();
   });
