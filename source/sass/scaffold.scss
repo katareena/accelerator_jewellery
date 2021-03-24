@@ -80,6 +80,11 @@ input {
 
 input[type="search"] {
   -webkit-appearance: none;
+  -khtml-magin-start: 15px;
+  -webkit-margin-start: 15px;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+
   @media all and (-webkit-min-device-pixel-ratio:0) {
     -webkit-appearance: none; // reset the default styles to apply the assigned styles (iOS)
   }
@@ -91,10 +96,8 @@ input[type="search"] {
 
 @media not all and (min-resolution:.001dpcm)
 { @supports (-webkit-appearance:none) and (stroke-color:transparent) {
-    .safari_only {
-      input[type="search"] {
-        -webkit-appearance: none; // reset the default styles to apply the assigned styles (iOS)
-      }
+    input[type="search"] {
+      -webkit-appearance: none; // reset the default styles to apply the assigned styles (iOS)
     }
   }
 }
