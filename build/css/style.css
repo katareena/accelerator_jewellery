@@ -470,7 +470,8 @@ input {
   transition: all 0.4s ease; }
   @media screen and (-webkit-min-device-pixel-ratio: 0) {
     .user-search__box input {
-      padding-left: 28px; } }
+      padding-left: 28px;
+      -webkit-padding-start: 172px; } }
   @media (max-width: 1023px) {
     .user-search__box input {
       width: inherit;
