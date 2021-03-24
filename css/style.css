@@ -139,14 +139,9 @@ body > div {
 input {
   border-radius: 0; }
 
-@supports (-webkit-touch-callout: none) {
+@media all and (-webkit-min-device-pixel-ratio: 0) {
   input[type="search"] {
     -webkit-appearance: none; } }
-
-@media not all and (min-resolution: 0.001dpcm) {
-  @supports (-webkit-appearance: none) and (stroke-color: transparent) {
-    .safari_only input[type="search"] {
-      -webkit-appearance: none; } } }
 
 @-webkit-keyframes opacity {
   0% {
@@ -474,7 +469,6 @@ input {
   width: 200px;
   height: 30px;
   padding-left: 28px;
-  -webkit-appearance: none;
   background-color: transparent;
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease; }
