@@ -74,6 +74,9 @@ body > div {
 
 input {
   -webkit-border-radius: 0; // removing the rounding on input (iOS)
-  -webkit-appearance: none; // reset the default styles to apply the assigned styles (iOS)
   border-radius: 0;
+}
+
+input[type="search"] {
+  -webkit-appearance: none; // reset the default styles to apply the assigned styles (iOS)
 }

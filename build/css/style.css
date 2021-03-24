@@ -137,9 +137,10 @@ body > div {
   min-height: 100%; }
 
 input {
-  -webkit-border-radius: 0;
-  -webkit-appearance: none;
   border-radius: 0; }
+
+input[type="search"] {
+  -webkit-appearance: none; }
 
 @-webkit-keyframes opacity {
   0% {
@@ -467,6 +468,7 @@ input {
   width: 200px;
   height: 30px;
   padding-left: 28px;
+  -webkit-appearance: none;
   background-color: transparent;
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease; }
