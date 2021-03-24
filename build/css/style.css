@@ -137,6 +137,8 @@ body > div {
   min-height: 100%; }
 
 input {
+  -webkit-border-radius: 0;
+  -webkit-appearance: none;
   border-radius: 0; }
 
 @-webkit-keyframes opacity {
@@ -468,11 +470,6 @@ input {
   background-color: transparent;
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease; }
-  @media screen and (-webkit-min-device-pixel-ratio: 0) {
-    .user-search__box input {
-      padding-left: 28px;
-      -webkit-appearance: none;
-      -webkit-padding-start: 28px; } }
   @media (max-width: 1023px) {
     .user-search__box input {
       width: inherit;
@@ -481,12 +478,6 @@ input {
       padding-right: 20px;
       background-color: rgba(255, 255, 255, 0.15);
       border-radius: 21px; } }
-  @media screen and (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 0) {
-    .user-search__box input {
-      padding-left: 36px;
-      -webkit-appearance: none;
-      -webkit-padding-start: 36px;
-      padding-right: 20px; } }
 
 .user-search__box input::-webkit-input-placeholder {
   color: #1d1613; }
