@@ -136,6 +136,9 @@ body > div {
           flex-direction: column;
   min-height: 100%; }
 
+input {
+  border-radius: 0; }
+
 @-webkit-keyframes opacity {
   0% {
     opacity: 0.4; }
@@ -188,7 +191,7 @@ body > div {
 
 .header__inner {
   width: 100%;
-  min-width: 1024px;
+  min-width: 964px;
   max-width: 1230px;
   padding-left: 30px;
   padding-right: 30px;
@@ -339,7 +342,8 @@ body > div {
     width: 100%;
     min-width: 320px;
     max-width: 1023px;
-    height: 91vh;
+    min-height: 600px;
+    height: calc(100vh - 92px);
     display: none;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -580,7 +584,7 @@ body > div {
 
 .site-nav__inner {
   width: 100%;
-  min-width: 1024px;
+  min-width: 964px;
   max-width: 1230px;
   padding-left: 30px;
   padding-right: 30px;
@@ -662,7 +666,7 @@ body > div {
 
 .main__wrap {
   width: inherit;
-  min-width: 1024px;
+  min-width: 964px;
   max-width: 1230px;
   padding-left: 30px;
   padding-right: 30px;
@@ -1016,7 +1020,7 @@ body > div {
 
 .pagination__inner {
   width: inherit;
-  min-width: 1024px;
+  min-width: 964px;
   max-width: 1230px;
   padding-left: 30px;
   padding-right: 30px;
@@ -1216,13 +1220,14 @@ body > div {
               flex-direction: column;
       height: 512px; } }
 
-@media (max-width: 1023px) {
-  .blog__item:not(:last-child) {
-    margin-bottom: 50px; } }
-
-@media (max-width: 767px) {
-  .blog__item:not(:last-child) {
-    margin-bottom: 40px; } }
+.blog__item:not(:last-child) {
+  margin-bottom: 30px; }
+  @media (max-width: 1023px) {
+    .blog__item:not(:last-child) {
+      margin-bottom: 50px; } }
+  @media (max-width: 767px) {
+    .blog__item:not(:last-child) {
+      margin-bottom: 40px; } }
 
 .blog__item:last-child {
   margin-bottom: -6px; }
@@ -1319,7 +1324,10 @@ body > div {
   margin: 0 auto;
   text-align: center;
   position: relative;
-  width: 100px; }
+  border-bottom: solid 1px #a87b62;
+  width: 100px;
+  height: 27px;
+  margin-bottom: 10px; }
   .blog__text a::before {
     position: absolute;
     content: "";
@@ -1328,6 +1336,8 @@ body > div {
     background-color: #a87b62;
     left: 0;
     bottom: -6px; }
+  .blog__text a::before {
+    display: none; }
 
 .questions {
   width: 100%;
@@ -1696,7 +1706,7 @@ body > div {
 
 .footer__wrap {
   width: 100%;
-  min-width: 1024px;
+  min-width: 964px;
   max-width: 1230px;
   padding-left: 30px;
   padding-right: 30px;
@@ -2329,7 +2339,7 @@ body > div {
 
 .catalog__wrap {
   width: inherit;
-  min-width: 1024px;
+  min-width: 964px;
   max-width: 1230px;
   padding-left: 30px;
   padding-right: 30px;

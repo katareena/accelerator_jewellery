@@ -2,8 +2,6 @@
 
 (function () {
   // --------------- accordion ---------------
-  const items = document.querySelectorAll('.accordion-item');
-
   function moveAccordion (trgt) {
     const set = trgt.dataset.set;
     document.querySelector('#' + set).classList.toggle('hide');
@@ -20,10 +18,28 @@
     }
   };
 
-  items.forEach(el => {
-    el.addEventListener('click', clickPressHandler);
-    el.addEventListener('keydown', enterPressHandler);
-  });
+  function setEventListeners () {
+    let qustions;
+    let filter;
+    if (qustions = document.querySelector('.questions')) {
+      const items = document.querySelectorAll('.accordion-item');
+      items.forEach(el => {
+        el.addEventListener('click', clickPressHandler);
+        el.addEventListener('keydown', enterPressHandler);
+      });
+    }
+
+    if (filter = document.querySelector('.catalog__filter')) {
+      const blocks = document.querySelectorAll('.filter__item');
+      blocks.forEach(el => {
+        const item = el.querySelector('h4');
+        item.addEventListener('click', clickPressHandler);
+        item.addEventListener('keydown', enterPressHandler);
+      });
+    }
+  }
+
+  setEventListeners();
 
 })();
 
@@ -116,22 +132,26 @@
   const submitBtn = document.querySelector('.subscription__btn');
   const message = document.querySelector('#subscription-message');
 
-  function validateInputHandler () {
+  function validateInputHandler(evt) {
     if (input.value == '') {
       message.style.color = 'transparent';
-      submitBtn.disabled = 'true';
     } else {
       if (!input.value.includes('@') || !input.value.includes('.')) {
+        evt.preventDefault();
         message.style.color = COLOR_ERROR;
-        submitBtn.disabled = 'true';
       } else {
         message.style.color = 'transparent';
-        submitBtn.disabled = '';
       }
     }
   }
 
   input.addEventListener('input', validateInputHandler);
+  submitBtn.addEventListener('click', (evt) => {
+    if (input.value == '') {
+      evt.preventDefault();
+      message.style.color = COLOR_ERROR;
+    }
+  });
 })();
 
 (function () {
@@ -173,7 +193,7 @@
     window.slider.moveSliderAdvertisementHandler();
   });
 
-  document.addEventListener('resize', () => {
+  window.addEventListener('resize', () => {
     window.preSetPage.preSetPagesHandler();
     window.paginationRender.paginationRenderHandler();
   });
@@ -315,25 +335,45 @@
   const basketBtn = document.querySelector('.header__menu-btn--basket-js');
   const logo = headerMenu.querySelector('.header__menu-logo');
   const dropdown = document.querySelector('.header__dropdown');
+  const items = document.querySelectorAll('.item');
 
-  function openDropdownHandler () {
+  function hideItems() {
+    items.forEach(el => {
+      el.style.display = 'none';
+    });
+  };
+
+  function showItems() {
+    items.forEach(el => {
+      el.style.display = 'block';
+    });
+  };
+
+  function moveDropdownHandler() {
     dropdown.classList.toggle('header__dropdown--open');
     dropdown.classList.toggle('header__dropdown--absolute');
     burgerBtn.classList.toggle('header__menu-btn--close');
     headerMenu.classList.toggle('header__menu--dark-theme');
     basketBtn.classList.toggle('header__menu-btn--dark-theme');
     logo.classList.toggle('header__menu-logo--dark-theme');
+
+    if (burgerBtn.classList.contains('header__menu-btn--close')) {
+      hideItems();
+    } else {
+      showItems();
+    }
   }
 
   function closeEscDropdownHandler (evt) {
     if (evt.keyCode === ESCAPE) {
       if (dropdown.classList.contains('header__dropdown--open')) {
-        openDropdownHandler();
+        moveDropdownHandler();
+        showItems();
       }
     }
   };
 
-  burgerBtn.addEventListener('click', openDropdownHandler);
+  burgerBtn.addEventListener('click', moveDropdownHandler);
   document.addEventListener('keydown', closeEscDropdownHandler);
 
 })();
@@ -342,14 +382,18 @@
 // --------------- pagination render ---------------
   function paginationRenderHandler() {
     let advertisement;
+
     if (advertisement = document.querySelector('.advertisement')) {
       const MIN_WIDTH_DESKTOP = 1024;
-      const dotTemplate = document.querySelector('#dot').content.querySelector('.pagination__item');
+
+
       const pagination = document.querySelector('.pagination__list');
       const slides = document.querySelectorAll('.slider__item');
 
       function createDots(n) {
+        const dotTemplate = document.querySelector('#dot').content.querySelector('.pagination__item');
         const fragmentDots = document.createDocumentFragment();
+
         for (let i = 1; i < ((slides.length + 1)/n); i++) {
           const dotElement = dotTemplate.cloneNode(true);
           if (i == 1) {
@@ -361,7 +405,7 @@
         pagination.appendChild(fragmentDots);
       };
 
-        function renderPagination() {
+      function renderPagination() {
         while (pagination.firstChild) {
           pagination.removeChild(pagination.firstChild);
         }
