@@ -77,19 +77,24 @@ input {
   border-radius: 0;
 }
 
-@supports (-webkit-touch-callout: none) {
-  input[type="search"] {
+input[type="search"] {
+  @media all and (-webkit-min-device-pixel-ratio:0) {
     -webkit-appearance: none; // reset the default styles to apply the assigned styles (iOS)
   }
 }
 
-@media not all and (min-resolution:.001dpcm)
-{ @supports (-webkit-appearance:none) and (stroke-color:transparent) {
-    .safari_only {
-      input[type="search"] {
-        -webkit-appearance: none; // reset the default styles to apply the assigned styles (iOS)
-      }
-    }
-  }
-}
+// @supports (-webkit-touch-callout: none) {
+//   input[type="search"] {
+//     -webkit-appearance: none; // reset the default styles to apply the assigned styles (iOS)
+//   }
+// }
 
+// @media not all and (min-resolution:.001dpcm)
+// { @supports (-webkit-appearance:none) and (stroke-color:transparent) {
+//     .safari_only {
+//       input[type="search"] {
+//         -webkit-appearance: none; // reset the default styles to apply the assigned styles (iOS)
+//       }
+//     }
+//   }
+// }
