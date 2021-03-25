@@ -335,7 +335,7 @@
   const basketBtn = document.querySelector('.header__menu-btn--basket-js');
   const logo = headerMenu.querySelector('.header__menu-logo');
   const dropdown = document.querySelector('.header__dropdown');
-  const items = document.querySelectorAll('.item');
+  const items = document.querySelectorAll('.module-js');
 
   function hideItems() {
     items.forEach(el => {
