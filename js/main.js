@@ -335,18 +335,24 @@
   const basketBtn = document.querySelector('.header__menu-btn--basket-js');
   const logo = headerMenu.querySelector('.header__menu-logo');
   const dropdown = document.querySelector('.header__dropdown');
-  const items = document.querySelectorAll('.item');
+  const items = document.querySelectorAll('.module-js');
+  const body = document.body;
+  const colorBody = '#ffffff';
+  const colorDropdown = '#a87b62';
+
 
   function hideItems() {
     items.forEach(el => {
       el.style.display = 'none';
     });
+    body.style.backgroundColor = colorDropdown;
   };
 
   function showItems() {
     items.forEach(el => {
       el.style.display = 'block';
     });
+    body.style.backgroundColor = colorBody;
   };
 
   function moveDropdownHandler() {
